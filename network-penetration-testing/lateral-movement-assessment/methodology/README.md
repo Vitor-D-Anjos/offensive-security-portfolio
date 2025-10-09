@@ -1,162 +1,187 @@
-# MITRE ATT&CK Framework Mapping
+# Testing Methodology - Lateral Movement Assessment
 
-## 📋 Engagement Technique Mapping
+## 🎯 Engagement Framework
 
-This engagement demonstrated multiple techniques from the MITRE ATT&CK Enterprise framework, showing real-world adversarial tradecraft.
+### Professional Testing Standards
+This assessment followed industry-standard penetration testing methodologies:
 
-## 🔥 Techniques Demonstrated
+- **Penetration Testing Execution Standard (PTES)** - Comprehensive testing framework
+- **OSSTMM** - Open Source Security Testing Methodology Manual
+- **NIST SP 800-115** - Technical Guide to Information Security Testing
 
-### TA0043: Reconnaissance
-| Technique ID | Technique Name                              | Evidence                   |
-|--------------|---------------------------------------------|----------------------------|
-| T1595.002    | Active Scanning: Vulnerability Scanning     | Network scanning with nmap |
-| T1592.002    | Gather Victim Host Information: Software    | Service version detection  |
+### Rules of Engagement
+| Aspect | Specification |
+|--------|---------------|
+| **Testing Window** | Business hours (9:00-17:00) |
+| **Testing Intensity** | Normal operations, no DoS testing |
+| **Data Handling** | No exfiltration of real customer data |
+| **Scope** | Pre-defined IP ranges and systems |
 
-### TA0042: Resource Development
-| Technique ID | Technique Name                   | Evidence                |
-|--------------|--------------------------------|-------------------------|
-| T1588.002    | Obtain Capabilities: Tool       | Hydra, Impacket suite usage |
+## 🔧 Tools & Techniques
 
-### TA0001: Initial Access
-| Technique ID | Technique Name              | Evidence                          |
-|--------------|-----------------------------|----------------------------------|
-| T1110.001    | Brute Force: Password Guessing | SSH credential attack against svc_webapp |
-| T1078.003    | Valid Accounts: Local Accounts   | Weak service account compromise  |
+### Network Discovery
+```bash
+# Primary Tools
+nmap - Network mapping and service enumeration
+masscan - Rapid port scanning
+tcpdump - Network traffic analysis
 
-### TA0007: Discovery
-| Technique ID | Technique Name              | Evidence                   |
-|--------------|-----------------------------|----------------------------|
-| T1087.002    | Account Discovery: Domain Account | Database credential harvesting |
-| T1069.002    | Permission Groups Discovery: Domain Groups | Domain group enumeration    |
-| T1018        | Remote System Discovery     | Network host enumeration    |
+# Techniques
+- TCP SYN scanning for host discovery
+- Service version detection
+- OS fingerprinting
+- Script scanning for vulnerability identification
 
-### TA0008: Lateral Movement
-| Technique ID | Technique Name                         | Evidence                  |
-|--------------|--------------------------------------|---------------------------|
-| T1021.001    | Remote Services: Remote Desktop Protocol | RDP access attempts        |
-| T1021.002    | Remote Services: SMB/Windows Admin Shares | SMB share access           |
-| T1021.004    | Remote Services: SSH                  | SSH lateral movement       |
-| T1550.002    | Use Alternate Authentication Material: Pass the Hash | PTH to domain controller   |
+Vulnerability Assessment
+bash
 
-### TA0004: Privilege Escalation
-| Technique ID | Technique Name                     | Evidence                   |
-|--------------|----------------------------------|-----------------------------|
-| T1548.003    | Abuse Elevation Control Mechanism: Sudo | Backup script privilege escalation |
-| T1068        | Exploitation for Privilege Escalation | Script manipulation for root access  |
+# Credential Testing
+hydra - Network login brute-forcing
+metasploit - Automated exploitation framework
+custom scripts - Targeted credential attacks
 
-### TA0006: Credential Access
-| Technique ID | Technique Name                              | Evidence                   |
-|--------------|---------------------------------------------|----------------------------|
-| T1003.008    | OS Credential Dumping: /etc/passwd and /etc/shadow | Linux hash extraction       |
-| T1555.003    | Credentials from Password Stores: Credentials from Web Browsers | Database config file access |
+# Service Assessment
+nmap scripting engine (NSE)
+manual service interrogation
+configuration file analysis
 
-### TA0009: Collection
-| Technique ID | Technique Name               | Evidence                    |
-|--------------|------------------------------|-----------------------------|
-| T1005        | Data from Local System       | Local file system enumeration|
-| T1213        | Data from Information Repositories | Database information collection |
+Exploitation & Lateral Movement
+bash
 
-### TA0011: Command and Control
-| Technique ID | Technique Name                         | Evidence                |
-|--------------|--------------------------------------|-----------------------|
-| T1071.001    | Application Layer Protocol: Web Protocols | HTTP-based communication |
-| T1573.001    | Encrypted Channel: Symmetric Cryptography | SSH encrypted tunnels    |
+# Lateral Movement Tools
+impacket suite - Pass-the-hash, SMB attacks
+evil-winrm - Windows Remote Management
+pth-winexe - Pass-the-hash execution
+ssh, scp - Secure shell for Unix systems
 
-## 🗺️ Attack Flow Mapping
+# Techniques
+- Credential reuse testing
+- Pass-the-hash attacks
+- Service exploitation
+- Privilege escalation paths
 
-graph TD
-A[T1595.002: Vulnerability Scanning] --> B[T1110.001: Password Guessing]
-B --> C[T1078.003: Valid Accounts Compromise]
-C --> D[T1087.002: Account Discovery]
-D --> E[T1003.008: Credential Dumping]
-E --> F[T1021.004: SSH Lateral Movement]
-F --> G[T1548.003: Sudo Privilege Escalation]
-G --> H[T1550.002: Pass the Hash]
-H --> I[TA0008: Domain Compromise]
+📊 Testing Phases
+Phase 1: Planning & Reconnaissance
 
-text
+    Scope finalization
 
-🎯 **Technique Details**
+    Network topology mapping
 
-**T1110.001 - Password Guessing**  
-Description: Systematic attempt to guess passwords via SSH service  
-Evidence:
+    Passive information gathering
 
-hydra -L userlist -P passlist ssh://web-server-01.internal.corp
+    Tool preparation and configuration
 
-text
+Phase 2: Discovery & Enumeration
 
-**T1021.004 - SSH Lateral Movement**  
-Description: Use of SSH for moving between systems with compromised credentials  
-Evidence:
+    Active host discovery
 
-ssh jsmith@app-server-01.internal.corp
+    Service enumeration
 
-text
+    Network mapping
 
-**T1548.003 - Sudo Privilege Escalation**  
-Description: Abuse of sudo permissions to execute malicious scripts as root  
-Evidence:
+    Vulnerability identification
 
-sudo -l
-(root) NOPASSWD: /opt/scripts/backup.sh
+Phase 3: Exploitation & Access
 
-text
+    Initial compromise
 
-**T1550.002 - Pass the Hash**  
-Description: Use of password hashes for authentication instead of plaintext passwords  
-Evidence:
+    Privilege escalation
 
-pth-winexe -U administrator//[hash] //dc-01.internal.corp cmd
+    Persistence establishment
 
-text
+    Evidence collection
 
-## 📊 Detection Recommendations
+Phase 4: Lateral Movement & Pivoting
 
-**T1110.001 Detection**  
+    Internal reconnaissance
 
-SIEM query for SSH brute force detection
+    Credential harvesting
 
-source="ssh_logs" failed password | stats count by src_ip | where count > 10
+    Horizontal movement
 
-text
+    Vertical privilege escalation
 
-**T1550.002 Detection**  
+Phase 5: Domain Compromise
 
-Windows Event ID for Pass-the-Hash
+    Domain privilege escalation
 
-Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4624; LogonType=9}
+    Critical asset access
 
-text
+    Business impact assessment
 
-**T1021.004 Detection**  
+    Cleanup activities
 
-SSH lateral movement monitoring
+Phase 6: Reporting & Analysis
 
-grep "Accepted password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c
+    Evidence documentation
 
-text
+    Risk assessment
 
-🔄 **MITRE ATT&CK Navigator Layer**  
-A complete MITRE ATT&CK Navigator layer is available for this engagement, showing:  
-- Techniques used during testing  
-- Detection coverage gaps  
-- Mitigation recommendations  
-- Tactical progression mapping  
+    Remediation planning
 
-📈 **Strategic Insights**  
-This engagement demonstrates how attackers can chain multiple techniques to achieve domain compromise. The mapping shows:  
-- Initial Access: Relies on weak credentials (T1110.001)  
-- Discovery: Extensive internal reconnaissance (TA0007)  
-- Lateral Movement: Multiple techniques for horizontal spread (TA0008)  
-- Privilege Escalation: Systematic privilege elevation (TA0004)  
-- Objective Achievement: Domain control (T1550.002)  
+    Executive communication
 
-🛡️ **Mitigation Alignment**  
-Each technique maps to specific MITRE D3FEND countermeasures:  
-- D3-PSA - Privileged Account Management  
-- D3-LBP - Login Baseline Profile  
-- D3-NTA - Network Traffic Analysis  
-- D3-CSP - Configuration Standards Enforcement  
+⚠️ Testing Limitations
+Scope Limitations
 
-> *MITRE ATT&CK Mapping - For Defensive Planning*
+    Social engineering attacks excluded
+
+    Physical security testing not performed
+
+    Denial-of-service testing excluded
+
+    Limited to technical infrastructure assessment
+
+Technical Limitations
+
+    Testing conducted during business hours only
+
+    No wireless network assessment
+
+    Limited social engineering component
+
+    No physical security testing
+
+📈 Success Metrics
+Technical Objectives
+
+    [✅] Initial compromise achieved
+
+    [✅] Lateral movement demonstrated
+
+    [✅] Privilege escalation accomplished
+
+    [✅] Domain compromise achieved
+
+Business Objectives
+
+    [✅] Identify critical security gaps
+
+    [✅] Demonstrate business impact
+
+    [✅] Provide actionable remediation
+
+    [✅] Enhance security awareness
+
+🔄 Continuous Improvement
+Methodology Refinements
+
+    Regular tool updates and validation
+
+    Technique expansion based on emerging threats
+
+    Framework alignment with industry standards
+
+    Skill development for testers
+
+Quality Assurance
+
+    Peer review of testing approach
+
+    Validation of findings
+
+    Consistency in reporting
+
+    Client feedback incorporation
+
+Methodology Documentation - Internal Use
