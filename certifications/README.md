@@ -55,6 +55,19 @@ text
 
 
 ### Skill Development Timeline
+
+gantt
+    title Skill Development Timeline
+    dateFormat  YYYY-MM-DD
+    section Certifications
+    OSCP                        :done, 2022-06-01, 30d
+    CEH                         :done, 2022-07-15, 20d
+    GPEN                        :active, 2023-01-10, 40d
+    section Training
+    Active Directory Security   :done, 2022-08-01, 60d
+    Offensive Security Labs     :active, 2023-02-01, 90d
+
+
 ```mermaid
 graph LR
 A[2023: Data Science<br/>Python, ML, Statistics] --> B[2024: Cybersecurity<br/>ISC2 CC Fundamentals]
