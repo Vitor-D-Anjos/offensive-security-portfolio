@@ -38,4 +38,4 @@ BloodHound, Impacket, CrackMapExec, Responder, Mimikatz, PowerShell
 
 ---
 
-> *This assessment demonstrates professional penetration testing capabilities in a controlled lab environment.*
+> *Professional penetration testing assessment conducted in controlled lab environment*
