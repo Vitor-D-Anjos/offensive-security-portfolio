@@ -53,17 +53,33 @@ IT Fundamentals → Cybersecurity Principles → Penetration Testing → Advance
 CompTIA+ ISC2 CC INE PTP eCPPTv3
 text
 
-
 ### Skill Development Timeline
 
-```mermaid
-graph LR
-A[2023: Data Science<br/>Python, ML, Statistics] --> B[2024: Cybersecurity<br/>ISC2 CC Fundamentals]
-B --> C[2024: Penetration Testing<br/>INE PTP Methodology]
-C --> D[2024: Advanced Exploitation<br/>eCPPTv3 AD Security]
+**2023: Data Science Foundation**
+- Python programming & machine learning
+- Statistical analysis & data visualization
+- Software engineering principles
+
+**2024 Q1: Cybersecurity Fundamentals** 
+- ISC2 CC certification
+- Security principles & risk management
+- Access control & network security
+
+**2024 Q2: Penetration Testing Methodology**
+- INE Penetration Testing Professional
+- Network & web application security
+- Professional testing frameworks
+
+**2024 Q3: Advanced Exploitation**
+- eCPPTv3 certification
+- Active Directory security mastery
+- Enterprise penetration testing
+
+---
 
 <div align="center">
 
-https://../../README.md
-https://../../active-directory-assessments/enterprise-ad-compromise/README.md
-</div> ```
+[![Back to Portfolio](../../README.md)](https://img.shields.io/badge/←_Back_to_Main_Portfolio-blue?style=for-the-badge)
+[![View AD Project](../../active-directory-assessments/enterprise-ad-compromise/README.md)](https://img.shields.io/badge/🔓_View_AD_Penetration_Test-green?style=for-the-badge)
+
+</div>
