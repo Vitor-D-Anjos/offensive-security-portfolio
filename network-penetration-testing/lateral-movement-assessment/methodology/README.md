@@ -159,4 +159,4 @@ Each technique maps to specific MITRE D3FEND countermeasures:
 - D3-NTA - Network Traffic Analysis  
 - D3-CSP - Configuration Standards Enforcement  
 
-# MITRE ATT&CK Mapping - For Defensive Planning
+> *MITRE ATT&CK Mapping - For Defensive Planning*
