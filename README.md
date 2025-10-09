@@ -383,3 +383,481 @@ This portfolio and its contents are licensed under the MIT License - see the [LI
 *Last Updated: October 2024*
 
 </div>
+
+
+
+
+
+
+--------------
+
+
+____________
+_______________
+________________
+
+
+# 🔓 Enterprise Active Directory Compromise
+## From Zero to Domain Admin in 16 Hours
+
+<div align="center">
+
+![Assessment Type](https://img.shields.io/badge/Type-Internal_Penetration_Test-red?style=for-the-badge)
+![Duration](https://img.shields.io/badge/Duration-48_Hours-blue?style=for-the-badge)
+![Result](https://img.shields.io/badge/Result-Domain_Compromised-critical?style=for-the-badge)
+![Systems](https://img.shields.io/badge/Systems-5/5_Compromised-success?style=for-the-badge)
+
+[![Back to Portfolio](https://img.shields.io/badge/←_Back_to-Portfolio-blue?style=for-the-badge)](../../../README.md)
+[![AD Assessments](https://img.shields.io/badge/←_Back_to-AD_Assessments-green?style=for-the-badge)](../../README.md)
+
+</div>
+
+---
+
+## 🎯 Executive Summary
+
+This penetration test demonstrates **complete compromise of an enterprise Active Directory environment** simulating a financial services organization. Starting from an internal network position, I achieved Domain Administrator privileges within 16 hours through a carefully orchestrated attack chain exploiting common but critical misconfigurations.
+
+### The Bottom Line
+
+> **"An attacker with initial network access could steal $3.5M-$10M worth of data, deploy ransomware across the entire domain, and maintain persistent access indefinitely."**
+
+---
+
+## 📊 Assessment Overview
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th>Value</th>
+    <th>Impact</th>
+  </tr>
+  <tr>
+    <td><b>⏱️ Time to Domain Admin</b></td>
+    <td>16 hours</td>
+    <td>🔴 Critical - Rapid compromise</td>
+  </tr>
+  <tr>
+    <td><b>💥 Systems Compromised</b></td>
+    <td>5/5 (100%)</td>
+    <td>🔴 Complete domain control</td>
+  </tr>
+  <tr>
+    <td><b>🔴 Critical Findings</b></td>
+    <td>4 vulnerabilities</td>
+    <td>🔴 Immediate action required</td>
+  </tr>
+  <tr>
+    <td><b>🟠 High Findings</b></td>
+    <td>4 vulnerabilities</td>
+    <td>🟠 Prompt remediation needed</td>
+  </tr>
+  <tr>
+    <td><b>💰 Estimated Breach Cost</b></td>
+    <td>$3.5M - $10M</td>
+    <td>🔴 Severe financial impact</td>
+  </tr>
+  <tr>
+    <td><b>📊 Data at Risk</b></td>
+    <td>15,000+ records</td>
+    <td>🔴 Regulatory violations</td>
+  </tr>
+  <tr>
+    <td><b>🎯 MITRE Techniques</b></td>
+    <td>15 demonstrated</td>
+    <td>🟢 Comprehensive coverage</td>
+  </tr>
+</table>
+
+---
+
+## ⚡ Attack Chain Visualization
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    COMPLETE ATTACK CHAIN                         │
+│                  From Recon to Domain Admin                      │
+└─────────────────────────────────────────────────────────────────┘
+
+🔍 PHASE 1: RECONNAISSANCE (2 hours)
+   └─> Nmap network scan → 5 hosts discovered
+       └─> SMB signing NOT required (2 systems) ⚠️
+           └─> LLMNR/NBT-NS enabled ⚠️
+
+💥 PHASE 2: INITIAL ACCESS (4 hours)
+   └─> Web enumeration → config.php.bak exposed 🔴
+       └─> Database credentials extracted
+           └─> SSH access → WEB-APP-01 compromised ✓
+
+🔑 PHASE 3: CREDENTIAL HARVEST (3 hours)
+   ├─> LLMNR poisoning → jthompson hash captured
+   │   └─> Cracked: Summer2024! ✓
+   ├─> Password spraying → sjenkins compromised ✓
+   ├─> AS-REP Roasting → backup_admin cracked ✓
+   └─> Kerberoasting → sql_service cracked (4min) ✓
+
+🔀 PHASE 4: LATERAL MOVEMENT (3 hours)
+   └─> WinRM → WKSTN-HR-05 access
+       └─> Mimikatz → mrodriguez:ITAdmin@2024! ✓
+           └─> Pass-the-Hash → VFS-FS-01 (File Server) ✓
+               └─> Sensitive files discovered 💎
+
+⬆️ PHASE 5: PRIVILEGE ESCALATION (4 hours)
+   └─> BloodHound analysis → Attack path identified 🎯
+       └─> mrodriguez → ForceChangePassword → dadmin
+           └─> Password reset → Domain Admin access ✓
+
+👑 PHASE 6: DOMAIN DOMINANCE (2 hours)
+   └─> Domain controller access → VFS-DC-02
+       └─> DCSync attack → ALL domain hashes extracted 🔴
+           └─> krbtgt hash → Golden ticket capability ✓
+
+TOTAL TIME: 16 hours → COMPLETE DOMAIN COMPROMISE
+```
+
+---
+
+## 🔴 Critical Vulnerabilities Discovered
+
+### 1. Exposed Configuration File (CVSS 9.8)
+**What:** Backup config file accessible via web browser  
+**Impact:** Database credentials exposed, SSH access gained  
+**Exploitation:** `curl http://10.50.1.45/config.php.bak`
+
+### 2. Weak Password Policy (CVSS 9.1)
+**What:** 8-character minimum allows predictable passwords  
+**Impact:** 18% of users compromised via password spraying  
+**Exploitation:** Seasonal patterns (Summer2024!, Spring2024!)
+
+### 3. SMB Signing Disabled (CVSS 8.1)
+**What:** NTLM relay attacks possible on 2 systems  
+**Impact:** Lateral movement without password cracking  
+**Exploitation:** Responder + ntlmrelayx → SYSTEM access
+
+### 4. Kerberoastable Service Account (CVSS 8.8)
+**What:** Service account with weak password and SPN  
+**Impact:** Offline cracking in 4 minutes 37 seconds  
+**Exploitation:** GetUserSPNs → Hashcat → Password recovered
+
+---
+
+## 🎯 What This Demonstrates
+
+### Technical Skills
+✅ **Active Directory Exploitation**
+- Kerberos attacks (Kerberoasting, AS-REP Roasting)
+- LLMNR/NBT-NS poisoning for credential capture
+- BloodHound-based privilege escalation analysis
+- ACL abuse (ForceChangePassword exploitation)
+- DCSync attacks for credential extraction
+
+✅ **Network Penetration Testing**
+- Comprehensive reconnaissance and enumeration
+- Service exploitation (exposed configuration files)
+- Lateral movement via multiple methods
+- Pass-the-Hash authentication
+- Memory credential dumping (Mimikatz)
+
+✅ **Professional Methodology**
+- PTES framework adherence
+- MITRE ATT&CK technique mapping (15 techniques)
+- Comprehensive evidence documentation
+- Business impact analysis
+
+### Professional Capabilities
+✅ **Comprehensive Reporting**
+- 50+ page technical documentation
+- Executive summaries for leadership
+- Detailed remediation roadmap with costs
+- Detection engineering recommendations
+
+✅ **Business Communication**
+- Risk quantification ($3.5M-$10M impact)
+- Compliance mapping (PCI-DSS, NIST CSF)
+- Prioritized remediation timeline
+- ROI analysis for security investments
+
+---
+
+## 📁 Documentation Structure
+
+### 📖 Read the Complete Assessment
+
+<div align="center">
+
+| Document | Description | Pages |
+|----------|-------------|-------|
+| **[📋 Cover Sheet](./cover-sheet.md)** | Executive overview & quick stats | 2 pages |
+| **[🔍 Technical Assessment](./technical-assessment.md)** | Complete exploitation walkthrough | ~25 pages |
+| **[🛡️ Findings & Remediation](./findings-remediation.md)** | Vulnerabilities, fixes, detection | ~25 pages |
+| **[📊 Methodology](./methodology/)** | Frameworks & MITRE mapping | ~5 pages |
+| **[🖼️ Evidence](./evidence/)** | Proof and supporting data | Multiple artifacts |
+
+</div>
+
+---
+
+## 🛠️ Tools & Technologies Used
+
+### Reconnaissance & Enumeration
+```
+Nmap 7.94          → Network and service discovery
+enum4linux         → SMB enumeration
+ldapsearch         → LDAP queries
+Kerbrute          → Kerberos user enumeration
+DNSenum           → DNS reconnaissance
+```
+
+### Exploitation & Access
+```
+Responder 3.1.3.0 → LLMNR/NBT-NS poisoning
+CrackMapExec 5.4  → SMB exploitation & password spraying
+Hashcat 6.2.6     → Password cracking (GPU-accelerated)
+Impacket Suite    → Windows protocol exploitation
+  ├─ GetUserSPNs  → Kerberoasting
+  ├─ GetNPUsers   → AS-REP Roasting
+  ├─ secretsdump  → DCSync attacks
+  └─ psexec       → Remote code execution
+```
+
+### Post-Exploitation & Analysis
+```
+BloodHound 4.3.1  → AD attack path analysis
+Evil-WinRM        → Windows Remote Management
+Mimikatz          → Credential extraction
+pypykatz          → Python-based credential dumping
+PowerView         → PowerShell AD enumeration
+```
+
+---
+
+## 🎓 Skills Demonstrated
+
+### MITRE ATT&CK Techniques (15 Techniques)
+
+**Reconnaissance:**
+- T1595.001 - Active Scanning: IP Blocks
+
+**Initial Access:**
+- T1190 - Exploit Public-Facing Application
+- T1078.002 - Valid Accounts: Domain Accounts
+
+**Credential Access:**
+- T1557.001 - LLMNR/NBT-NS Poisoning
+- T1110.003 - Password Spraying
+- T1558.003 - Kerberoasting
+- T1558.004 - AS-REP Roasting
+- T1003.001 - LSASS Memory Dumping
+- T1003.006 - DCSync
+
+**Lateral Movement:**
+- T1021.006 - Windows Remote Management
+- T1021.002 - SMB/Windows Admin Shares
+- T1550.002 - Pass the Hash
+
+**Discovery:**
+- T1046 - Network Service Discovery
+- T1482 - Domain Trust Discovery
+
+**Collection:**
+- T1039 - Data from Network Shared Drive
+
+**📖 [View Complete MITRE Mapping →](./methodology/mitre-mapping.md)**
+
+---
+
+## 💼 Business Impact Analysis
+
+### Financial Impact Breakdown
+
+**Estimated Total Cost of Real Breach:** $3.5M - $10M
+
+<table>
+  <tr>
+    <th>Impact Category</th>
+    <th>Estimated Cost</th>
+    <th>Timeline</th>
+  </tr>
+  <tr>
+    <td>🚨 Incident Response & Forensics</td>
+    <td>$500K - $1.5M</td>
+    <td>Immediate (Weeks 1-4)</td>
+  </tr>
+  <tr>
+    <td>⚖️ Regulatory Fines (PCI-DSS, GDPR)</td>
+    <td>$1M - $5M</td>
+    <td>6-12 months</td>
+  </tr>
+  <tr>
+    <td>📧 Customer Notification & Monitoring</td>
+    <td>$500K - $1M</td>
+    <td>Immediate (Weeks 2-6)</td>
+  </tr>
+  <tr>
+    <td>⚖️ Legal Fees & Settlements</td>
+    <td>$1M - $2M</td>
+    <td>12-24 months</td>
+  </tr>
+  <tr>
+    <td>📉 Reputational Damage & Lost Business</td>
+    <td>Ongoing/Immeasurable</td>
+    <td>Long-term</td>
+  </tr>
+</table>
+
+### Data at Risk
+- **15,000+ customer financial records**
+- **1,247 employee PII records**
+- **Proprietary business documents**
+- **All domain authentication credentials**
+
+### Compliance Violations
+- ❌ PCI-DSS Requirements (multiple failures)
+- ❌ GDPR Article 32 (security measures)
+- ❌ SOX controls for financial data
+- ❌ NIST Cybersecurity Framework gaps
+
+---
+
+## 🛡️ Remediation Highlights
+
+### Immediate Actions (Week 1) - $0 Cost
+```
+☑ Force password resets for all compromised accounts
+☑ Enable SMB signing via Group Policy
+☑ Remove exposed config.php.bak file
+☑ Disable LLMNR and NetBIOS-NS
+☑ Fix ACL permissions (Remove ForceChangePassword)
+```
+
+### Short-term (Months 1-3) - $50K-$150K
+```
+☑ Deploy Microsoft LAPS ($0 - included in licensing)
+☑ Implement MFA for all privileged accounts ($6/user/month)
+☑ Migrate to Group Managed Service Accounts (gMSA)
+☑ Deploy EDR solution ($50-100/endpoint/year)
+☑ Enable comprehensive logging and monitoring
+```
+
+### Strategic (Year 1) - $350K-$900K Total
+```
+☑ Implement SIEM solution ($50K-$150K)
+☑ Network segmentation via VLANs ($25K-$50K)
+☑ Deploy PAM solution ($100K-$250K)
+☑ Regular penetration testing ($25K-$40K/year)
+☑ Security awareness training program
+```
+
+**ROI:** 5-10x return vs. average breach cost of $4.45M
+
+**📖 [Read Complete Remediation Strategy →](./findings-remediation.md#5-remediation-strategy)**
+
+---
+
+## 📈 Key Takeaways
+
+### For Organizations
+
+> **"Defense in depth failed. Single misconfigurations led to complete compromise."**
+
+**Critical Lessons:**
+1. 🔴 **Weak passwords are the #1 entry point** - 18% success rate on password spraying
+2. 🔴 **ACL misconfigurations are invisible escalation paths** - Hidden in plain sight
+3. 🔴 **Service accounts are goldmines** - Offline cracking bypasses all defenses
+4. 🔴 **Detection is non-existent** - Attacker activity went completely unnoticed
+5. 🔴 **Flat networks enable rapid spread** - No segmentation = no containment
+
+### For Security Teams
+
+**Detection Opportunities Missed:**
+- ❌ No LLMNR/NBT-NS traffic monitoring
+- ❌ Failed authentication attempts not aggregated
+- ❌ Kerberoasting activity undetected
+- ❌ WinRM from workstations not flagged  
+- ❌ **DCSync completely missed (CRITICAL)**
+
+**What Would Have Stopped This:**
+- ✅ MFA on all accounts (blocks password spraying)
+- ✅ LAPS deployment (prevents lateral movement)
+- ✅ SMB signing (stops relay attacks)
+- ✅ Regular BloodHound analysis (identifies ACL issues)
+- ✅ SIEM with proper detection rules
+
+---
+
+## 🎬 Assessment Highlights
+
+### Most Impactful Moments
+
+**🔴 Hour 4 - Initial Access Achieved**
+> Found exposed config.php.bak containing database credentials. Within minutes, had SSH access to the application server and extracted 2,847 customer records.
+
+**🟠 Hour 7 - First Domain Credentials**
+> LLMNR poisoning captured jthompson's NTLMv2 hash. Cracked in 8 minutes to "Summer2024!" - the password policy allowed this predictable pattern.
+
+**🟠 Hour 12 - Service Account Compromised**
+> Kerberoasting attack on sql_service account. The "strong" 19-character password cracked in under 5 minutes due to predictable pattern. Service account had WriteDacl on privileged groups.
+
+**🔴 Hour 14 - Domain Admin Access**
+> BloodHound revealed mrodriguez had ForceChangePassword on dadmin (Domain Admin). Simple rpcclient command later, we owned the domain.
+
+**🔴 Hour 16 - Complete Domain Compromise**
+> DCSync attack extracted every credential in the domain, including krbtgt hash. Golden ticket created. Game over.
+
+---
+
+## 📚 Additional Resources
+
+### Learn More
+- **[Active Directory Security](../../README.md)** - My AD security specialization
+- **[About Me](../../../about-me.md)** - Professional background
+- **[All Certifications](../../../certifications/)** - Training and credentials
+
+### External References
+- [MITRE ATT&CK for Enterprise](https://attack.mitre.org/)
+- [BloodHound Documentation](https://bloodhound.readthedocs.io/)
+- [Active Directory Security (adsecurity.org)](https://adsecurity.org/)
+
+---
+
+## ⚖️ Legal & Ethical Notice
+
+**This assessment was conducted in a controlled, authorized laboratory environment.**
+
+- ✅ All systems were owned/controlled by the assessor
+- ✅ No production systems accessed
+- ✅ No unauthorized access occurred
+- ✅ All data sanitized for portfolio use
+- ✅ Demonstrates skills ethically and legally
+
+**Purpose:** Professional skill demonstration and career development  
+**Classification:** Public portfolio demonstration  
+**Standards:** Complies with (ISC)² Code of Ethics
+
+---
+
+<div align="center">
+
+## 🚀 Ready to Dive Deeper?
+
+[![Read Cover Sheet](https://img.shields.io/badge/📋-Cover_Sheet-blue?style=for-the-badge)](./cover-sheet.md)
+[![Technical Report](https://img.shields.io/badge/🔍-Technical_Assessment-green?style=for-the-badge)](./technical-assessment.md)
+[![Findings & Remediation](https://img.shields.io/badge/🛡️-Findings_&_Fixes-red?style=for-the-badge)](./findings-remediation.md)
+[![Methodology](https://img.shields.io/badge/📊-Methodology-purple?style=for-the-badge)](./methodology/)
+
+---
+
+### 💬 Let's Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](YOUR_LINKEDIN_URL)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:YOUR_EMAIL)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge)](YOUR_PORTFOLIO_URL)
+
+---
+
+*"The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards - and even then I have my doubts." - Gene Spafford*
+
+**Last Updated:** October 2024  
+**Project Status:** Complete & Documented
+
+</div>
