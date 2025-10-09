@@ -17,7 +17,7 @@ Penetration tester specializing in Active Directory security assessments, with a
 - **Red Team Methodologies**
 
 ## Contact
-- **LinkedIn:** [LinkedIn - Vitor David Anjos](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)
+- **LinkedIn:** [Vitor Anjos](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)
 
 ## Professional Philosophy
 "Applying systematic, data-driven approaches to identify and exploit security vulnerabilities, while providing actionable remediation strategies that balance security and business operations."
