@@ -19,7 +19,6 @@
 Config File Exposure → SSH Access → LLMNR Poisoning →
 Credential Harvesting → Kerberoasting → ACL Abuse →
 Domain Admin → DCSync → Complete Control
-text
 
 
 ### 📊 Business Impact
