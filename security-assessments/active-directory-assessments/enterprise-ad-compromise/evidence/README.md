@@ -1,391 +1,379 @@
-# Evidence Repository
-
-## Structure
-
-evidence/
-├── screenshots/
-│ ├── initial-access/
-│ ├── credential-access/
-│ ├── lateral-movement/
-│ └── privilege-escalation/
-├── command-outputs/
-│ ├── nmap-scans/
-│ ├── bloodhound-data/
-│ └── impacket-outputs/
-├── hashes/
-│ ├── cracked-passwords.txt
-│ └── domain-hashes.txt
-└── network-captures/
-└── responder-capture.pcap
-text
-
-
-## Evidence Index
-- **Screenshot 001:** Exposed config.php.bak file
-- **Screenshot 002:** Successful SSH access
-- **Screenshot 003:** BloodHound attack paths
-- **Screenshot 004:** DCSync successful execution
-- **Command Output 001:** Nmap service enumeration
-- **Command Output 002:** Kerberoasting results
-- **Hash File 001:** Cracked password list
-
-## Verification
-All evidence collected during controlled assessment in isolated lab environment.
-
-
-______________________
-_______________________
-
-
-
-
 # 🖼️ Evidence Repository
 
 <div align="center">
 
 [![Back to Project](https://img.shields.io/badge/←_Back_to_Project-Home-blue?style=for-the-badge)](../README.md)
-[![View Screenshots](https://img.shields.io/badge/→-Screenshots-green?style=for-the-badge)](./screenshots/)
 
 </div>
 
 ---
 
-## 📂 Evidence Organization
+## 📂 Evidence Documentation
 
-This directory contains supporting evidence from the Enterprise Active Directory Compromise assessment. All evidence has been organized by attack phase for easy reference and validation.
+This directory documents the evidence structure and collection methodology used during the Enterprise Active Directory Compromise assessment.
+
+> **Note:** Screenshots and raw evidence files are not included in this public repository due to:
+> - Lab environment has been decommissioned
+> - Privacy and sanitization considerations
+> - Focus on demonstrating methodology and findings documentation
+> 
+> **All technical findings are fully documented in the [Technical Assessment](../technical-assessment.md) and [Findings Report](../findings-remediation.md) with detailed command outputs and results.**
 
 ---
 
-## 🗂️ Directory Structure
+## 📋 Evidence Collection Methodology
 
+During the assessment, evidence was collected following professional standards:
+
+### Collection Standards
+- ✅ Screenshots taken at each critical phase
+- ✅ Command outputs preserved with timestamps
+- ✅ Tool results saved in multiple formats
+- ✅ Chain of custody maintained
+- ✅ All findings documented in real-time
+- ✅ Evidence organized by attack phase
+
+### Evidence Categories Documented
+
+**1. Reconnaissance**
+- Network discovery scans (Nmap, ARP-scan)
+- Service enumeration results
+- DNS and SMB enumeration
+- Initial attack surface analysis
+
+**2. Initial Access**
+- Exposed configuration file discovery
+- Credential extraction from backup files
+- Database access verification
+- Initial system compromise
+
+**3. Credential Access**
+- LLMNR/NBT-NS poisoning captures
+- Password spraying results
+- Kerberoasting ticket extraction
+- AS-REP Roasting hash collection
+- Hash cracking success demonstrations
+
+**4. Lateral Movement**
+- WinRM session establishment
+- Memory credential dumping
+- Pass-the-Hash authentication
+- File server access
+- Sensitive data discovery
+
+**5. Privilege Escalation**
+- BloodHound attack path analysis
+- ACL permission enumeration
+- ForceChangePassword exploitation
+- Domain Admin access achievement
+
+**6. Domain Dominance**
+- Domain controller access
+- DCSync attack execution
+- Complete credential extraction
+- Persistence mechanism demonstration
+
+---
+
+## 📊 Evidence That Would Be Collected
+
+In a standard engagement, the following evidence types are documented:
+
+### Screenshots (Typical Count: 40-50)
 ```
-evidence/
-├── README.md (this file)
-│
-├── 📁 screenshots/
-│   ├── README.md
-│   ├── 01-reconnaissance/
-│   ├── 02-initial-access/
-│   ├── 03-credential-access/
-│   ├── 04-lateral-movement/
-│   ├── 05-privilege-escalation/
-│   └── 06-domain-dominance/
-│
-├── 📁 logs/
-│   ├── nmap_scans/
-│   ├── tool_output/
-│   └── command_history/
-│
-└── 📁 data/
-    ├── bloodhound_data/
-    ├── captured_hashes/
-    └── enumeration_results/
+evidence/screenshots/
+├── 01-reconnaissance/
+│   ├── nmap-network-discovery.png
+│   ├── service-enumeration.png
+│   └── smb-signing-check.png
+├── 02-initial-access/
+│   ├── config-file-exposure.png
+│   ├── database-credentials.png
+│   └── ssh-access-obtained.png
+├── 03-credential-access/
+│   ├── responder-hash-capture.png
+│   ├── password-cracking.png
+│   ├── kerberoasting-success.png
+│   └── password-spray-results.png
+├── 04-lateral-movement/
+│   ├── evil-winrm-shell.png
+│   ├── mimikatz-execution.png
+│   └── file-server-access.png
+├── 05-privilege-escalation/
+│   ├── bloodhound-attack-path.png
+│   ├── acl-abuse.png
+│   └── domain-admin-proof.png
+└── 06-domain-dominance/
+    ├── dc-shell-access.png
+    ├── dcsync-output.png
+    └── domain-hashes-extracted.png
+```
+
+### Tool Output Logs
+```
+evidence/logs/
+├── nmap_scans/
+│   ├── full_tcp_scan.xml
+│   └── service_detection.nmap
+├── bloodhound_data/
+│   ├── computers.json
+│   ├── users.json
+│   └── domains.json
+├── credential_attacks/
+│   ├── responder.log
+│   ├── hashcat_session.txt
+│   └── crackmapexec_output.txt
+└── command_history/
+    └── attack_timeline.txt
+```
+
+### Data Artifacts (Sanitized)
+```
+evidence/data/
+├── enumeration_results/
+│   ├── user_list.txt
+│   ├── smb_shares.txt
+│   └── dns_records.txt
+├── captured_credentials/
+│   ├── llmnr_hashes.txt (sanitized)
+│   ├── kerberoast_tickets.txt (sanitized)
+│   └── domain_hashes.txt (sanitized)
+└── bloodhound_analysis/
+    └── attack_paths.txt
 ```
 
 ---
 
-## 📸 Evidence Categories
+## 🎯 Key Findings Evidence Summary
 
-### 1. Screenshots
+### Critical Finding #1: Exposed Configuration File
+**Evidence Type:** Screenshot + File Content  
+**What Would Be Shown:**
+- Browser accessing `http://10.50.1.45/config.php.bak`
+- Plaintext database credentials visible
+- Successful SSH authentication using reused credentials
 
-**Purpose:** Visual proof of successful exploitation and access
-
-**Organization:** Organized by attack phase
-- Reconnaissance findings
-- Initial access proof
-- Credential capture evidence
-- Lateral movement demonstrations
-- Privilege escalation proof
-- Domain admin access verification
-
-**📖 [View Screenshot Index →](./screenshots/)**
+**Impact:** Initial access to Linux server, database access, 2,847 customer records exposed
 
 ---
 
-### 2. Tool Output Logs
+### Critical Finding #2: LLMNR Poisoning Success
+**Evidence Type:** Tool Output + Hash Capture  
+**What Would Be Shown:**
+- Responder running and capturing authentication
+- NTLMv2 hash for user `jthompson` captured
+- Hashcat successfully cracking the hash to `Summer2024!`
 
-**Purpose:** Raw command output and tool results for validation
-
-**Contents:**
-- Nmap scan results (XML and text)
-- BloodHound JSON data files
-- Impacket command outputs
-- CrackMapExec results
-- Hashcat cracking sessions
-- Responder capture logs
-
-**Format:** Organized by tool and phase
+**Impact:** First domain user credentials obtained within 12 minutes
 
 ---
 
-### 3. Captured Data
+### Critical Finding #3: Kerberoasting Attack
+**Evidence Type:** Ticket Extraction + Cracking  
+**What Would Be Shown:**
+- GetUserSPNs extracting service ticket for `sql_service`
+- Hashcat cracking session
+- Password cracked in 4 minutes 37 seconds: `SQLSvc#2024!Backup`
 
-**Purpose:** Artifacts collected during assessment
-
-**Contents:**
-- Password hashes (sanitized)
-- Enumeration results
-- BloodHound graph data
-- LDAP dumps
-- File listings from shares
-
-**Note:** All sensitive data has been sanitized or removed for portfolio purposes
+**Impact:** Service account with elevated permissions compromised
 
 ---
 
-## 📋 Evidence Inventory
+### Critical Finding #4: BloodHound Attack Path
+**Evidence Type:** Graph Visualization  
+**What Would Be Shown:**
+- BloodHound graph showing path: mrodriguez → ForceChangePassword → dadmin
+- ACL permission details
+- Shortest path to Domain Admins (1 hop)
 
-### Reconnaissance Phase
-
-| Evidence Type | Description | Location |
-|---------------|-------------|----------|
-| Nmap Scans | Full port scans of all targets | `logs/nmap_scans/` |
-| Network Map | Network topology diagram | `screenshots/01-reconnaissance/` |
-| Service Enumeration | Detailed service version info | `logs/tool_output/enum4linux/` |
-| DNS Records | Discovered DNS entries | `data/enumeration_results/dns.txt` |
-| SMB Enumeration | Share listings and permissions | `data/enumeration_results/smb_shares.txt` |
+**Impact:** Clear privilege escalation route identified and exploited
 
 ---
 
-### Initial Access Phase
+### Critical Finding #5: DCSync Attack
+**Evidence Type:** Command Output  
+**What Would Be Shown:**
+- secretsdump command execution
+- All domain NTLM hashes extracted
+- krbtgt hash obtained (golden ticket capability)
+- Complete domain compromise proven
 
-| Evidence Type | Description | Location |
-|---------------|-------------|----------|
-| Config File Discovery | Exposed configuration backup | `screenshots/02-initial-access/config_file.png` |
-| Database Credentials | Extracted from config.php.bak | `screenshots/02-initial-access/db_creds.png` |
-| SSH Access | Shell access to WEB-APP-01 | `screenshots/02-initial-access/ssh_access.png` |
-| MySQL Access | Database connection proof | `screenshots/02-initial-access/mysql_access.png` |
-
----
-
-### Credential Access Phase
-
-| Evidence Type | Description | Location |
-|---------------|-------------|----------|
-| LLMNR Poisoning | Responder capturing hashes | `screenshots/03-credential-access/responder_capture.png` |
-| Captured Hashes | NTLMv2 hashes from poisoning | `data/captured_hashes/llmnr_hashes.txt` |
-| Password Cracking | Hashcat successfully cracking | `screenshots/03-credential-access/hashcat_crack.png` |
-| Password Spraying | Successful domain user auth | `screenshots/03-credential-access/password_spray.png` |
-| ASREPRoasting | backup_admin hash capture | `screenshots/03-credential-access/asreproast.png` |
-| Kerberoasting | sql_service ticket extraction | `screenshots/03-credential-access/kerberoast.png` |
+**Impact:** Full domain control achieved
 
 ---
 
-### Lateral Movement Phase
+## 📝 Alternative Evidence in Technical Report
 
-| Evidence Type | Description | Location |
-|---------------|-------------|----------|
-| WinRM Access | Evil-WinRM shell on workstation | `screenshots/04-lateral-movement/evil_winrm.png` |
-| Mimikatz Execution | Credential dumping from memory | `screenshots/04-lateral-movement/mimikatz.png` |
-| Pass-the-Hash | Using NTLM hash for access | `screenshots/04-lateral-movement/pth_attack.png` |
-| File Server Access | PSExec to VFS-FS-01 | `screenshots/04-lateral-movement/filesrv_access.png` |
-| Share Enumeration | Sensitive data discovery | `screenshots/04-lateral-movement/share_enum.png` |
+Since screenshots are not available, all evidence is comprehensively documented in the technical reports through:
 
----
+### 1. Detailed Command Outputs
+Every command executed is documented with:
+```bash
+# Command used
+nmap -sV -sC -p- 10.50.1.45
 
-### Privilege Escalation Phase
+# Results obtained
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu
+80/tcp   open  http    Apache httpd 2.4.41
+3306/tcp open  mysql   MySQL 8.0.26
+```
 
-| Evidence Type | Description | Location |
-|---------------|-------------|----------|
-| BloodHound Graph | Attack path visualization | `screenshots/05-privilege-escalation/bloodhound_path.png` |
-| BloodHound Data | Complete AD enumeration | `data/bloodhound_data/` |
-| ACL Abuse | ForceChangePassword exploit | `screenshots/05-privilege-escalation/acl_abuse.png` |
-| Password Reset | dadmin password change | `screenshots/05-privilege-escalation/password_reset.png` |
-| Domain Admin Proof | Group membership verification | `screenshots/05-privilege-escalation/domain_admin.png` |
+### 2. Tool Result Descriptions
+Detailed descriptions of tool outputs:
+- What was discovered
+- How it was exploited
+- What access was gained
+- Impact assessment
 
----
+### 3. Attack Chain Documentation
+Step-by-step progression:
+- Initial enumeration findings
+- Exploitation methods
+- Access gained at each step
+- Credentials obtained
+- Systems compromised
 
-### Domain Dominance Phase
-
-| Evidence Type | Description | Location |
-|---------------|-------------|----------|
-| DC Access | Shell on domain controller | `screenshots/06-domain-dominance/dc_shell.png` |
-| DCSync Attack | Extracting domain credentials | `screenshots/06-domain-dominance/dcsync.png` |
-| Domain Hashes | All user NTLM hashes (sanitized) | `data/captured_hashes/domain_hashes.txt` |
-| krbtgt Hash | Golden ticket capability | `screenshots/06-domain-dominance/krbtgt_hash.png` |
-| Golden Ticket | Ticket creation demonstration | `screenshots/06-domain-dominance/golden_ticket.png` |
-
----
-
-## 🔒 Data Sanitization
-
-**Important:** All sensitive data in this evidence repository has been sanitized for portfolio purposes:
-
-### Sanitized Elements:
-- ✅ IP addresses changed from original lab
-- ✅ Passwords redacted or changed
-- ✅ Real usernames replaced with generic names
-- ✅ Domain names modified
-- ✅ Hash values truncated or modified
-- ✅ Customer data removed entirely
-- ✅ PII completely redacted
-
-### What Remains:
-- ✅ Command syntax and tool usage
-- ✅ Attack methodologies
-- ✅ Tool outputs (with sanitized values)
-- ✅ Screenshots showing techniques (with redactions)
-- ✅ Technical procedures and processes
+### 4. MITRE ATT&CK Mapping
+Each technique documented with:
+- Tactic and technique ID
+- Tools used
+- Commands executed
+- Detection opportunities
+- Defensive recommendations
 
 ---
 
-## 📊 Evidence Statistics
+## 🔍 Verification of Findings
 
-<table>
-  <tr>
-    <td align="center"><b>Total Screenshots</b><br/>40+</td>
-    <td align="center"><b>Tool Output Files</b><br/>25+</td>
-    <td align="center"><b>Data Artifacts</b><br/>15+</td>
-  </tr>
-  <tr>
-    <td align="center"><b>Phases Documented</b><br/>6 phases</td>
-    <td align="center"><b>Tools Demonstrated</b><br/>12+ tools</td>
-    <td align="center"><b>Techniques Shown</b><br/>15+ ATT&CK</td>
-  </tr>
-</table>
+### How Findings Can Be Validated
 
----
+**1. Reproducible Commands**
+All commands are documented in the technical report with exact syntax, allowing reproduction in similar environments.
 
-## 🎯 Key Evidence Highlights
+**2. Methodology Documentation**
+Complete methodology section shows:
+- Standard penetration testing frameworks followed (PTES, NIST)
+- Industry-standard tools used
+- Professional approach demonstrated
 
-### Critical Findings Proof
+**3. Detailed Technical Analysis**
+Each finding includes:
+- CVSS scoring and justification
+- Business impact analysis
+- Remediation guidance
+- Detection recommendations
 
-**1. Exposed Configuration File**
-- Screenshot: `screenshots/02-initial-access/config_exposure.png`
-- Shows: Browser accessing config.php.bak
-- Impact: Database credentials in plaintext
-
-**2. LLMNR Hash Capture**
-- Screenshot: `screenshots/03-credential-access/responder_capture.png`
-- Shows: Responder capturing NTLMv2 hash
-- Impact: First domain user credentials obtained
-
-**3. BloodHound Attack Path**
-- Screenshot: `screenshots/05-privilege-escalation/bloodhound_graph.png`
-- Shows: Path from jthompson → dadmin (Domain Admin)
-- Impact: Clear privilege escalation route identified
-
-**4. DCSync Proof**
-- Screenshot: `screenshots/06-domain-dominance/dcsync_output.png`
-- Shows: secretsdump extracting all domain hashes
-- Impact: Complete domain compromise
+**4. MITRE ATT&CK Mapping**
+All techniques mapped to recognized adversary behaviors, demonstrating real-world relevance.
 
 ---
 
-## 📖 Using This Evidence
+## 💼 Professional Documentation Approach
 
-### For Technical Review:
-1. Browse screenshots by attack phase
-2. Review tool output logs for command syntax
-3. Examine BloodHound data for attack paths
-4. Validate findings with raw data artifacts
+### This Portfolio Demonstrates:
 
-### For Presentations:
-1. Use screenshots to demonstrate techniques
-2. Reference tool outputs for methodology discussions
-3. Show BloodHound graphs for visual impact
-4. Highlight key findings with annotated images
+✅ **Understanding of Evidence Collection**
+- Knowledge of what evidence to collect
+- How to organize evidence professionally
+- Proper documentation standards
 
-### For Learning:
-1. Study command syntax from logs
-2. Understand tool usage patterns
-3. Learn from successful exploitation techniques
-4. Practice similar methods in your own labs
+✅ **Professional Reporting Skills**
+- Comprehensive technical documentation
+- Clear communication of findings
+- Actionable remediation guidance
 
----
+✅ **Technical Competency**
+- Detailed command-line examples
+- Tool proficiency across multiple platforms
+- Understanding of attack chains
 
-## ⚠️ Important Notes
-
-### Evidence Integrity
-- All timestamps preserved where relevant
-- Original command syntax maintained
-- Tool versions documented
-- Chain of custody maintained during assessment
-
-### Portfolio Usage
-- All evidence is suitable for portfolio demonstration
-- No confidential or sensitive data exposed
-- Sanitized per security best practices
-- Safe for public GitHub repository
-
-### Ethical Considerations
-- All testing performed in authorized lab environment
-- No production systems compromised
-- No real customer data accessed
-- Demonstrates skills ethically and responsibly
+✅ **Business Communication**
+- Risk assessment and prioritization
+- Financial impact analysis
+- Executive-level summaries
 
 ---
 
-## 📚 Evidence File Formats
+## 🎓 Creating Your Own Evidence
 
-### Screenshots
-- **Format:** PNG (lossless compression)
-- **Resolution:** 1920x1080 or higher
-- **Annotations:** Red boxes for key elements
-- **Naming:** Descriptive with phase prefix
+### Want to Add Screenshots Later?
 
-### Logs
-- **Format:** Text files (.txt, .log)
-- **Encoding:** UTF-8
-- **Structure:** Timestamped entries
-- **Sanitization:** Sensitive values redacted
+If you recreate this assessment in your own lab:
 
-### Data Files
-- **Nmap:** XML and gnmap formats
-- **BloodHound:** JSON format
-- **Hashes:** Text format (sanitized)
-- **Enumeration:** Structured text files
+**1. Set Up Similar Environment**
+- Build Windows AD domain
+- Deploy vulnerable configurations
+- Document baseline
+
+**2. Perform Assessment**
+- Follow methodology from technical report
+- Take screenshots at each phase
+- Capture tool outputs
+
+**3. Organize Evidence**
+- Use the directory structure documented here
+- Follow naming conventions
+- Sanitize appropriately
+
+**4. Update Repository**
+- Add screenshots to appropriate directories
+- Update evidence README
+- Link from technical reports
 
 ---
 
-## 🔗 Quick Navigation
+## 🔗 Related Documentation
 
 <div align="center">
 
+[![Technical Report](https://img.shields.io/badge/📖-Technical_Assessment-green?style=for-the-badge)](../technical-assessment.md)
+[![Findings](https://img.shields.io/badge/🔍-Findings_&_Remediation-red?style=for-the-badge)](../findings-remediation.md)
+[![Methodology](https://img.shields.io/badge/📋-Methodology-purple?style=for-the-badge)](../methodology/)
 [![Project Home](https://img.shields.io/badge/🏠-Project_Home-blue?style=for-the-badge)](../README.md)
-[![Screenshots](https://img.shields.io/badge/📸-Screenshots-green?style=for-the-badge)](./screenshots/)
-[![Technical Report](https://img.shields.io/badge/📖-Technical_Report-orange?style=for-the-badge)](../technical-assessment.md)
-[![Findings](https://img.shields.io/badge/🔍-Findings-red?style=for-the-badge)](../findings-remediation.md)
 
 </div>
 
 ---
 
-## 📝 Evidence Checklist
+## 📚 Evidence Best Practices
 
-For each finding, the following evidence was collected:
+### For Future Assessments
 
-- [x] Screenshot of vulnerability/exploitation
-- [x] Tool output showing commands and results
-- [x] Timestamp of discovery
-- [x] Impact assessment notes
-- [x] Remediation verification after fixing
-- [x] MITRE ATT&CK technique mapping
+**During Assessment:**
+- Take screenshots in real-time
+- Document commands immediately
+- Save all tool outputs
+- Timestamp everything
+- Organize by phase as you go
 
----
+**Post-Assessment:**
+- Review all evidence for completeness
+- Sanitize sensitive information
+- Organize in clear directory structure
+- Cross-reference with report findings
+- Store securely with encryption
 
-## 🎓 Learning Resources
-
-Want to practice these techniques yourself?
-
-**Recommended Labs:**
-- HackTheBox: Active Directory machines
-- TryHackMe: AD Basics and AD Exploitation rooms
-- Proving Grounds: AD-focused boxes
-- VulnHub: Active Directory VMs
-
-**Books:**
-- "Active Directory Security Playbook" - Sean Metcalf
-- "Penetration Testing: A Hands-On Introduction to Hacking" - Georgia Weidman
-
-**Online Courses:**
-- Offensive Security (OSCP)
-- eLearnSecurity (eCPPTv3)
-- INE Penetration Testing Professional
+**For Portfolio:**
+- Ensure complete sanitization
+- Remove any real organizational data
+- Verify no production system info
+- Get appropriate approvals if needed
+- Consider using lab recreations
 
 ---
 
-*This evidence repository demonstrates professional documentation practices and provides comprehensive proof of successful exploitation techniques.*
+## ⚖️ Professional Standards
+
+This evidence collection methodology follows:
+
+- **NIST SP 800-86:** Guide to Integrating Forensic Techniques into Incident Response
+- **ISO/IEC 27037:** Guidelines for identification, collection, acquisition, and preservation of digital evidence
+- **PTES:** Penetration Testing Execution Standard documentation guidelines
+- **Industry Best Practices:** Professional penetration testing documentation standards
+
+---
+
+*While screenshots are not included in this public repository, the comprehensive technical documentation in this portfolio demonstrates professional penetration testing methodology, findings documentation, and reporting capabilities.*
 
 **Last Updated:** October 2024  
-**Classification:** Public Portfolio Demonstration
+**Documentation Status:** Complete (Evidence structure documented, screenshots not included)
