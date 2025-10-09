@@ -1,3 +1,6 @@
+```bash
+#!/bin/bash
+
 # Network Enumeration Script
 # Lateral Movement Assessment - Internal Penetration Test
 # Author: Penetration Testing Team
