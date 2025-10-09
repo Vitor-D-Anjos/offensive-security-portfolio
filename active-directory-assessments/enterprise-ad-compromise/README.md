@@ -24,11 +24,14 @@ Domain Admin → DCSync → Complete Control
 ### 📊 Business Impact
 **Estimated Breach Cost:** $3.5M - $10M
 
-### 📁 Report Sections
-1. [Technical Assessment](technical-assessment.md) - Full exploitation details
-2. [Findings & Remediation](findings-remediation.md) - Vulnerabilities & fixes
-3. [Evidence](evidence/) - Screenshots and proof
-4. [Methodology](methodology/) - Testing approach
+## 📁 Report Sections
+
+### 📄 Documentation
+- **[Cover Sheet](cover-sheet.md)** - Executive summary and project overview
+- **[Technical Assessment](technical-assessment.md)** - Detailed exploitation steps
+- **[Findings & Remediation](findings-remediation.md)** - Vulnerabilities and fixes
+- **[Methodology](methodology/)** - Testing approach and frameworks
+- **[Evidence](evidence/)** - Proof and supporting materials
 
 ### 🛠️ Tools Used
 BloodHound, Impacket, CrackMapExec, Responder, Mimikatz, PowerShell
