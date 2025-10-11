@@ -9,6 +9,17 @@ Penetration tester specializing in Active Directory security assessments, with a
 - **INE** - Penetration Testing Professional (100%)
 - **HyperionDev** - Data Science Certificate (98%)
 
+- ## 🎓 Professional Development
+
+### Specialized Penetration Testing Training
+- INE Advanced Penetration Testing Program
+- INE eJPT certification paths and challenge labs
+
+### Cybersecurity Foundations
+- CompTIA Security+, CySA+, and Network+ preparation certifications 
+- Netcom Training (Cybersecurity Practices)
+- ISC2 (CC - Certified in Cybersecurity)
+
 ## Technical Specializations
 - **Active Directory Exploitation**
 - **Network Penetration Testing** 
