@@ -318,7 +318,6 @@ Domain Admin → DCSync → Complete Domain Control
 
 This project demonstrates expertise gained through:
 - **eCPPTv3** - Certified Professional Penetration Tester
-- **ISC2 CC** - Certified in Cybersecurity
 - **INE PTP** - Penetration Testing Professional (100%)
 - Hands-on Active Directory security training
 - Red team/blue team exercise experience
