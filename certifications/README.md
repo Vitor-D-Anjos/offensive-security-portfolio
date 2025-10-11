@@ -1,3 +1,4 @@
+
 # Certifications & Professional Development
 
 ## 🎓 Credentials Overview
@@ -773,3 +774,23 @@ Have questions about my certifications or want to discuss professional developme
 [![Back to Main Portfolio](https://img.shields.io/badge/🏠-Return_to_Portfolio-blue?style=for-the-badge)](../README.md)
 
 </div>
+
+---
+---
+
+# Certifications & Professional Development
+
+## 🎯 Penetration Testing Certifications
+- [eJPT] - eLearnSecurity Junior Penetration Tester
+- [eCPPT] - eLearnSecurity Certified Professional Penetration Tester
+- INE Advanced Penetration Testing Program
+
+## 🔒 Cybersecurity Foundations
+- **CompTIA Security+** - Network security, cryptography, risk management
+- **CompTIA CySA+** - Security analytics, threat detection, monitoring
+- **CompTIA Network+** - Network infrastructure, protocols, operations
+- **Netcom Training** - Cybersecurity practices, secure protocols, risk management
+
+## 📚 Continuous Learning
+- Ongoing preparation for industry-recognized certifications
+- Regular participation in security training and skill development
