@@ -6,7 +6,7 @@
 |-----------|---------|
 | **Provider** | INE (eLearnSecurity) |
 | **Program** | Penetration Testing Professional |
-| **Completion** | 2024 |
+| **Completion** | 2025 |
 | **Skill Check** | 100% Achieved |
 | **Level** | Professional |
 
