@@ -1,6 +1,6 @@
 # Certifications & Credentials
 
-## 🏆 INE Security Certifications
+## INE Security Certifications
 
 ### Professional Penetration Testing
 - **eCPPTv3 Certification** - Penetration Testing Professional
