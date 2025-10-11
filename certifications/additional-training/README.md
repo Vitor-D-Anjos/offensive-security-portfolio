@@ -2,20 +2,25 @@
 
 ## 🔧 Skills Development
 
-### Cisco Python Essentials
-- **Python Programming:** Fundamentals and advanced concepts
-- **Script Development:** Automation and tool creation
-- **Network Programming:** Socket programming and protocol implementation
-
 ### CompTIA Certification Preparation
 - **Security+:** Network security and cryptography
 - **CySA+:** Security analytics and monitoring
 - **Network+:** Network infrastructure and protocols
 
+### ISC2
+- **Certified in Cybersecurity:** cybersecurity knowledge across network security, risk management, and incident response
+
+### Netcom training
+- **Cybersecurity Practices:** Protecting digital systems and data through secure protocols, threat mitigation, and risk management strategies.
+
+### Cisco Python Essentials
+- **Python Programming:** Fundamentals and advanced concepts
+- **Script Development:** Automation and tool creation
+- **Network Programming:** Socket programming and protocol implementation
+
 ### Practical Training Platforms
 - **TryHackMe:** Hands-on penetration testing exercises
 - **HackTheBox:** Real-world vulnerability exploitation
-- **Cybrary:** Professional security training
 
 ## 📚 Self-Directed Learning
 
@@ -40,18 +45,11 @@
 - **Threat Intelligence:** Advanced threat analysis and hunting
 
 ### Certification Goals
-- **OSCP** (Offensive Security Certified Professional)
 - **CISSP** (Certified Information Systems Security Professional)
-- **AWS Security Specialty**
-- **Azure Security Engineer**
+- **eMAPT** (Mobile Application Penetration Testing Professional)
+- **eWPTX** (Advanced Web Application Penetration Testing)
 
 ## 🔄 Continuous Improvement
-
-### Professional Development Activities
-- **Security Conferences:** Black Hat, DEF CON attendance
-- **Research Papers:** Academic and industry research review
-- **Community Engagement:** Open source tool contributions
-- **Mentorship:** Knowledge sharing and skill development
 
 ### Skill Maintenance
 - **Regular Practice:** Lab environment maintenance and testing
