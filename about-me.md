@@ -16,7 +16,7 @@ Penetration tester specializing in Active Directory security assessments, with a
 - INE eJPT certification path and challenge labs
 
 ### Cybersecurity Foundations
-- CompTIA Security+, CySA+, and Network+ preparation certifications
+- CompTIA Network+, Security+, and CySA+ preparation certifications
 
 ## Technical Specializations
 - **Active Directory Exploitation**
