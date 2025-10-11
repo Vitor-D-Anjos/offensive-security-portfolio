@@ -117,17 +117,16 @@ Domain Admin → DCSync → Complete Domain Control
 
 🎓 **CERTIFICATIONS & TRAINING**  
 This project demonstrates expertise gained through:  
-- [Your Certifications] - e.g., OSCP, CEH, GPEN  
+- [Penetration Testing Professional (eCPPTv3)]
 - Hands-on Active Directory security training  
 - Red team/blue team exercise experience  
 - Professional penetration testing methodology  
 
 📧 **CONTACT INFORMATION**  
-Penetration Tester: [Your Name]  
-Email: [your.email@example.com]  
-LinkedIn: [linkedin.com/in/yourprofile]  
-GitHub: [github.com/yourprofile]  
-Portfolio: [yourportfolio.com]  
+Penetration Tester: [Vitor Anjos]   
+LinkedIn: [[linkedin.com/in/yourprofile](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)]  
+GitHub: [[github.com/yourprofile](https://github.com/Vitor-D-Anjos)]  
+Portfolio: [[yourportfolio.com](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]  
 
 ⚖️ **LEGAL DISCLAIMER**  
 Important: This penetration test was conducted in a controlled, isolated laboratory environment specifically created for security training and professional development. All systems, networks, and data were owned/controlled by the tester. No unauthorized access to production systems or third-party infrastructure occurred. This assessment demonstrates professional penetration testing capabilities for portfolio and career development purposes only.  
@@ -148,8 +147,8 @@ For detailed technical findings, remediation guidance, and detection strategies,
 This cover sheet provides a high-level overview of the penetration testing engagement. All information has been sanitized and modified from the original lab environment to protect infrastructure details while demonstrating professional security assessment capabilities.  
 
 **Document Version:** 1.0  
-**Last Updated:** October 2024  
-**Report ID:** VFS-PENTEST-2024-10  
+**Last Updated:** October 2025  
+**Report ID:** VFS-PENTEST-2025-10  
 
 
 
