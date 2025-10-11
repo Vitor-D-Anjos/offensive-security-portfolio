@@ -2,10 +2,7 @@
 
 ## 🔧 Skills Development
 
-### ISC2
-- **Certified in Cybersecurity:** cybersecurity knowledge across network security, risk management, and incident response
-
-### Netcom training
+### Netcom Training
 - **Cybersecurity Practices:** Protecting digital systems and data through secure protocols, threat mitigation, and risk management strategies.
 
 ### CompTIA Certification Preparation
