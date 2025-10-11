@@ -2,16 +2,16 @@
 
 ## 🔧 Skills Development
 
-### CompTIA Certification Preparation
-- **Security+:** Network security and cryptography
-- **CySA+:** Security analytics and monitoring
-- **Network+:** Network infrastructure and protocols
-
 ### ISC2
 - **Certified in Cybersecurity:** cybersecurity knowledge across network security, risk management, and incident response
 
 ### Netcom training
 - **Cybersecurity Practices:** Protecting digital systems and data through secure protocols, threat mitigation, and risk management strategies.
+
+### CompTIA Certification Preparation
+- **Security+:** Network security and cryptography
+- **CySA+:** Security analytics and monitoring
+- **Network+:** Network infrastructure and protocols
 
 ### Cisco Python Essentials
 - **Python Programming:** Fundamentals and advanced concepts
