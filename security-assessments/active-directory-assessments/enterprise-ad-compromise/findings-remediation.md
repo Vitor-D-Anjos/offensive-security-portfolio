@@ -1315,11 +1315,11 @@ sha256sum Vanguard_Pentest_Report_Part2.pdf
 ### Contact Information
 
 **Lead Penetration Tester:**  
-**Name:** [Vitor Anjos]  
-**Certifications:** [eCPPTv3]   
-**LinkedIn:** [[linkedin.com/in/yourprofile](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)]  
-**GitHub:** [[github.com/yourprofile](https://github.com/Vitor-D-Anjos)]  
-**Portfolio:** [[yourportfolio.com](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]
+**Name:** Vitor Anjos  
+**Certifications:** eCPPTv3  
+**LinkedIn:** [my_linkedin.com](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)  
+**GitHub:** [[my_github.com](https://github.com/Vitor-D-Anjos)]  
+**Portfolio:** [[my_portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]
 
 ---
 
