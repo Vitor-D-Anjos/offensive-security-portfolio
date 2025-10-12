@@ -655,8 +655,8 @@ This project demonstrates expertise gained through:
 
 **Penetration Tester:** Vitor Anjos   
 **LinkedIn:** [linkedin.com](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)    
-**GitHub:** [github.com](https://github.com/Vitor-D-Anjos))   
-**Portfolio:** [[portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]
+**GitHub:** [github.com](https://github.com/Vitor-D-Anjos)   
+**Portfolio:** [portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 ---
 
