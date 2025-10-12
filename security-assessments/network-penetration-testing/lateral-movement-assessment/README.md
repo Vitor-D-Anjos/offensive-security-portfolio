@@ -43,7 +43,6 @@ text
 - [Technical Report](technical-report.md) - Detailed exploitation chain
 - [Findings & Remediation](findings-remediation.md) - Vulnerabilities & fixes
 - [Methodology](methodology/README.md) - Testing frameworks
-- [Evidence](evidence/command-log.md) - Command execution logs
 
 ---
 
