@@ -60,7 +60,7 @@ text
 
 **Impact**:  
 - Unauthorized database access  
-- Exposure of customer data (15,000 records)  
+- Exposure of customer data (11,717 records)  
 - Credential harvesting for lateral movement  
 
 **Remediation**:  
