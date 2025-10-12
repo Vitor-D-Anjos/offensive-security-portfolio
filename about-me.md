@@ -149,6 +149,7 @@ I'm always interested in connecting with fellow security professionals, discussi
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](YOUR_PORTFOLIO_URL)
 
+
 </div>
 
 ---
