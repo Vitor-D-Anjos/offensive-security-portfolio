@@ -95,10 +95,10 @@ SELECT * FROM system_credentials;
 
 # Discover sensitive business data
 SELECT COUNT(*) FROM customer_data;
-# 15,000 customer records accessible
+# 11,717 customer records accessible
 
 SELECT COUNT(*) FROM financial_records;  
-# 2,400 financial records accessible
+# 4,137 financial records accessible
 
 Evidence Collected: Accessed customer database containing 15,000 records and extracted domain user credentials.
 
