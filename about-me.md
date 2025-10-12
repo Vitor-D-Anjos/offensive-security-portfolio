@@ -139,9 +139,7 @@ I'm always interested in connecting with fellow security professionals, discussi
 
 </div>
 
-**🔗 LinkedIn:** [https://www.linkedin.com/in/vitor-david-anjos-33242a107/](YOUR_LINKEDIN_URL)  
-**🌐 Portfolio Website:** [yourportfolio.com](YOUR_PORTFOLIO_URL)  
-**📍 Location:** [Your City, State/Country]  
+**📍 Location:** [London, UK]  
 **🗣️ Languages:** [Portuguese, English, Spanish]
 
 ## ⚖️ Professional Ethics
