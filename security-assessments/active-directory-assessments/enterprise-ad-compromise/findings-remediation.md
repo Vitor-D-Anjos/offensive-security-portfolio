@@ -1373,7 +1373,7 @@ DCSync → Full compromise
 
 ---
 
-**Report Prepared By:** [Your Name], [Your Credentials]  
+**Report Prepared By:** Vitor Anjos, eCCPT 
 **Date:** October 20, 2025  
 **Document ID:** VFS-PENTEST-2024-10-PART2  
 **Classification:** CONFIDENTIAL - Portfolio Demonstration
