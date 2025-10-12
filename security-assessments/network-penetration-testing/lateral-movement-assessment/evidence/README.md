@@ -169,7 +169,7 @@ mysql> SELECT COUNT(*) FROM customer_data;
 +----------+
 | COUNT(*) |
 +----------+
-|    15000 |
+|    11717 |
 +----------+
 
 mysql> SELECT username, password FROM users LIMIT 3;
@@ -181,7 +181,7 @@ mysql> SELECT username, password FROM users LIMIT 3;
 | kwang    | Admin@2024    |
 +----------+---------------+
 
-# EVIDENCE: 15,000 customer records + domain credentials accessible
+# EVIDENCE: 11,717 customer records + domain credentials accessible
 ```
 
 ---
