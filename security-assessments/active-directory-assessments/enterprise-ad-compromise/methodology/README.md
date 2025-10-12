@@ -541,4 +541,4 @@ All vulnerabilities were scored using the Common Vulnerability Scoring System:
 
 *This methodology documentation demonstrates adherence to industry-standard frameworks and professional penetration testing practices.*
 
-**Last Updated:** October 2024
+**Last Updated:** October 2025
