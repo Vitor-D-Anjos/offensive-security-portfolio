@@ -1,4 +1,17 @@
-# About Me - Vitor David Anjos
+# About Me
+
+<div align="center">
+
+## [Your Name]
+### Penetration Tester | Active Directory Specialist | Security Researcher
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
+
+</div>
+
+---
 
 ## Professional Summary
 Penetration tester specializing in Active Directory security assessments, with a unique background in data science applied to cybersecurity. Certified eCPPTv3 professional focused on comprehensive network penetration testing and red team exercises.
