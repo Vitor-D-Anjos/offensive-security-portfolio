@@ -34,7 +34,7 @@ Enterprise AD security testing and domain compromise methodologies
 ### 🌐 [Network Penetration Testing](/network-penetration-testing/)
 Internal and external network security assessments
 
-### 📜 [Certifications & Training]([/certifications/](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/certifications))
+### 📜 [Certifications & Training]([/certifications/](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/certifications)
 Professional credentials and continuous development
 
 ---
