@@ -1,4 +1,4 @@
-# Executive Summary - Lateral Movement Assessment
+# Executive Summary
 
 ## 📋 Engagement Overview
 
