@@ -1305,21 +1305,11 @@ sha256sum Vanguard_Pentest_Report_Part2.pdf
 ### Contact Information
 
 **Lead Penetration Tester:**  
-**Name:** [Your Name]  
-**Certifications:** [OSCP, CEH, GPEN, etc.]  
-**Email:** [your.email@example.com]  
-**LinkedIn:** [linkedin.com/in/yourprofile]  
-**GitHub:** [github.com/yourprofile]  
-**Portfolio:** [yourportfolio.com]
-
-### Contact Information
-
-**Lead Penetration Tester:**  
 **Name:** Vitor Anjos  
 **Certifications:** eCPPTv3  
 **LinkedIn:** [my_linkedin.com](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)  
-**GitHub:** [[my_github.com](https://github.com/Vitor-D-Anjos)]  
-**Portfolio:** [[my_portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]
+**GitHub:** [my_github.com](https://github.com/Vitor-D-Anjos)
+**Portfolio:** [my_portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 ---
 
