@@ -198,8 +198,10 @@ This assessment includes:
 | **Part 1: Technical Assessment** | Detailed exploitation walkthrough (Phases 1-5) | [Read Technical Report →](./technical-assessment.md) |
 | **Part 2: Findings & Remediation** | Vulnerabilities, remediation, detection strategies | [Read Findings →](./findings-remediation.md) |
 | **Methodology** | PTES, MITRE ATT&CK mapping, frameworks | [View Methodology →](./methodology/) |
+| **Evidence** | Screenshots and proof of compromise | [View Evidence →](./evidence/) |
 
 **Total Pages:** ~50 pages of comprehensive documentation  
+**Evidence Files:** Screenshots, logs, and command outputs organized by attack phase
 
 ---
 
@@ -325,13 +327,13 @@ This project successfully demonstrates:
 *This cover sheet provides a high-level overview of the penetration testing engagement. All information has been sanitized and modified from the original lab environment to protect infrastructure details while demonstrating professional security assessment capabilities.*
 
 **Document Version:** 1.0  
-**Last Updated:** October 2024  
+**Last Updated:** October 2025  
 **Report ID:** VFS-PENTEST-2024-10  
 **Classification:** Public Portfolio Demonstration
 
 ---
 
-**Built with 🔐 by [Your Name]**
+**Built with 🔐 by Vitor Anjos**
 
 *"The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards." - Gene Spafford*
 
