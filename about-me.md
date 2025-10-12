@@ -132,58 +132,8 @@ I follow the PTES and MITRE ATT&CK frameworks, adapted to each environment.
 
 I'm open to collaborations, engagements, and knowledge sharing.
 
-<div align="center">
 
-
----
-
-## 📫 Let's Connect
-
-I'm always interested in connecting with fellow security professionals, discussing collaboration opportunities, or sharing knowledge with the community.
-
-<div align="center">
-
-### Get In Touch
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](YOUR_PORTFOLIO_URL)
-
-</div> <!-- 👈 This ends the centering -->
-
----
-
-**📧 Email:** [your.email@example.com](mailto:your.email@example.com)  
-**🔗 LinkedIn:** [linkedin.com/in/yourprofile](YOUR_LINKEDIN_URL)  
-**🌐 Portfolio Website:** [yourportfolio.com](YOUR_PORTFOLIO_URL)  
-**📍 Location:** [Your City, State/Country]  
-**🗣️ Languages:** [English, Spanish, etc.]
-
----
-
-⚖️ **Professional Ethics**
-
-- ✅ Only test with written authorization  
-- ✅ Strict confidentiality  
-- ✅ Transparent, accurate reporting  
-- ✅ Responsible disclosure  
-- ✅ Continuous learning and compliance  
-
-> _"Security is not a product, but a process." — Bruce Schneier_
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 ---
 
 ## 📫 Let's Connect
