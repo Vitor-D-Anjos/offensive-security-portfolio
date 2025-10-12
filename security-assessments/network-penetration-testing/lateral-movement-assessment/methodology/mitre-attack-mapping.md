@@ -62,18 +62,86 @@ This engagement demonstrated multiple techniques from the MITRE ATT&CK Enterpris
 | T1071.001 | Application Layer Protocol: Web Protocols | HTTP-based communication for tool transfer |
 | T1571 | Non-Standard Port | SSH connections on standard port 22 |
 
-## 🗺️ Attack Flow Visualization
+🗺️ Attack Flow Summary
+🔍 Phase 1: Reconnaissance & Initial Access
 
-graph TD
-A[T1595.002: Vulnerability Scanning] --> B[T1110.001: Password Guessing]
-B --> C[T1078.003: Valid Accounts Compromise]
-C --> D[T1083: File & Directory Discovery]
-D --> E[T1552.001: Credentials in Files]
-E --> F[T1021.004: SSH Lateral Movement]
-F --> G[T1548.003: Sudo Privilege Escalation]
-G --> H[T1003.008: Credential Dumping]
-H --> I[T1550.002: Pass the Hash]
-I --> J[TA0008: Domain Compromise]
+T1595.002 → T1110.001 → T1078.003
+text
+
+Network Scanning → Password Guessing → Valid Account Compromise
+    ↓
+nmap discovery → Hydra SSH attack → svc_webapp access
+
+📁 Phase 2: Discovery & Credential Harvesting
+
+T1083 → T1552.001
+text
+
+File Discovery → Credentials in Files
+    ↓
+Config file search → Database credentials found
+
+🔄 Phase 3: Lateral Movement
+
+T1021.004 → T1548.003
+text
+
+SSH Lateral Movement → Sudo Privilege Escalation
+    ↓
+jsmith@app-server-01 → Backup script exploitation
+
+🗝️ Phase 4: Privilege Escalation & Credential Access
+
+T1003.008 → T1550.002
+text
+
+Credential Dumping → Pass the Hash
+    ↓
+/etc/shadow extraction → Domain controller access
+
+👑 Phase 5: Domain Compromise
+
+TA0008
+text
+
+Domain Compromise Achieved
+    ↓
+Full enterprise control established
+
+📊 Attack Chain Progression
+Phase	MITRE Technique	Action	Evidence
+1. Recon	T1595.002	Network scanning	nmap -sn 192.168.78.0/24
+1. Initial Access	T1110.001	SSH brute force	hydra against svc_webapp
+1. Access	T1078.003	Valid account use	SSH as svc_webapp
+2. Discovery	T1083	File enumeration	find / -name "*.config"
+2. Credentials	T1552.001	Config file access	Database credentials harvested
+3. Lateral Move	T1021.004	SSH credential reuse	Access as jsmith
+3. Privilege Esc	T1548.003	Sudo abuse	Backup script manipulation
+4. Credential Access	T1003.008	Hash extraction	/etc/shadow dump
+4. Authentication	T1550.002	Pass-the-hash	Domain controller access
+5. Final Objective	TA0008	Domain compromise	Full enterprise control
+🎯 Technique Chain Sequence
+text
+
+1. T1595.002 (Scanning)
+   ↓
+2. T1110.001 (Brute Force)
+   ↓  
+3. T1078.003 (Valid Accounts)
+   ↓
+4. T1083 (File Discovery)
+   ↓
+5. T1552.001 (Credential Harvesting)
+   ↓
+6. T1021.004 (Lateral Movement)
+   ↓
+7. T1548.003 (Privilege Escalation)
+   ↓
+8. T1003.008 (Credential Dumping)
+   ↓
+9. T1550.002 (Pass-the-Hash)
+   ↓
+10. TA0008 (Domain Compromise)
 
 text
 
