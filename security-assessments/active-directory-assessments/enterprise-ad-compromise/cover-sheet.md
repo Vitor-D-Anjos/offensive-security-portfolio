@@ -316,7 +316,7 @@ This project successfully demonstrates:
 
 ### 📚 Additional Resources
 
-[![AD Assessments Overview](https://img.shields.io/badge/📁-All_AD_Assessments-blue?style=for-the-badge)](../../README.md)
+[![AD Assessments Overview](https://img.shields.io/badge/📁-All_AD_Assessments-blue?style=for-the-badge)](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/active-directory-assessments/enterprise-ad-compromise)
 [![Certifications](https://img.shields.io/badge/🎓-Certifications-green?style=for-the-badge)](../../../certifications/)
 [![Back to Main Portfolio](https://img.shields.io/badge/🏠-Main_Portfolio-orange?style=for-the-badge)](../../../README.md)
 
