@@ -5,8 +5,8 @@
 # Vitor Anjos
 ### Penetration Tester | Active Directory Specialist | Security Researcher
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([YOUR_LINKEDIN_URL](https://www.linkedin.com/in/vitor-david-anjos-33242a107/))
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/YOUR_GITHUB](https://github.com/Vitor-D-Anjos))
 
 </div>
 
@@ -133,13 +133,13 @@ I'm always interested in connecting with fellow security professionals, discussi
 
 ### Get In Touch
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](YOUR_PORTFOLIO_URL)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([YOUR_LINKEDIN_URL](https://www.linkedin.com/in/vitor-david-anjos-33242a107/))
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/YOUR_GITHUB](https://github.com/Vitor-D-Anjos))
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)]([YOUR_PORTFOLIO_URL](https://github.com/Vitor-D-Anjos/offensive-security-portfolio))
 
 </div>
 
-**🔗 LinkedIn:** [linkedin.com/in/yourprofile](YOUR_LINKEDIN_URL)  
+**🔗 LinkedIn:** [https://www.linkedin.com/in/vitor-david-anjos-33242a107/](YOUR_LINKEDIN_URL)  
 **🌐 Portfolio Website:** [yourportfolio.com](YOUR_PORTFOLIO_URL)  
 **📍 Location:** [Your City, State/Country]  
 **🗣️ Languages:** [Portuguese, English, Spanish]
