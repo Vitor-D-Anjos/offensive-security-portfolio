@@ -525,11 +525,6 @@ All vulnerabilities were scored using the Common Vulnerability Scoring System:
 - [SpecterOps BloodHound Resources](https://bloodhound.readthedocs.io/)
 - [PayloadsAllTheThings - Active Directory](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md)
 
-### Tool Documentation
-- [Impacket Documentation](https://github.com/SecureAuthCorp/impacket)
-- [CrackMapExec Wiki](https://wiki.porchetta.industries/)
-- [BloodHound Documentation](https://bloodhound.readthedocs.io/)
-
 ---
 
 ## 📖 Navigation
