@@ -653,11 +653,10 @@ This project demonstrates expertise gained through:
 
 ### 📧 CONTACT INFORMATION
 
-**Penetration Tester:** [Your Name]  
-**Email:** [your.email@example.com]  
-**LinkedIn:** [linkedin.com/in/yourprofile]  
-**GitHub:** [github.com/yourprofile]  
-**Portfolio:** [yourportfolio.com]
+**Penetration Tester:** Vitor Anjos 
+**LinkedIn:** [linkedin.com](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)  
+**GitHub:** [github.com]([https://github.com/Vitor-D-Anjos) 
+**Portfolio:** [[portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]
 
 ---
 
