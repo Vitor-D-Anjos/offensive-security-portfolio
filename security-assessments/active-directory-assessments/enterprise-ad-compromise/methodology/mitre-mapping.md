@@ -60,7 +60,7 @@ __________________________
 This document maps all observed techniques from the Enterprise Active Directory Compromise assessment to the **MITRE ATT&CK Framework for Enterprise**. This mapping enables blue teams to understand adversary behavior patterns and improve detection capabilities.
 
 **MITRE ATT&CK Version:** v14  
-**Assessment Date:** October 2024  
+**Assessment Date:** October 2025  
 **Techniques Observed:** 15 unique techniques across 7 tactics
 
 ---
