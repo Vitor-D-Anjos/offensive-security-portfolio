@@ -199,10 +199,8 @@ This assessment includes:
 | **Part 1: Technical Assessment** | Detailed exploitation walkthrough (Phases 1-5) | [Read Technical Report →](./technical-assessment.md) |
 | **Part 2: Findings & Remediation** | Vulnerabilities, remediation, detection strategies | [Read Findings →](./findings-remediation.md) |
 | **Methodology** | PTES, MITRE ATT&CK mapping, frameworks | [View Methodology →](./methodology/) |
-| **Evidence** | Screenshots and proof of compromise | [View Evidence →](./evidence/) |
 
 **Total Pages:** ~50 pages of comprehensive documentation  
-**Evidence Files:** Screenshots, logs, and command outputs organized by attack phase
 
 ---
 
