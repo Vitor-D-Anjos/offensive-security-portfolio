@@ -1,6 +1,7 @@
 # Technical Report - Lateral Movement Assessment
 
-## 🔍 Phase 1: Network Discovery & Enumeration
+
+## Phase 1: Network Discovery & Enumeration
 
 ### Host Discovery
 ```bash
@@ -25,7 +26,9 @@ nmap -sS -sV -sC -p- 192.168.78.10,192.168.78.20,192.168.78.30,192.168.78.40
 # db-server-01: MySQL (3306)
 # dc-01: SMB (445), RDP (3389)
 
-🎯 Phase 2: Initial Compromise (45 minutes)
+
+## Phase 2: Initial Compromise (45 minutes)
+
 SSH Credential Attack
 bash
 
@@ -57,7 +60,10 @@ sudo -l
 #     (ALL) NOPASSWD: /usr/bin/systemctl restart apache2
 
 Evidence Collected: Gained initial foothold via weak SSH credentials with ability to restart web services.
-🔎 Phase 3: Internal Reconnaissance & Database Access (60 minutes)
+
+
+## Phase 3: Internal Reconnaissance & Database Access (60 minutes)
+
 Local Enumeration
 bash
 
@@ -95,7 +101,10 @@ SELECT COUNT(*) FROM financial_records;
 # 2,400 financial records accessible
 
 Evidence Collected: Accessed customer database containing 15,000 records and extracted domain user credentials.
-🚀 Phase 4: Lateral Movement (75 minutes)
+
+
+## Phase 4: Lateral Movement (75 minutes)
+
 Credential Reuse Testing
 bash
 
@@ -127,7 +136,10 @@ cat /opt/scripts/backup.sh
 # Script performs database backups with root privileges
 
 Evidence Collected: Successfully moved laterally using reused credentials and identified privilege escalation vector.
-⬆️ Phase 5: Privilege Escalation (90 minutes)
+
+
+## Phase 5: Privilege Escalation (90 minutes)
+
 Privilege Escalation Execution
 bash
 
@@ -156,7 +168,10 @@ find /root -type f -name "*.key" -o -name "*.pem" -o -name "*.cred" 2>/dev/null
 ls -la /etc/secrets/
 
 Evidence Collected: Achieved root-level access via privilege escalation and extracted credential hashes.
-👑 Phase 6: Domain Compromise (30 minutes)
+
+
+## Phase 6: Domain Compromise (30 minutes)
+
 Pass-the-Hash Attack
 bash
 
@@ -180,6 +195,5 @@ dir C:\HR\Confidential\
 tree C:\ /F | findstr "password\|secret\|confidential"
 
 Evidence Collected: Gained domain administrator privileges and accessed sensitive financial and HR data repositories.
-📊 Complete Attack Chain Summary
 
-Technical Report - Confidential
+Complete Attack Chain Summary
