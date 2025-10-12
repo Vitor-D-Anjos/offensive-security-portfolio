@@ -9,7 +9,7 @@
 
 ### 📊 Quick Facts
 - **Initial Compromise**: 45 minutes
-- **Domain Compromise**: 4 hours
+- **Domain Compromise**: 5 hours
 - **Systems Compromised**: 4 of 4
 - **Critical Findings**: 3
 - **Business Impact**: Critical
