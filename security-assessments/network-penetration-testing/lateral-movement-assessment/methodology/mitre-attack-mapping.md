@@ -87,6 +87,20 @@ graph TD
 8. T1550.002: Pass the Hash → Using hashed credentials
 9. TA0008: Domain Compromise → Achieved full domain control
 
+## 🗺️ Attack Flow Summary
+
+```mermaid
+graph TD
+    A[T1595.002: Vulnerability Scanning] --> B[T1110.001: Password Guessing]
+    B --> C[T1078.003: Valid Accounts Compromise]
+    C --> D[T1087.002: Account Discovery]
+    D --> E[T1003.008: Credential Dumping]
+    E --> F[T1021.004: SSH Lateral Movement]
+    F --> G[T1548.003: Sudo Privilege Escalation]
+    G --> H[T1550.002: Pass the Hash]
+    H --> I[TA0008: Domain Compromise]
+
+
 
 🎯 Technique Details
 T1110.001 - Password Guessing
