@@ -71,14 +71,13 @@ Cybersecurity Practices
 - eCPPT (Certified Professional Penetration Tester) SkillCheck Labs - 100% Achieved
 - eJPT (Junior Penetration Tester Certification) SkillCheck Labs Completed
 
-**Data Science**
-- HyperionDev Data Science Certificate
+### HyperionDev
+- Data Science Certificate
 
 **📖 [View Detailed Certification Information →](./certifications/)**
 
 **Currently Pursuing:**
 
-- 🛠️ OSCP – Offensive Security Certified Professional
 - 🌐 eWPTX – Advanced Web Application Penetration Testing
 
 **Ongoing Learning:**
@@ -150,7 +149,6 @@ I'm always interested in connecting with fellow security professionals, discussi
 ### Get In Touch
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](YOUR_PORTFOLIO_URL)
 
@@ -159,11 +157,10 @@ I'm always interested in connecting with fellow security professionals, discussi
 
 ---
 
-**📧 Email:** [your.email@example.com](mailto:your.email@example.com)  
 **🔗 LinkedIn:** [linkedin.com/in/yourprofile](YOUR_LINKEDIN_URL)  
 **🌐 Portfolio Website:** [yourportfolio.com](YOUR_PORTFOLIO_URL)  
 **📍 Location:** [Your City, State/Country]  
-**🗣️ Languages:** [English, Spanish, etc.]
+**🗣️ Languages:** [Portuguese, English, Spanish]
 
 ⚖️ **Professional Ethics**
 
