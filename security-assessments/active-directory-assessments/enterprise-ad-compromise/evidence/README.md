@@ -13,7 +13,7 @@
 
 *This section demonstrates enterprise penetration testing evidence collection, documentation standards, and professional reporting practices. The examples below illustrate how security findings are structured, documented, and presented in real-world assessments.*
 
-**Educational Purpose:** These examples show proper evidence formatting, command documentation, and technical reporting standards used in professional security engagements.
+**Portfolio Demonstration:** These examples show proper evidence formatting, command documentation, and technical reporting standards used in professional security engagements.
 
 ---
 
