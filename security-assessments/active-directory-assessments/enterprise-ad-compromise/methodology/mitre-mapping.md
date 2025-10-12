@@ -862,6 +862,6 @@ Analyze:
 
 *This MITRE ATT&CK mapping enables blue teams to understand the attack progression and implement appropriate detections and defenses.*
 
-**Last Updated:** October 2024  
+**Last Updated:** October 2025  
 **MITRE ATT&CK Version:** v14
 
