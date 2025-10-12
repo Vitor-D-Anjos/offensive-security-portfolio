@@ -17,7 +17,7 @@
 
 ---
 
-📂 Evidence Collection Approach
+📂 **Evidence Collection Approach**
 
 *This documentation demonstrates professional evidence collection practices. While real client data cannot be shown, these examples illustrate the comprehensive technical documentation standards used in enterprise penetration testing.*
 
@@ -34,35 +34,6 @@ Professional documentation includes:
 3. Hash & Credential Evidence Formatting
 4. Attack Chain Documentation
 5. Technical Findings with CVSS Scores
-
----
----
-
-
-## 📂 Evidence Collection Approach
-
-This section documents **actual findings and evidence from the assessment**, extracted directly from the technical reports. While screenshots are not included in this public repository, all technical evidence is preserved through detailed command outputs, tool results, and exploitation documentation.
-
-> **Professional Note:** Evidence is presented through comprehensive technical documentation rather than screenshots. This approach demonstrates professional documentation skills while maintaining appropriate operational security for lab environments.
-
----
-
-## ✅ What IS Included (From Reports)
-
-### 1. Complete Command-Line Evidence
-Every command executed with full syntax and output
-
-### 2. Tool Output Documentation  
-Detailed results from all tools used
-
-### 3. Hash & Credential Evidence
-Sanitized examples showing attack success
-
-### 4. Attack Chain Documentation
-Step-by-step progression with timestamps
-
-### 5. Technical Findings
-Vulnerability details with CVSS scores
 
 ---
 
