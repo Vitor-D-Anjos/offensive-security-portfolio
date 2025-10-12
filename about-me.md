@@ -316,9 +316,7 @@ I'm always interested in connecting with fellow security professionals, discussi
 
 ---
 
-**🔗 LinkedIn:** [linkedin.com/in/yourprofile](YOUR_LINKEDIN_URL)  
-**🌐 Portfolio Website:** [yourportfolio.com](YOUR_PORTFOLIO_URL)  
-**📍 Location:** [Your City, State/Country]  
+**📍 Location:** [London, UK]  
 **🗣️ Languages:** [Portuguese, English, Spanish]
 
 ⚖️ **Professional Ethics**
