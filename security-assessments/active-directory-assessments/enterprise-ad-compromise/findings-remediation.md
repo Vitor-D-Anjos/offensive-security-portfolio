@@ -1307,9 +1307,9 @@ sha256sum Vanguard_Pentest_Report_Part2.pdf
 **Lead Penetration Tester:**  
 **Name:** Vitor Anjos  
 **Certifications:** eCPPTv3  
-**LinkedIn:** [linkedin.com](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)  
-**GitHub:** [github.com](https://github.com/Vitor-D-Anjos)  
-**Portfolio:** [portfolio](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
+**LinkedIn:** [LinkedIn](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)  
+**GitHub:** [GitHub](https://github.com/Vitor-D-Anjos)  
+**Portfolio:** [Offensive Security](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 ---
 
