@@ -9,6 +9,22 @@
 
 ---
 
+## Evidence Repository
+
+Note: Detailed screenshots and command outputs were generated during the lab assessment 
+but are not included in this public portfolio version to protect lab environment details. 
+In a professional engagement, evidence would include:
+
+- Nmap scan results (XML output)
+- Impacket command execution logs
+- BloodHound attack path visualizations
+- Windows Event Viewer captures
+- PowerShell session transcripts
+- Hash cracking results
+
+During interviews, I can discuss specific evidence collection and demonstrate 
+the technical tools and techniques used in this assessment.
+
 ## 🎓 Professional Evidence Documentation Demonstration
 
 *This section demonstrates enterprise penetration testing evidence collection, documentation standards, and professional reporting practices. The examples below illustrate how security findings are structured, documented, and presented in real-world assessments.*
