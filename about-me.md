@@ -56,15 +56,14 @@ I approach offensive security with the mindset of an adversary and the ethics of
 
 **CC** (ISC² - Certified in Cybersecurity)  
 
-**Netcom Training** Cybersecurity Practices  
+**Netcom Training** (Cybersecurity Practices)  
 
 ### INE Professional Development
 - Advanced Penetration Testing
 - eCPPT SkillCheck Labs 100% Achieved
 - eJPT SkillCheck Labs Completed
 
-### HyperionDev
-- Data Science Certificate
+**HyperionDev** (Data Science Certificate)
 
 **📖 [View Detailed Certification Information →](./certifications/)**
 
