@@ -100,7 +100,7 @@ SELECT COUNT(*) FROM customer_data;
 SELECT COUNT(*) FROM financial_records;  
 # 4,137 financial records accessible
 
-Evidence Collected: Accessed customer database containing 15,000 records and extracted domain user credentials.
+Evidence Collected: Accessed customer database containing 11,717 records and extracted domain user credentials.
 
 ```
 ## Phase 4: Lateral Movement (75 minutes)
