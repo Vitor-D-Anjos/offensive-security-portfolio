@@ -33,23 +33,9 @@ the technical tools and techniques used in this assessment.
 
 ---
 
-📂 **Evidence Collection Approach**
+📂 ## Evidence Documentation Examples
 
-*This documentation demonstrates professional evidence collection practices. While original data cannot be shown, these examples illustrate the comprehensive technical documentation standards used in enterprise penetration testing.*
-
-Professional documentation includes:
-- Complete command-line evidence with full syntax and output
-- Tool output analysis and interpretation  
-- Vulnerability evidence with CVSS scoring
-- Attack progression documentation
-- Business impact correlation
-
-✅ **Documentation Standards Demonstrated:**
-1. Complete Command-Line Evidence
-2. Tool Output Documentation  
-3. Hash & Credential Evidence Formatting
-4. Attack Chain Documentation
-5. Technical Findings with CVSS Scores
+*The following examples demonstrate professional evidence formatting and documentation standards used in enterprise penetration testing reports.*
 
 ---
 
