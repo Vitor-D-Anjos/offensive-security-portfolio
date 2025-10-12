@@ -58,7 +58,7 @@ I approach offensive security with the mindset of an adversary and the ethics of
 ## 🎓 Certifications & Professional Training
 
 #### INE
-**eCPPT** (Certified Professional Penetration Tester)  
+**eCPPTv3** (Certified Professional Penetration Tester)  
 
 #### ISC²
 **CC** (Certified in Cybersecurity)  
@@ -67,9 +67,9 @@ I approach offensive security with the mindset of an adversary and the ethics of
 Cybersecurity Practices  
 
 ### INE Professional Development
-- Advanced Penetration Testing Program - Completed
+- Advanced Penetration Testing Learning Path
 - eCPPTv3 SkillCheck Labs - 100% Achieved
-- eJPT SkillCheck Labs - Completed
+- eJPT SkillCheck Labs
 
 **Data Science**
 - HyperionDev Data Science Certificate
