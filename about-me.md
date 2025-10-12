@@ -50,7 +50,7 @@ _________________
 ______________________
 
 
-# 👤 About Me
+# About Me
 
 <div align="center">
 
@@ -65,303 +65,165 @@ ______________________
 
 ---
 
-## 🎯 Professional Summary
+🎯 Summary
 
-I am a dedicated penetration tester specializing in Active Directory security assessments and enterprise network penetration testing. With hands-on experience in offensive security operations, I focus on identifying complex attack paths, exploiting misconfigurations, and providing actionable security guidance to help organizations strengthen their security posture.
+I'm a penetration tester focused on Active Directory security, network exploitation, and red team operations. I specialize in identifying complex attack paths, exploiting real-world misconfigurations, and delivering actionable remediation tailored to both technical and business audiences.
 
-My approach combines technical expertise with a deep understanding of business risk, enabling me to deliver comprehensive assessments that resonate with both technical teams and executive leadership.
+I combine deep technical expertise with a strong understanding of business risk—ensuring my assessments go beyond vulnerabilities to support strategic security decisions.
 
-**Core Expertise:**
-- 🔓 Active Directory exploitation and privilege escalation
-- 🌐 Internal and external network penetration testing
-- 🛡️ Post-exploitation and lateral movement techniques
-- 📊 Security risk assessment and business impact analysis
-- 📝 Professional security reporting and remediation guidance
+🛠️ Core Expertise
 
----
+🔓 Active Directory exploitation & privilege escalation
 
-## 🚀 What Drives Me
+🌐 Internal/external network penetration testing
 
-Security is not just about finding vulnerabilities—it's about understanding how adversaries think, move, and persist within networks. I'm passionate about:
+🛡️ Post-exploitation & lateral movement (Pass-the-Hash, DCSync, NTLM relay)
 
-- **🔍 Complex Problem Solving** - Unraveling intricate Active Directory environments and discovering hidden attack paths
-- **📚 Continuous Learning** - Staying current with emerging threats, techniques, and defensive strategies
-- **🤝 Knowledge Sharing** - Contributing to the security community through detailed documentation and ethical research
-- **💡 Business Impact** - Translating technical findings into actionable business risk that drives organizational change
-- **🎓 Professional Growth** - Pursuing advanced certifications and expanding expertise across security domains
+📊 Security risk assessment & impact analysis
 
----
+📝 Reporting aligned with MITRE ATT&CK & business objectives
 
-## 💼 Professional Experience
+🚀 What Drives Me
 
-### Penetration Testing Projects
+I approach offensive security with the mindset of an adversary and the ethics of a defender.
 
-**Enterprise Active Directory Assessments**
-- Conducted comprehensive security assessments of Active Directory environments
-- Identified and exploited privilege escalation paths using tools like BloodHound
-- Achieved domain compromise through Kerberos-based attacks (Kerberoasting, AS-REP Roasting)
-- Demonstrated lateral movement techniques including Pass-the-Hash and NTLM relay
-- Executed DCSync attacks to extract domain credentials
-- Provided detailed remediation guidance with cost estimates and timelines
+🔍 Problem Solving – Mapping and exploiting hidden AD attack paths
 
-**Key Achievements:**
-- ✅ Successfully compromised 100% of in-scope systems
-- ✅ Identified critical vulnerabilities with business impact exceeding $3.5M
-- ✅ Documented 10+ MITRE ATT&CK techniques across full kill chain
-- ✅ Delivered professional reports suitable for both technical and executive audiences
-- ✅ Created detection use cases and SIEM correlation rules
+📚 Continuous Learning – Staying sharp with labs, CTFs, and threat research
 
----
+💡 Business Impact – Translating technical findings into real-world risk
+
+🤝 Knowledge Sharing – Contributing to community learning and mentoring
+
+🎓 Growth-Oriented – Actively pursuing OSCP and advanced red team certs
+
+💼 Experience Highlights
+Enterprise AD Security Assessments
+
+Discovered and exploited escalation paths using BloodHound, Kerberoasting, AS-REP Roasting, and ACL abuse
+
+Achieved domain compromise and lateral movement via NTLM relay, Pass-the-Hash, and WinRM/PSExec
+
+Delivered remediation plans with cost/timeline estimates and detection use cases
+
+Key Outcomes:
+
+✅ 100% in-scope compromise rate
+
+✅ $3.5M+ business impact from critical findings
+
+✅ Full-chain attack simulation using MITRE ATT&CK techniques
+
+🎓 Certifications & Education
+
+eCPPTv3 – eLearnSecurity Certified Penetration Tester
+
+ISC2 CC – Certified in Cybersecurity
+
+HyperionDev – Data Science Certificate (98% Grade)
+
+INE Training – Advanced Pentesting, eJPT labs (100% completed)
+
 
 ## 🎓 Certifications & Education
 
 ### Professional Certifications
 
-**🏆 eCPPTv3 - eLearnSecurity Certified Professional Penetration Tester v3**
-- Advanced penetration testing certification
-- Covers network security, web application testing, WiFi security, and more
-- Practical, hands-on examination demonstrating real-world skills
+## 🎓 Certifications & Professional Training
 
-**🏆 ISC2 CC - Certified in Cybersecurity**
-- Foundational cybersecurity principles and best practices
-- Security concepts, access controls, and network security
-- Demonstrates commitment to ethical security practices
+**eCPPTv3** - eLearnSecurity Certified Professional Penetration Tester v3
+ISC2 CC - Certified in Cybersecurity
+Netcom Training - Cybersecurity Practices
 
-**🏆 INE Penetration Testing Professional**
-- Comprehensive penetration testing training (100% completion)
-- Advanced exploitation techniques and methodologies
-- Practical labs covering real-world scenarios
+**INE Professional Development:**
+- Advanced Penetration Testing Program - Completed
+- eCPPTv3 SkillCheck Labs - 100% Achieved
+- eJPT SkillCheck Labs - Completed
+
+**Data Science:**
+- HyperionDev Data Science Certificate (98% Grade)
 
 **📖 [View Detailed Certification Information →](./certifications/)**
 
-### Currently Pursuing
-- **OSCP** (Offensive Security Certified Professional) - Target: [Date]
-- Advanced Active Directory security certifications
 
-### Continuous Education
-- Regular participation in capture-the-flag (CTF) competitions
-- Hands-on training through platforms like HackTheBox, TryHackMe, and Proving Grounds
-- Active engagement with security research papers and threat intelligence reports
-- Community involvement through security forums and knowledge-sharing platforms
+Currently Pursuing:
 
----
+🛠️ OSCP – Offensive Security Certified Professional
 
-## 🛠️ Technical Expertise
+🌐 eWPTX – Advanced Web Application Penetration Testing
 
-### 🎯 Core Competencies
+Ongoing Learning:
 
-**Active Directory Security**
-- Domain enumeration and reconnaissance (BloodHound, PowerView, ADRecon)
-- Kerberos exploitation (Kerberoasting, AS-REP Roasting, Golden/Silver Tickets)
-- ACL abuse and privilege escalation paths
-- Domain trust relationship attacks
-- GPO-based exploitation and lateral movement
-- Credential harvesting (Mimikatz, DCSync, NTDS.dit extraction)
+HackTheBox, TryHackMe, Proving Grounds
 
-**Network Penetration Testing**
-- Internal network assessments and segmentation testing
-- External perimeter testing and vulnerability identification
-- LLMNR/NBT-NS poisoning and NTLM relay attacks
-- SMB relay attacks and Pass-the-Hash techniques
-- Lateral movement via WinRM, PSExec, WMI, DCOM
-- Network pivoting and tunneling
+CTF competitions and home lab development
 
-**Web Application Security**
-- OWASP Top 10 vulnerability testing
-- Authentication and authorization bypass
-- SQL injection, XSS, CSRF, and other injection attacks
-- API security testing
-- Session management vulnerabilities
+Security research, blogs, threat reports
 
-**Post-Exploitation**
-- Credential dumping and hash extraction
-- Persistence mechanism establishment
-- Data exfiltration techniques (proof-of-concept)
-- Evidence collection and documentation
-- Remediation validation and verification
+🧰 Tools & Tech Stack (Selected)
 
-### 🔧 Technical Toolset
+Active Directory:
+BloodHound, PowerView, Mimikatz, Rubeus, Responder, Impacket, Kerbrute
 
-**Reconnaissance & Enumeration:**
-- Nmap, Masscan, Netdiscover
-- DNSenum, Fierce, Sublist3r
-- OSINT tools and methodologies
+Network & Exploitation:
+Nmap, Metasploit, CrackMapExec, PSExec, Evil-WinRM, SharpHound
 
-**Active Directory:**
-- BloodHound, SharpHound, PowerView
-- Rubeus, Impacket Suite, Responder
-- Mimikatz, pypykatz, secretsdump
-- Kerbrute, GetUserSPNs, GetNPUsers
+Web Security:
+Burp Suite Pro, OWASP ZAP, SQLi/XSS/CSRF testing, API fuzzing (Ffuf, Nikto)
 
-**Exploitation Frameworks:**
-- Metasploit Framework
-- Cobalt Strike (conceptual knowledge)
-- Custom exploit development
+Scripting:
+PowerShell, Python, Bash — for automation and custom tools
 
-**Web Application Testing:**
-- Burp Suite Professional
-- OWASP ZAP
-- Nikto, Gobuster, Ffuf
+Operating Systems:
+Kali Linux, Windows Server (2016–2022), Ubuntu/Debian, Red Hat, macOS
 
-**Password Attacks:**
-- Hashcat, John the Ripper
-- Hydra, Medusa, CrackMapExec
-- Custom wordlist generation
+📊 Methodology
 
-**Post-Exploitation:**
-- PowerShell Empire (conceptual)
-- Evil-WinRM, PSExec, WMI
-- WinPEAS, LinPEAS, PrivescCheck
+I follow the PTES and MITRE ATT&CK frameworks, adapted to each environment.
 
-**Reporting & Documentation:**
-- Professional report writing
-- MITRE ATT&CK mapping
-- Markdown, LaTeX documentation
+Scoping & Recon – Define goals, enumerate assets, identify vulnerabilities
 
-### 💻 Operating Systems
+Threat Modeling – Map potential attack paths and business impact
 
-**Expert Level:**
-- Kali Linux (Primary offensive platform)
-- Windows Server (2016/2019/2022) - Active Directory environments
-- Ubuntu/Debian Linux
+Exploitation – Gain access, escalate privileges, move laterally
 
-**Proficient:**
-- CentOS, Red Hat Enterprise Linux
-- Windows 10/11 Enterprise
-- macOS for security testing
+Post-Exploitation – Harvest credentials, establish persistence
 
-### 📝 Programming & Scripting
+Reporting – Deliver technical findings + executive summaries
 
-**Advanced:**
-- PowerShell (Active Directory enumeration and exploitation)
-- Bash (Linux automation and post-exploitation)
+Remediation Guidance – Actionable, prioritized, and measurable
 
-**Intermediate:**
-- Python (Custom tool development and exploit scripting)
-- SQL (Database exploitation and queries)
+🌟 What Sets Me Apart
 
-**Familiar:**
-- JavaScript (Web application testing)
-- C/C++ (Exploit development concepts)
+📝 Clear, Executive-Level Reporting
 
----
+Business impact quantified ($)
 
-## 📊 Methodology & Approach
+MITRE technique mapping
 
-### Testing Methodology
+Remediation with cost/timeline
 
-I follow industry-standard frameworks while adapting to each unique environment:
+💼 Business-Aligned Security
 
-**1. Pre-Engagement**
-- Scope definition and rules of engagement
-- Asset inventory and target identification
-- Communication protocols and escalation procedures
+Vulnerabilities prioritized by risk
 
-**2. Information Gathering**
-- Passive reconnaissance (OSINT)
-- Active enumeration (network scanning, service detection)
-- Vulnerability identification and prioritization
+Clear communication to exec and tech audiences
 
-**3. Threat Modeling**
-- Attack surface analysis
-- Potential attack path identification
-- Risk assessment and prioritization
+📈 Improvement-Driven
 
-**4. Exploitation**
-- Initial access vector execution
-- Privilege escalation
-- Lateral movement and pivoting
+Constant upskilling via labs, research, CTFs, and community engagement
 
-**5. Post-Exploitation**
-- Credential harvesting and persistence
-- Objective achievement (data access, domain control)
-- Evidence collection for reporting
+🧭 Ethical by Design
 
-**6. Reporting & Remediation**
-- Technical documentation with evidence
-- Executive summaries with business impact
-- Prioritized remediation roadmap
-- Detection and monitoring recommendations
+Respect scope, data, and disclosure processes
 
-### Standards & Frameworks
+Adhere to ISC², EC-Council, and ACM Codes of Ethics
 
-- **PTES** (Penetration Testing Execution Standard)
-- **OWASP** Testing Guide
-- **MITRE ATT&CK** Framework
-- **NIST SP 800-115** (Information Security Testing)
-- **OSSTMM** (Open Source Security Testing Methodology)
+💬 Let’s Connect
 
----
+I'm open to collaborations, engagements, and knowledge sharing.
 
-## 🎯 Professional Goals
-
-### Short-Term (2024-2025)
-- ✅ Complete OSCP certification
-- ✅ Expand portfolio with diverse assessment types
-- ✅ Contribute to open-source security tools
-- ✅ Present at local security meetups/conferences
-
-### Long-Term (2025+)
-- 🚀 Obtain advanced offensive security certifications (OSEP, OSED)
-- 🚀 Transition to red team operations role
-- 🚀 Develop specialized expertise in cloud security (Azure, AWS)
-- 🚀 Contribute security research and white papers
-- 🚀 Mentor aspiring penetration testers
-
----
-
-## 🌟 What Sets Me Apart
-
-### 1. Comprehensive Documentation
-I believe that a penetration test is only as valuable as its report. My assessments include:
-- Detailed technical walkthroughs with evidence
-- Executive summaries for non-technical stakeholders
-- Business impact analysis with financial quantification
-- Actionable remediation guidance with timelines and costs
-- Detection engineering recommendations for blue teams
-
-### 2. Business-Focused Security
-Technical findings are meaningless without business context. I excel at:
-- Translating vulnerabilities into business risk
-- Quantifying potential financial impact
-- Prioritizing findings based on organizational objectives
-- Communicating effectively with both technical and executive audiences
-
-### 3. Continuous Improvement Mindset
-The security landscape evolves rapidly. I stay ahead through:
-- Regular hands-on practice in realistic lab environments
-- Engagement with the latest threat intelligence
-- Participation in CTF competitions and security challenges
-- Continuous certification and training pursuit
-
-### 4. Ethical Approach
-I adhere to the highest ethical standards:
-- Strict adherence to scope and rules of engagement
-- Respect for data privacy and confidentiality
-- Transparent communication throughout assessments
-- Compliance with (ISC)² Code of Ethics
-
----
-
-## 💬 Interests & Community Involvement
-
-**Security Research:**
-- Active Directory attack techniques and defensive strategies
-- Red team tactics and adversary emulation
-- Detection engineering and SIEM use case development
-- Threat intelligence and APT behavior analysis
-
-**Community Engagement:**
-- Participation in security forums and knowledge-sharing platforms
-- Contribution to open-source security projects
-- Mentoring newcomers to penetration testing
-- Sharing insights through technical blog posts (planned)
-
-**Personal Interests:**
-- Capture-the-flag (CTF) competitions
-- Home lab development for security testing
-- Reading security research papers and conference talks
-- Staying current with emerging vulnerabilities and exploits
+<div align="center">
 
 ---
 
@@ -386,41 +248,26 @@ I'm always interested in connecting with fellow security professionals, discussi
 **📍 Location:** [Your City, State/Country]  
 **🗣️ Languages:** [English, Spanish, etc.]
 
-**Available for:**
-- Penetration testing engagements
-- Security consulting
-- Red team operations
-- Technical mentorship
-- Speaking opportunities
+
+
+⚖️ Professional Ethics
+
+✅ Only test with written authorization
+
+✅ Strict confidentiality
+
+✅ Transparent, accurate reporting
+
+✅ Responsible disclosure
+
+✅ Continuous learning and compliance
+
+> *Security is not a product, but a process." — Bruce Schneier*
+
+📍 Location: [City, Country]
+📫 Email: your.email@example.com
+
+
+
 
 ---
-
-## ⚖️ Professional Ethics
-
-I am committed to conducting all security assessments with the highest ethical standards:
-
-- ✅ **Authorization First** - Only test systems with explicit written permission
-- ✅ **Confidentiality** - Maintain strict confidentiality of client data and findings
-- ✅ **Transparency** - Provide honest, accurate reporting without exaggeration
-- ✅ **Responsible Disclosure** - Follow coordinated vulnerability disclosure practices
-- ✅ **Continuous Learning** - Stay current with laws, regulations, and ethical guidelines
-- ✅ **Professionalism** - Represent the security industry with integrity
-
-**Code of Ethics Adherence:**
-- (ISC)² Code of Professional Ethics
-- EC-Council Code of Ethics
-- ACM Code of Ethics and Professional Conduct
-
----
-
-<div align="center">
-
-**👉 [Return to Portfolio Home](./README.md)**
-
----
-
-*"Security is not a product, but a process." - Bruce Schneier*
-
-*Last Updated: October 2024*
-
-</div>
