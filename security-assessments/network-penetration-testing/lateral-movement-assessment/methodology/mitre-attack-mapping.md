@@ -75,7 +75,6 @@ This engagement demonstrated multiple techniques from the MITRE ATT&CK Enterpris
 9. **T1550.002**: Pass the Hash → Domain controller compromise
 10. **TA0008**: Domain Compromise → Full enterprise control achieved
 
-text
 
 ## 🎯 Key Technique Details
 
