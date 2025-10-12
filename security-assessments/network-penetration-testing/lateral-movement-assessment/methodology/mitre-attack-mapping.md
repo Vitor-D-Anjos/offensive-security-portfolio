@@ -75,6 +75,19 @@ graph TD
     G --> H[T1550.002: Pass the Hash]
     H --> I[TA0008: Domain Compromise]
 
+## 🗺️ Attack Flow Summary
+
+1. T1595.002: Vulnerability Scanning → Network scanning
+2. T1110.001: Password Guessing → SSH brute force attack
+3. T1078.003: Valid Accounts Compromise → Weak account access
+4. T1087.002: Account Discovery → Harvesting domain accounts
+5. T1003.008: Credential Dumping → Extract password hashes
+6. T1021.004: SSH Lateral Movement → Moving laterally via SSH
+7. T1548.003: Sudo Privilege Escalation → Escalating with sudo rights
+8. T1550.002: Pass the Hash → Using hashed credentials
+9. TA0008: Domain Compromise → Achieved full domain control
+
+
 🎯 Technique Details
 T1110.001 - Password Guessing
 
