@@ -29,12 +29,11 @@
 ## 📁 Project Structure
 
 lateral-movement-assessment/
-├── 📄 executive-summary.md # Business impact & key findings
-├── 📄 technical-report.md # Detailed exploitation narrative
-├── 📄 findings-remediation.md # Vulnerabilities & fixes
-├── 📚 methodology/ # Testing frameworks
-├── 🛠️ scripts/ # Technical tools & commands
-└── 🖼️ evidence/ # Supporting materials
+- 📄 README.md # Project overview
+- 📄 executive-summary.md # Business impact & key findings
+- 📄 technical-report.md # Detailed exploitation narrative
+- 📄 findings-remediation.md # Vulnerabilities & fixes
+- 📚 methodology/ # Testing frameworks
 text
 
 
