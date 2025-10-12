@@ -1312,6 +1312,15 @@ sha256sum Vanguard_Pentest_Report_Part2.pdf
 **GitHub:** [github.com/yourprofile]  
 **Portfolio:** [yourportfolio.com]
 
+### Contact Information
+
+**Lead Penetration Tester:**  
+**Name:** [Vitor Anjos]  
+**Certifications:** [eCPPTv3]   
+**LinkedIn:** [[linkedin.com/in/yourprofile](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)]  
+**GitHub:** [[github.com/yourprofile](https://github.com/Vitor-D-Anjos)]  
+**Portfolio:** [[yourportfolio.com](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)]
+
 ---
 
 ## Acknowledgments
@@ -1375,7 +1384,7 @@ DCSync → Full compromise
 ---
 
 **Report Prepared By:** [Your Name], [Your Credentials]  
-**Date:** October 20, 2024  
+**Date:** October 20, 2025  
 **Document ID:** VFS-PENTEST-2024-10-PART2  
 **Classification:** CONFIDENTIAL - Portfolio Demonstration
 
