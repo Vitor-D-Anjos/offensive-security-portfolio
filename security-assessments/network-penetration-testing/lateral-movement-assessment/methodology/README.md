@@ -1,4 +1,4 @@
-# Testing Methodology - Lateral Movement Assessment  
+# Testing Methodology
 [](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/certifications#skill-development-timeline)  
 
 ## 🎯 Engagement Framework  
