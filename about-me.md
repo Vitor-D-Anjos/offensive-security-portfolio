@@ -59,9 +59,9 @@ I approach offensive security with the mindset of an adversary and the ethics of
 **Netcom Training** (Cybersecurity Practices)  
 
 **INE Professional Development**
-- Advanced Penetration Testing
-- eCPPT SkillCheck Labs 100% Achieved
-- eJPT SkillCheck Labs Completed
+  - Advanced Penetration Testing
+  - eCPPT SkillCheck Labs 100% Achieved
+  - eJPT SkillCheck Labs Completed
 
 **HyperionDev** (Data Science Certificate)
 
