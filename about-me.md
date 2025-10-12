@@ -57,16 +57,16 @@ I approach offensive security with the mindset of an adversary and the ethics of
 
 ## 🎓 Certifications & Professional Training
 
-### INE
+#### INE
 **eCPPT** (Certified Professional Penetration Tester)  
 
-### ISC²
+#### ISC²
 **CC** (Certified in Cybersecurity)  
 
-### Netcom Training
+#### Netcom Training
 Cybersecurity Practices  
 
-**INE Professional Development:**
+### INE Professional Development
 - Advanced Penetration Testing Program - Completed
 - eCPPTv3 SkillCheck Labs - 100% Achieved
 - eJPT SkillCheck Labs - Completed
