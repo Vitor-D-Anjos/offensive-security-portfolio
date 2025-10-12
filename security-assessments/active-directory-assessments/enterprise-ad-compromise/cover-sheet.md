@@ -329,11 +329,10 @@ This project demonstrates expertise gained through:
 
 ### 📧 CONTACT INFORMATION
 
-**Penetration Tester:** [Your Name]  
-**Email:** [your.email@example.com](mailto:your.email@example.com)  
-**LinkedIn:** [linkedin.com/in/yourprofile](YOUR_LINKEDIN_URL)  
-**GitHub:** [github.com/yourprofile](https://github.com/YOUR_GITHUB)  
-**Portfolio:** [yourportfolio.com](YOUR_PORTFOLIO_URL)
+**Penetration Tester:** Vitor Anjos    
+**LinkedIn:** [LinkedIn](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)  
+**GitHub:** [GitHub](https://github.com/Vitor-D-Anjos)  
+**Portfolio:** [Offensive Security](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 **🔗 [Learn More About My Background →](../../../about-me.md)**
 
