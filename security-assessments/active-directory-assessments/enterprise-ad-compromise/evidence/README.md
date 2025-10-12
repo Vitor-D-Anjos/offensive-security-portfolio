@@ -19,7 +19,7 @@
 
 📂 **Evidence Collection Approach**
 
-*This documentation demonstrates professional evidence collection practices. While real client data cannot be shown, these examples illustrate the comprehensive technical documentation standards used in enterprise penetration testing.*
+*This documentation demonstrates professional evidence collection practices. While original data cannot be shown, these examples illustrate the comprehensive technical documentation standards used in enterprise penetration testing.*
 
 Professional documentation includes:
 - Complete command-line evidence with full syntax and output
