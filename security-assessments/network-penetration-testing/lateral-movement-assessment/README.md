@@ -1,4 +1,4 @@
-# Lateral Movement Assessment - Internal Network Penetration Test
+Internal Network Penetration Test
 
 ## 🎯 Project Overview
 
