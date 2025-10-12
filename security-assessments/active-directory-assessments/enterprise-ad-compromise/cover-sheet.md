@@ -158,10 +158,9 @@ Domain Admin → DCSync → Complete Domain Control
 
 This project demonstrates expertise gained through:
 - **eCPPTv3** - Certified Professional Penetration Tester
-- **INE PTP** - Penetration Testing Professional (100%)
+- **INE** - Penetration Testing Professional SkillCheck (100%)
+- **INE** - Advanced Penetration Testing
 - Hands-on Active Directory security training
-- Red team/blue team exercise experience
-- Professional penetration testing methodology
 
 **🔗 [View All Certifications →](../../../certifications/)**
 
