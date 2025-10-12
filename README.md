@@ -28,10 +28,10 @@
 
 ## 📂 Portfolio Structure
 
-### 🔓 [Active Directory Assessments](/active-directory-assessments/)
+### 🔓 [Active Directory Assessments](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/active-directory-assessments/enterprise-ad-compromise)
 Enterprise AD security testing and domain compromise methodologies
 
-### 🌐 [Network Penetration Testing](/network-penetration-testing/)
+### 🌐 [Network Penetration Testing](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
 Internal and external network security assessments
 
 ### 📜 [Certifications & Training](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/certifications)
