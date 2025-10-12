@@ -1,4 +1,4 @@
-# Findings & Remediation - Lateral Movement Assessment
+# Findings & Remediation
 
 ## 📊 Vulnerability Summary
 
