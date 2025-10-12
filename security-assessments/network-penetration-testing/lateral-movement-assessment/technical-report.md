@@ -26,11 +26,10 @@ nmap -sS -sV -sC -p- 192.168.78.10,192.168.78.20,192.168.78.30,192.168.78.40
 # db-server-01: MySQL (3306)
 # dc-01: SMB (445), RDP (3389)
 
----
+(```)
 
 ## Phase 2: Initial Compromise (45 minutes)
 
----
 SSH Credential Attack
 bash
 
