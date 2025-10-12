@@ -1,4 +1,4 @@
-# Technical Report - Lateral Movement Assessment
+# Technical Report
 
 
 ## Phase 1: Network Discovery & Enumeration
