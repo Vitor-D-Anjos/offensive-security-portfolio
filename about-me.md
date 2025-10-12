@@ -67,9 +67,9 @@ I approach offensive security with the mindset of an adversary and the ethics of
 Cybersecurity Practices  
 
 ### INE Professional Development
-- Advanced Penetration Testing Learning Path
-- eCPPT (Certified Professional Penetration Tester) SkillCheck Labs - 100% Achieved
-- eJPT (Junior Penetration Tester Certification) SkillCheck Labs Completed
+- Advanced Penetration Testing
+- eCPPT SkillCheck Labs 100% Achieved
+- eJPT SkillCheck Labs Completed
 
 ### HyperionDev
 - Data Science Certificate
