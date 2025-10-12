@@ -1,4 +1,4 @@
-# About Me
+🧑‍💻# About Me
 
 <div align="center">
 
@@ -13,117 +13,43 @@
 
 ---
 
-## Professional Summary
-Penetration tester specializing in Active Directory security assessments, with a unique background in data science applied to cybersecurity. Certified eCPPTv3 professional focused on comprehensive network penetration testing and red team exercises.
-
-## Certifications
-- **eCPPTv3** - Certified Professional Penetration Tester
-- **ISC2 CC** - Certified in Cybersecurity
-- **Netcom Training** - Cybersecurity Practices
-- **HyperionDev** - Data Science Certificate
-
-- ## 🎓 Professional Development
-
-### Specialized Penetration Testing Training
-- INE Advanced Penetration Testing Program
-- INE eJPT certification path and challenge labs
-
-### Cybersecurity Foundations
-- CompTIA Network+, Security+, and CySA+ preparation certifications
-
-## Technical Specializations
-- **Active Directory Exploitation**
-- **Network Penetration Testing** 
-- **Web Application Security**
-- **Security Data Science**
-- **Red Team Methodologies**
-
-## Contact
-- **LinkedIn:** [Vitor David Anjos](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)
-
-## Professional Philosophy
-"Applying systematic, data-driven approaches to identify and exploit security vulnerabilities, while providing actionable remediation strategies that balance security and business operations."
-
-
-
-_________________
-______________________
-
-
-# About Me
-
-<div align="center">
-
-## [Your Name]
-### Penetration Tester | Active Directory Specialist | Security Researcher
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](YOUR_LINKEDIN_URL)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB)
-
-</div>
-
----
-
-🎯 Summary
+🎯 **Summary**
 
 I'm a penetration tester focused on Active Directory security, network exploitation, and red team operations. I specialize in identifying complex attack paths, exploiting real-world misconfigurations, and delivering actionable remediation tailored to both technical and business audiences.
 
 I combine deep technical expertise with a strong understanding of business risk—ensuring my assessments go beyond vulnerabilities to support strategic security decisions.
 
-🛠️ Core Expertise
+🛠️ **Core Expertise**
 
-🔓 Active Directory exploitation & privilege escalation
+- 🔓 Active Directory exploitation & privilege escalation
+- 🌐 Internal/external network penetration testing
+- 🛡️ Post-exploitation & lateral movement (Pass-the-Hash, DCSync, NTLM relay)
+- 📊 Security risk assessment & impact analysis
+- 📝 Reporting aligned with MITRE ATT&CK & business objectives
 
-🌐 Internal/external network penetration testing
-
-🛡️ Post-exploitation & lateral movement (Pass-the-Hash, DCSync, NTLM relay)
-
-📊 Security risk assessment & impact analysis
-
-📝 Reporting aligned with MITRE ATT&CK & business objectives
-
-🚀 What Drives Me
+🚀 **What Drives Me**
 
 I approach offensive security with the mindset of an adversary and the ethics of a defender.
 
-🔍 Problem Solving – Mapping and exploiting hidden AD attack paths
+- 🔍 Problem Solving – Mapping and exploiting hidden AD attack paths
+- 📚 Continuous Learning – Staying sharp with labs, CTFs, and threat research
+- 💡 Business Impact – Translating technical findings into real-world risk
+- 🤝 Knowledge Sharing – Contributing to community learning and mentoring
+- 🎓 Growth-Oriented – Actively pursuing OSCP and advanced red team certs
 
-📚 Continuous Learning – Staying sharp with labs, CTFs, and threat research
+💼 **Experience Highlights**
 
-💡 Business Impact – Translating technical findings into real-world risk
+**Enterprise AD Security Assessments**
 
-🤝 Knowledge Sharing – Contributing to community learning and mentoring
+- Discovered and exploited escalation paths using BloodHound, Kerberoasting, AS-REP Roasting, and ACL abuse
+- Achieved domain compromise and lateral movement via NTLM relay, Pass-the-Hash, and WinRM/PSExec
+- Delivered remediation plans with cost/timeline estimates and detection use cases
 
-🎓 Growth-Oriented – Actively pursuing OSCP and advanced red team certs
+**Key Outcomes:**
 
-💼 Experience Highlights
-Enterprise AD Security Assessments
-
-Discovered and exploited escalation paths using BloodHound, Kerberoasting, AS-REP Roasting, and ACL abuse
-
-Achieved domain compromise and lateral movement via NTLM relay, Pass-the-Hash, and WinRM/PSExec
-
-Delivered remediation plans with cost/timeline estimates and detection use cases
-
-Key Outcomes:
-
-✅ 100% in-scope compromise rate
-
-✅ $3.5M+ business impact from critical findings
-
-✅ Full-chain attack simulation using MITRE ATT&CK techniques
-
-🎓 Certifications & Education
-
-eCPPTv3 – eLearnSecurity Certified Penetration Tester
-
-ISC2 CC – Certified in Cybersecurity
-
-HyperionDev – Data Science Certificate (98% Grade)
-
-INE Training – Advanced Pentesting, eJPT labs (100% completed)
-
+- ✅ 100% in-scope compromise rate
+- ✅ $3.5M+ business impact from critical findings
+- ✅ Full-chain attack simulation using MITRE ATT&CK techniques
 
 ## 🎓 Certifications & Education
 
@@ -131,9 +57,9 @@ INE Training – Advanced Pentesting, eJPT labs (100% completed)
 
 ## 🎓 Certifications & Professional Training
 
-**eCPPTv3** - eLearnSecurity Certified Professional Penetration Tester v3
-ISC2 CC - Certified in Cybersecurity
-Netcom Training - Cybersecurity Practices
+**eCPPTv3** - eLearnSecurity Certified Professional Penetration Tester v3  
+ISC2 CC - Certified in Cybersecurity  
+Netcom Training - Cybersecurity Practices  
 
 **INE Professional Development:**
 - Advanced Penetration Testing Program - Completed
@@ -145,81 +71,64 @@ Netcom Training - Cybersecurity Practices
 
 **📖 [View Detailed Certification Information →](./certifications/)**
 
+**Currently Pursuing:**
 
-Currently Pursuing:
+- 🛠️ OSCP – Offensive Security Certified Professional
+- 🌐 eWPTX – Advanced Web Application Penetration Testing
 
-🛠️ OSCP – Offensive Security Certified Professional
+**Ongoing Learning:**
 
-🌐 eWPTX – Advanced Web Application Penetration Testing
+- HackTheBox, TryHackMe, Proving Grounds
+- CTF competitions and home lab development
+- Security research, blogs, threat reports
 
-Ongoing Learning:
+🧰 **Tools & Tech Stack (Selected)**
 
-HackTheBox, TryHackMe, Proving Grounds
-
-CTF competitions and home lab development
-
-Security research, blogs, threat reports
-
-🧰 Tools & Tech Stack (Selected)
-
-Active Directory:
+**Active Directory:**  
 BloodHound, PowerView, Mimikatz, Rubeus, Responder, Impacket, Kerbrute
 
-Network & Exploitation:
+**Network & Exploitation:**  
 Nmap, Metasploit, CrackMapExec, PSExec, Evil-WinRM, SharpHound
 
-Web Security:
+**Web Security:**  
 Burp Suite Pro, OWASP ZAP, SQLi/XSS/CSRF testing, API fuzzing (Ffuf, Nikto)
 
-Scripting:
+**Scripting:**  
 PowerShell, Python, Bash — for automation and custom tools
 
-Operating Systems:
+**Operating Systems:**  
 Kali Linux, Windows Server (2016–2022), Ubuntu/Debian, Red Hat, macOS
 
-📊 Methodology
+📊 **Methodology**
 
 I follow the PTES and MITRE ATT&CK frameworks, adapted to each environment.
 
-Scoping & Recon – Define goals, enumerate assets, identify vulnerabilities
+- Scoping & Recon – Define goals, enumerate assets, identify vulnerabilities
+- Threat Modeling – Map potential attack paths and business impact
+- Exploitation – Gain access, escalate privileges, move laterally
+- Post-Exploitation – Harvest credentials, establish persistence
+- Reporting – Deliver technical findings + executive summaries
+- Remediation Guidance – Actionable, prioritized, and measurable
 
-Threat Modeling – Map potential attack paths and business impact
+🌟 **What Sets Me Apart**
 
-Exploitation – Gain access, escalate privileges, move laterally
+- 📝 Clear, Executive-Level Reporting  
+  Business impact quantified ($)  
+  MITRE technique mapping  
+  Remediation with cost/timeline
 
-Post-Exploitation – Harvest credentials, establish persistence
+- 💼 Business-Aligned Security  
+  Vulnerabilities prioritized by risk  
+  Clear communication to exec and tech audiences
 
-Reporting – Deliver technical findings + executive summaries
+- 📈 Improvement-Driven  
+  Constant upskilling via labs, research, CTFs, and community engagement
 
-Remediation Guidance – Actionable, prioritized, and measurable
+- 🧭 Ethical by Design  
+  Respect scope, data, and disclosure processes  
+  Adhere to ISC², EC-Council, and ACM Codes of Ethics
 
-🌟 What Sets Me Apart
-
-📝 Clear, Executive-Level Reporting
-
-Business impact quantified ($)
-
-MITRE technique mapping
-
-Remediation with cost/timeline
-
-💼 Business-Aligned Security
-
-Vulnerabilities prioritized by risk
-
-Clear communication to exec and tech audiences
-
-📈 Improvement-Driven
-
-Constant upskilling via labs, research, CTFs, and community engagement
-
-🧭 Ethical by Design
-
-Respect scope, data, and disclosure processes
-
-Adhere to ISC², EC-Council, and ACM Codes of Ethics
-
-💬 Let’s Connect
+💬 **Let’s Connect**
 
 I'm open to collaborations, engagements, and knowledge sharing.
 
@@ -242,32 +151,23 @@ I'm always interested in connecting with fellow security professionals, discussi
 
 </div>
 
+---
+
 **📧 Email:** [your.email@example.com](mailto:your.email@example.com)  
 **🔗 LinkedIn:** [linkedin.com/in/yourprofile](YOUR_LINKEDIN_URL)  
 **🌐 Portfolio Website:** [yourportfolio.com](YOUR_PORTFOLIO_URL)  
 **📍 Location:** [Your City, State/Country]  
 **🗣️ Languages:** [English, Spanish, etc.]
 
+⚖️ **Professional Ethics**
 
-
-⚖️ Professional Ethics
-
-✅ Only test with written authorization
-
-✅ Strict confidentiality
-
-✅ Transparent, accurate reporting
-
-✅ Responsible disclosure
-
-✅ Continuous learning and compliance
+- ✅ Only test with written authorization
+- ✅ Strict confidentiality
+- ✅ Transparent, accurate reporting
+- ✅ Responsible disclosure
+- ✅ Continuous learning and compliance
 
 > *Security is not a product, but a process." — Bruce Schneier*
 
-📍 Location: [City, Country]
-📫 Email: your.email@example.com
 
 
-
-
----
