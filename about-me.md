@@ -68,8 +68,8 @@ Cybersecurity Practices
 
 ### INE Professional Development
 - Advanced Penetration Testing Learning Path
-- eCPPTv3 SkillCheck Labs - 100% Achieved
-- eJPT SkillCheck Labs
+- eCPPT (Certified Professional Penetration Tester) SkillCheck Labs - 100% Achieved
+- eJPT (Junior Penetration Tester Certification) SkillCheck Labs Completed
 
 **Data Science**
 - HyperionDev Data Science Certificate
