@@ -175,7 +175,7 @@ mysql> SELECT username, email FROM users LIMIT 3;
 | mrodriguez  | m.rodriguez@vanguardfs |
 +-------------+------------------------+
 
-# EVIDENCE: 2,847 customer records accessible
+# RESULT: 2,847 customer records accessible
 ```
 
 ---
