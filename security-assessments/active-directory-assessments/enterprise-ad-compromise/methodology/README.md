@@ -108,8 +108,6 @@ The **Penetration Testing Execution Standard** provided the overall structure fo
 
 🔗 **Reference:** [PTES Technical Guidelines](http://www.pentest-standard.org/index.php/PTES_Technical_Guidelines)
 
-🔗 **Reference:** [PTES Technical Guidelines](https://github.com/pentest-standard/docs/blob/master/reporting.rst)
-
 ---
 
 ### 2. MITRE ATT&CK Framework
