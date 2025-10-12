@@ -57,17 +57,22 @@ I approach offensive security with the mindset of an adversary and the ethics of
 
 ## 🎓 Certifications & Professional Training
 
-**eCPPTv3** - eLearnSecurity Certified Professional Penetration Tester v3  
-ISC2 CC - Certified in Cybersecurity  
-Netcom Training - Cybersecurity Practices  
+###INE
+**eCPPT** (Certified Professional Penetration Tester)  
+
+###ISC²
+**CC** (Certified in Cybersecurity)  
+
+###Netcom Training
+Cybersecurity Practices  
 
 **INE Professional Development:**
 - Advanced Penetration Testing Program - Completed
 - eCPPTv3 SkillCheck Labs - 100% Achieved
 - eJPT SkillCheck Labs - Completed
 
-**Data Science:**
-- HyperionDev Data Science Certificate (98% Grade)
+**Data Science**
+- HyperionDev Data Science Certificate
 
 **📖 [View Detailed Certification Information →](./certifications/)**
 
