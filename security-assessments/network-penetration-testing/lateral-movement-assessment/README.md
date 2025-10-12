@@ -53,4 +53,4 @@ This assessment was conducted in a controlled lab environment for educational pu
 
 ---
 
-*Last Updated: ${new Date().toLocaleDateString()}*
+*Last Updated: October 2025*
