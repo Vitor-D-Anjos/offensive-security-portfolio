@@ -24,10 +24,16 @@
 - **Attack Chain:** Config exposure → LLMNR → Kerberoasting → ACL abuse → DCSync
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
 
-### 🔐 [Multi-Tier Network Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/multi-tier-infrastructure-compromise)
-**Skills**: Network Penetration Testing, Privilege Escalation, Lateral Movement  
-**Summary**: Achieved full domain admin through chained vulnerabilities including CVE-2025-32463
-**Tags**: `Network Security` `Privilege Escalation` `CVE Exploitation` `Lateral Movement`
+### [Multi-Tier Network Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/multi-tier-infrastructure-compromise)
+
+*Complete administrative access | 40-100 hour assessment | Critical infrastructure risk*
+
+- **Exploitation Timeline**: 4 hours from initial access to domain admin
+- **Assessment Duration**: 40-100 hours (comprehensive testing)
+- **Critical Findings**: 4 Critical vulnerabilities enabling complete chain
+- **Attack Chain**: External recon → SMB compromise → Web app → Database → Internal pivot → CVE exploitation
+- **Methodology**: PTES, MITRE ATT&CK, NIST SP 800-115
+- **Business Impact**: Complete infrastructure control, regulatory exposure scenarios
 
 ---
 
