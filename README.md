@@ -16,13 +16,18 @@
 
 ## 🔥 Featured Engagement
 
-### [Enterprise Active Directory Compromise](/active-directory-assessments/enterprise-ad-compromise/)
+### [Enterprise Active Directory Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/active-directory-assessments/enterprise-ad-compromise)
 **Complete domain takeover | 48-hour assessment | $3.5M-$10M business impact**
 
 - **Time to Domain Admin:** 16 hours
 - **Critical Findings:** 4 Critical, 4 High-risk vulnerabilities
 - **Attack Chain:** Config exposure → LLMNR → Kerberoasting → ACL abuse → DCSync
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
+
+### 🔐 [Multi-Tier Network Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/multi-tier-infrastructure-compromise)
+**Skills**: Network Penetration Testing, Privilege Escalation, Lateral Movement  
+**Summary**: Achieved full domain admin through chained vulnerabilities including CVE-2025-32463
+**Tags**: `Network Security` `Privilege Escalation` `CVE Exploitation` `Lateral Movement`
 
 ---
 
