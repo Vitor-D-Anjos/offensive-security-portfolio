@@ -98,4 +98,4 @@ Enterprise Attack Surface Coverage
 
 💡 Professional Context
 
-*This comprehensive skills validation represents a complete penetration testing educational pathway: foundational expertise through eJPT labs, professional-level mastery via 100% eCPPT skill checks, and advanced enterprise techniques through INE's Advanced Penetration Testing curriculum. With 250+ hours of validated hands-on experience across enterprise environments, this progression demonstrates proven capability to conduct sophisticated security assessments from initial reconnaissance to full domain compromise.*
+*This comprehensive skills validation represents a complete penetration testing educational pathway: foundational expertise through eJPT labs, professional-level mastery via 100% eCPPT skill checks, and advanced enterprise techniques through INE's Advanced Penetration Testing curriculum. With several thousand hours of validated hands-on experience across enterprise environments, this progression demonstrates proven capability to conduct sophisticated security assessments from initial reconnaissance to full domain compromise.*
