@@ -75,7 +75,6 @@ Professional credentials and continuous development
 ---
 
 ## 📫 Connect
-- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/vitor-david-anjos-33242a107/)
 - **GitHub:** [GitHub](https://github.com/Vitor-D-Anjos)
 
 ---
