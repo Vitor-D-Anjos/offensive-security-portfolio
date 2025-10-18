@@ -21,8 +21,9 @@
 
 - **Time to Domain Admin:** 16 hours
 - **Critical Findings:** 4 Critical, 4 High-risk vulnerabilities
-- **Attack Chain:** Config exposure → LLMNR → Kerberoasting → ACL abuse → DCSync
+- **Attack Chain:** Config exposure → LLMNR poisoning → Kerberoasting → ACL abuse → DCSync
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
+- **Business Impact**: 15,000+ customer records, financial data, complete AD infrastructure compromise
   
 ### [Enterprise Network & Domain Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
 **Complete infrastructure takeover | 40-100 hour assessment | Critical data breach scenario**
