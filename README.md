@@ -23,6 +23,16 @@
 - **Critical Findings:** 4 Critical, 4 High-risk vulnerabilities
 - **Attack Chain:** Config exposure → LLMNR → Kerberoasting → ACL abuse → DCSync
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
+  
+### [Enterprise Network & Domain Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
+**Complete infrastructure takeover | 40-100 hour assessment | Critical data breach scenario**
+
+- **Exploitation Timeline**: 5 hours from initial access to domain admin
+- **Assessment Duration**: 40-100 hours (comprehensive methodology)
+- **Critical Findings**: 3 Critical, 3 High-risk vulnerabilities enabling full chain
+- **Attack Chain**: SSH brute force → Database credential theft → Lateral movement → Privilege escalation → Pass-the-hash → Domain control
+- **Methodology**: PTES, MITRE ATT&CK, NIST SP 800-115
+- **Business Impact**: 11,717 customer records, 4,137 financial records, complete domain compromise
 
 ### [Multi-Tier Network Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/multi-tier-infrastructure-compromise)
 **Complete administrative control | 40-100 hour comprehensive assessment | Critical business risk**
