@@ -28,7 +28,7 @@
 **Complete infrastructure takeover | 40-100 hour assessment | Critical data breach scenario**
 
 - **Exploitation Timeline**: 5 hours from initial access to domain admin
-- **Assessment Duration**: 40-100 hours (comprehensive methodology)
+- **Assessment Duration**: 30-100 hours (comprehensive methodology)
 - **Critical Findings**: 3 Critical, 3 High-risk vulnerabilities enabling full chain
 - **Attack Chain**: SSH brute force → Database credential theft → Lateral movement → Privilege escalation → Pass-the-hash → Domain control
 - **Methodology**: PTES, MITRE ATT&CK, NIST SP 800-115
