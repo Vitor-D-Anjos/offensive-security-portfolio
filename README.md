@@ -25,14 +25,14 @@
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
 
 ### [Multi-Tier Network Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/multi-tier-infrastructure-compromise)
-**Complete administrative access | 40-100 hour assessment | Critical infrastructure risk**
+**Complete administrative control | 40-100 hour comprehensive assessment | Critical business risk**
 
-- **Exploitation Timeline**: 4 hours from initial access to domain admin
-- **Assessment Duration**: 40-100 hours (comprehensive testing)
-- **Critical Findings**: 4 Critical vulnerabilities enabling complete chain
-- **Attack Chain**: External recon → SMB compromise → Web app → Database → Internal pivot → CVE exploitation
+- **Exploitation Timeline**: 4 hours from initial access to full domain compromise
+- **Assessment Duration**: 40-100 hours (methodical testing & documentation)
+- **Critical Findings**: 4 chained vulnerabilities enabling complete infrastructure takeover
+- **Attack Chain**: External recon → SMB compromise → Web app → Database → Internal pivot → CVE-2025-32463
 - **Methodology**: PTES, MITRE ATT&CK, NIST SP 800-115
-- **Business Impact**: Complete infrastructure control, regulatory exposure scenarios
+- **Business Impact**: Complete infrastructure control, data breach scenarios, regulatory exposure
 
 ---
 
