@@ -73,8 +73,8 @@ I approach offensive security with the mindset of an adversary and the ethics of
 
 **Ongoing Learning:**
 
-- HackTheBox, TryHackMe, Proving Grounds
-- CTF competitions and home lab development
+- HackTheBox, TryHackMe
+- CTF competitions
 - Security research, blogs, threat reports
 
 ## 🧰 Tools & Tech Stack (Selected)
