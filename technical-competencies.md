@@ -81,7 +81,7 @@ Enterprise Attack Surface Coverage
 
 ### Verified Outcomes
 
-- INE Advanced Penetration Testing Path - Comprehensive enterprise security curriculum completion
+- INE Advanced Penetration Testing Learning Path - Comprehensive enterprise security curriculum completion
 - eCPPT Skill Check Mastery - 100% scores across professional penetration testing assessments
 - eJPT Learning Path Mastery - All foundational challenge labs completed
 - 25+ INE CTF Labs Completed - Full penetration testing lifecycle demonstrations
