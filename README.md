@@ -25,8 +25,7 @@
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
 
 ### [Multi-Tier Network Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/multi-tier-infrastructure-compromise)
-
-*Complete administrative access | 40-100 hour assessment | Critical infrastructure risk*
+**Complete administrative access | 40-100 hour assessment | Critical infrastructure risk**
 
 - **Exploitation Timeline**: 4 hours from initial access to domain admin
 - **Assessment Duration**: 40-100 hours (comprehensive testing)
