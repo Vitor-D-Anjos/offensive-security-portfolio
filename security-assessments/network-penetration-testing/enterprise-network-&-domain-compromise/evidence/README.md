@@ -386,4 +386,4 @@ During technical interviews, I can demonstrate:
 - **Evidence Collection Methodology:** How to properly collect and preserve penetration testing evidence
 - **Tool Proficiency:** Hands-on experience with industry-standard testing tools
 - **Attack Chain Documentation:** Mapping technical findings to business impact
-- **Professional Reporting:** Translating technical evidence into executive-level insights 
+- **Professional Reporting:** Translating technical evidence into executive-level insights
