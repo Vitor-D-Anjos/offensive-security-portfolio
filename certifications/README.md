@@ -16,3 +16,6 @@
 - **eJPT Learning Path** - Junior Penetration Tester  
   - All SkillCheck labs completed
   - Fundamental methodology validation
+
+---
+> *Full certification details available during interview process*
