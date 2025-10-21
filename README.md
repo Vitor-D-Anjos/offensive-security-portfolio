@@ -61,8 +61,8 @@ Professional credentials and continuous development
 ## 📜 Certifications
 - **eCPPTv3** - Certified Professional Penetration Tester
 - **ISC² CC** - Certified in Cybersecurity
-- **INE** - Penetration Testing Professional SkillCheck (100%)
-- **HyperionDev** - Data Science Certificate (98%)
+- **INE** - Penetration Testing Professional SkillCheck (100% Achieved)
+- **HyperionDev** - Data Science Certificate (98% Average Grade)
 
 ---
 
