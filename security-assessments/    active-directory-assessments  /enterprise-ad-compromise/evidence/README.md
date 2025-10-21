@@ -33,7 +33,7 @@ the technical tools and techniques used in this assessment.
 
 ---
 
-📂 ## Evidence Documentation Examples
+## 📂 Evidence Documentation Examples
 
 *The following examples demonstrate professional evidence formatting and documentation standards used in enterprise penetration testing reports.*
 
