@@ -17,5 +17,6 @@
   - All SkillCheck labs completed
   - Fundamental methodology validation
 
+
 ---
 > *Full certification details available during interview process*
