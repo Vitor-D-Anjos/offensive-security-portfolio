@@ -21,15 +21,15 @@ Config File Exposure → SSH Access → LLMNR Poisoning → Credential Harvestin
 ### 🛠️ Tools & Technologies
 BloodHound, Impacket, CrackMapExec, Responder, Mimikatz, PowerShell
 
-### 📁 Documentation
-- **[Cover Sheet](cover-sheet.md)** - Project overview
-- **[Executive Summary](technical-assessment.md#executive-summary)** - High-level overview and key findings  
-- **[Technical Assessment](technical-assessment.md#technical-assessment)** - Detailed exploitation steps
-- **[Findings & Vulnerabilities](findings-remediation.md#3-findings--vulnerabilities)** - Complete vulnerability analysis
-- **[Remediation Strategy](findings-remediation.md#5-remediation-strategy)** - Action plan and timeline
-- **[Methodology](methodology.md)** - Testing approach and frameworks
-- **[Evidence](evidence/)** - Proof and supporting materials
-- **[Conclusion](findings-remediation.md#8-conclusion)** - Final assessment and recommendations
+### 📂 Documentation
+- 📋 **[Cover Sheet](cover-sheet.md)** - Project overview
+- 📊 **[Executive Summary](technical-assessment.md#executive-summary)** - High-level overview and key findings  
+- 🔧 **[Technical Assessment](technical-assessment.md#technical-assessment)** - Detailed exploitation steps
+- ⚠️ **[Findings & Vulnerabilities](findings-remediation.md#3-findings--vulnerabilities)** - Complete vulnerability analysis
+- 🛡️ **[Remediation Strategy](findings-remediation.md#5-remediation-strategy)** - Action plan and timeline
+- 📐 **[Methodology](methodology.md)** - Testing approach and frameworks
+- 📸 **[Evidence](evidence/)** - Proof and supporting materials
+- 🎯 **[Conclusion](findings-remediation.md#8-conclusion)** - Final assessment and recommendations
 
 ---
 
