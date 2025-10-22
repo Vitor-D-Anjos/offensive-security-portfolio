@@ -9,7 +9,7 @@
 ### Professional Penetration Testing
   - **Professional Penetration Tester (eCPPT) Learning Path**
     - 100% SkillCheck Achievement
-    - Completed all eCPPTv3 CTF Challenges:
+    - All CTF Challenges Completed:
       - Powershell for Pentesters
       - Client-Side Attacks 
       - Web Application Penetration Testing (CTF 1 & 2)
@@ -28,11 +28,11 @@
 
 ### Foundational Excellence
 - **INE Junior Penetration Tester (eJPT) Learning Path**  
-  - All SkillCheck labs completed
-  - Fundamental knowledge & methodology validation
+  - Full SkillCheck Accomplishment
+  - All 15+ CTF Challenges Successfully Done
+- Fundamental knowledge & methodology validation
 
 ---
 
 ## 🚀 Ongoing Skill Development  
 Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.
-
