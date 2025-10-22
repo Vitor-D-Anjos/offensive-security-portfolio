@@ -36,5 +36,3 @@
 ## 🚀 Ongoing Skill Development  
 - Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.
 
----
-> *Full certification details available during interview process*
