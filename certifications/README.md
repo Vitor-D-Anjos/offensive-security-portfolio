@@ -34,5 +34,5 @@
 ---
 
 ## 🚀 Ongoing Skill Development  
-- Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.
+Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.
 
