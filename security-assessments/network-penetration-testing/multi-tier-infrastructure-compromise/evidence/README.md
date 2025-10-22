@@ -251,7 +251,7 @@ The following information has been modified for confidentiality:
 ## Contact Information
 
 **Assessment Conducted By:** Vitor Anjos  
-**GitHub:** [Offensive Security](https://github.com/Vitor-D-Anjos)  
+**GitHub:** [Vitor-D-Anjos](https://github.com/Vitor-D-Anjos)  
 
 ---
 
