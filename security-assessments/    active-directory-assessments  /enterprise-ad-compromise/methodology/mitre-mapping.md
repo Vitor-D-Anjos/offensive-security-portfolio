@@ -848,7 +848,7 @@ Analyze:
 
 <div align="center">
 
-[![Back to Methodology](https://img.shields.io/badge/←-Methodology-blue?style=for-the-badge)](./README.md)
+[![Back to Methodology](https://img.shields.io/badge/←-Methodology_Home-blue?style=for-the-badge)](./README.md)
 [![Project Home](https://img.shields.io/badge/🏠-Project_Home-green?style=for-the-badge)](../README.md)
 [![Technical Report](https://img.shields.io/badge/→-Technical_Assessment-orange?style=for-the-badge)](../technical-assessment.md)
 
