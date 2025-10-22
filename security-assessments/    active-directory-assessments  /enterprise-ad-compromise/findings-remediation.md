@@ -1275,16 +1275,11 @@ Despite vulnerabilities, several controls were properly implemented:
 
 ### Distribution List
 
-**Internal (Simulated):**
+**Internal:**
 - Chief Information Security Officer (CISO)
 - Chief Information Officer (CIO)
 - IT Security Team Lead
 - Compliance Officer
-
-**External (Portfolio):**
-- Portfolio reviewers
-- Potential employers
-- GitHub repository (public version)
 
 ### Confidentiality Statement
 
@@ -1307,7 +1302,7 @@ sha256sum Vanguard_Pentest_Report_Part2.pdf
 **Lead Penetration Tester:**  
 **Name:** Vitor Anjos  
 **Certifications:** eCPPTv3   
-**GitHub:** [GitHub](https://github.com/Vitor-D-Anjos)  
+**GitHub:** [Vitor-D-Anjos](https://github.com/Vitor-D-Anjos)  
 **Portfolio:** [Offensive Security](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 ---
