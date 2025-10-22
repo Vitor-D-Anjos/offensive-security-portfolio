@@ -2,7 +2,7 @@
 
 ## 🏆 INE Security Certified
 
-- ### eCPPTv3 - **Certified Penetration Testing Professional**
+- ### 🎓 eCPPTv3 - **Certified Penetration Testing Professional**
 
 ## 🥇Credentials
 
@@ -30,6 +30,11 @@
 - **INE Junior Penetration Tester (eJPT) Learning Path**  
   - All SkillCheck labs completed
   - Fundamental knowledge & methodology validation
+
+---
+
+## 🚀 Ongoing Skill Development  
+- Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.
 
 ---
 > *Full certification details available during interview process*
