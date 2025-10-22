@@ -21,7 +21,7 @@
   - Advanced enterprise penetration testing validation
 
 ### Advanced Training Completion  
-- 🏅 **INE Advanced Penetration Testing Learning Path**
+- **INE Advanced Penetration Testing Learning Path**
   - Comprehensive Program
   - Complete curriculum mastery
   - Enterprise attack surface coverage
