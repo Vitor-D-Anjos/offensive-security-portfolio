@@ -2,7 +2,7 @@
 
 ## Professional Security Assessments & Research
 
-**Vitor David Anjos** | *Penetration Tester | AD Security Specialist | eCPPTv3 Certified*
+**Vitor Anjos** | *Penetration Tester | AD Security Specialist | eCPPTv3 Certified*
 
 ---
 
