@@ -1303,7 +1303,7 @@ sha256sum Vanguard_Pentest_Report_Part2.pdf
 **Name:** Vitor Anjos  
 **Certifications:** eCPPTv3   
 **GitHub:** [Vitor-D-Anjos](https://github.com/Vitor-D-Anjos)  
-**Portfolio:** [offensive-security](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
+**Portfolio:** [Offensive Security](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 ---
 
