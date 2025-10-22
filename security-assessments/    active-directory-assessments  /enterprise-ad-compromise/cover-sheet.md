@@ -169,7 +169,7 @@ This project demonstrates expertise gained through:
 ### 📧 CONTACT INFORMATION
 
 **Penetration Tester:** Vitor Anjos     
-**GitHub:** [GitHub](https://github.com/Vitor-D-Anjos)  
+**GitHub:** [Vitor-D-Anjos](https://github.com/Vitor-D-Anjos)  
 **Portfolio:** [Offensive Security](https://github.com/Vitor-D-Anjos/offensive-security-portfolio)
 
 **🔗 [Learn More About My Background →](../../../about-me.md)**
