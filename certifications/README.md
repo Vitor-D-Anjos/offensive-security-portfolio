@@ -21,7 +21,7 @@
   - Advanced enterprise penetration testing validation
 
 ### Advanced Training Completion  
-- **INE Advanced Penetration Testing Learning Path**
+- 🏅 **INE Advanced Penetration Testing Learning Path**
   - Comprehensive Program
   - Complete curriculum mastery
   - Enterprise attack surface coverage
@@ -35,4 +35,4 @@
 ---
 
 ## 🚀 Ongoing Skill Development  
-Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.
+Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.🌱
