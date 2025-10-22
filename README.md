@@ -75,4 +75,4 @@ Professional credentials and continuous development
 ---
 
 ## 📫 Connect
-- **GitHub:** [GitHub](https://github.com/Vitor-D-Anjos)
+- **GitHub:** [Vitor-D-Anjos](https://github.com/Vitor-D-Anjos)
