@@ -697,20 +697,20 @@ root@vault:/# cat /root/.ssh/id_rsa
 
 | Time | Activity | Result |
 |------|----------|--------|
-| T+00:00 | Initial reconnaissance | Target identification |
-| T+00:15 | SMB enumeration | Credential discovery |
-| T+00:30 | Web authentication | Admin panel access |
-| T+01:00 | Web shell deployment | www-data shell |
-| T+01:30 | Meterpreter upgrade | Enhanced capabilities |
-| T+02:00 | Database access | Credential harvest |
-| T+02:30 | Hash cracking | Additional credentials |
-| T+03:00 | Network pivoting | Internal network access |
-| T+04:00 | SSH brute force | User-level access |
-| T+04:30 | Vulnerability research | CVE-2025-32463 identified |
-| T+05:00 | Exploit development | Exploit compiled |
-| T+05:15 | Privilege escalation | Root access achieved |
+| T+00:00 | Initial reconnaissance & SMB enumeration | Target identification & credential discovery (robert_admin:SecureP@ss2024) |
+| T+08:00 | Web authentication & Git repository analysis | Admin panel access & source code review |
+| T+18:00 | Web shell deployment | www-data shell established on webapps.corp.local |
+| T+20:00 | Meterpreter session upgrade | Enhanced post-exploitation capabilities |
+| T+22:00 | Database configuration discovery | Passwordless MySQL root identified in config.php |
+| T+24:00 | Database access & hash extraction | MySQL user hashes extracted for cracking |
+| T+30:00 | Hash cracking & credential verification | Additional credential obtained (svc_backup:SecureP@ss2024) |
+| T+35:00 | Internal network discovery & pivot setup | Internal network segment (172.16.50.0/24) accessed |
+| T+40:00 | Internal host scanning & SSH brute force | User-level access achieved on vault.corp.internal (admin_vault:Welcome2024!) |
+| T+46:00 | Vulnerability research | Privilege escalation vector identified (CVE-2025-32463) |
+| T+48:00 | Exploit development & compilation | Custom exploit compiled for target environment |
+| T+49:00 | Privilege escalation execution | Root access achieved on vault.corp.internal |
 
-**Total Time to Complete Compromise:** 5 hours 15 minutes of active exploitation
+**Total Time to Complete Compromise:** 49 hours 15 minutes of active exploitation
 
 ---
 
