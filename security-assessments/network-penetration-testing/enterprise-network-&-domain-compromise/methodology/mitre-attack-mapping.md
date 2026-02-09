@@ -193,3 +193,10 @@ Each technique maps to specific MITRE D3FEND countermeasures:
 | Initial Access Vectors | 2         |
 | Privilege Escalation Methods | 2    |
 | Lateral Movement Techniques | 3     |
+
+---
+
+## 🔍 Quick Navigation
+
+- [Back to Project Hub](https://github.com/Vitor-D-Anjos/offensive-security-portfolio_0/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
+- [Back to Methodology](README.md)
