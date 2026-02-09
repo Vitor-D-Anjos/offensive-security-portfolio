@@ -36,13 +36,14 @@ lateral-movement-assessment/
 - 📚 methodology/ # Testing frameworks
 text
 
-
 ## 🔍 Quick Navigation
 
-- [Executive Summary](executive-summary.md) - Business-focused overview
-- [Technical Report](technical-report.md) - Detailed exploitation chain
-- [Findings & Remediation](findings-remediation.md) - Vulnerabilities & fixes
-- [Methodology](methodology/README.md) - Testing frameworks
+- [Executive Summary](executive-summary.md) – Business-focused overview and risk context
+- [Technical Report](technical-report.md) – Detailed exploitation chain and technical findings
+- [Findings & Remediation](findings-remediation.md) – Identified vulnerabilities and recommended fixes
+- [Evidence & Documentation](evidence/README.md) – Supporting evidence, command outputs, and proof of compromise
+- [Methodology](methodology/README.md) – Testing approach, frameworks, and assessment structure
+  - [MITRE ATT&CK Mapping](methodology/mitre-attack-mapping.md) – Tactics, techniques, and detection opportunities
 
 ---
 
