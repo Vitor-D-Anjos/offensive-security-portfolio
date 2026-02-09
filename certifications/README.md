@@ -29,7 +29,7 @@
 ### Foundational Excellence
 - **INE Junior Penetration Tester (eJPT) Learning Path**  
   - Full SkillCheck Accomplishment
-  - All 15+ CTF Challenges Successfully Done
+  - All 25+ CTF Challenges Successfully Done
 - Fundamental knowledge & methodology validation
 
 ---
