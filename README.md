@@ -18,7 +18,7 @@
 
 ## 🔥 Featured Engagement
 
-### [Enterprise Active Directory Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/%20%20%20%20active-directory-assessments%20%20/enterprise-ad-compromise)
+### [Enterprise Active Directory Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/%20%20%20%20active-directory-assessments%20%20)
 **Complete domain takeover | 48-hour assessment | $3.5M-$10M business impact**
 
 - **Time to Domain Admin:** 16 hours
