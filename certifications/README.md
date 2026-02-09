@@ -36,3 +36,11 @@
 
 ## 🚀 Ongoing Skill Development  
 Continuously engaging in new **CTF challenges** to stay current with emerging penetration testing techniques and methodologies.🌱
+
+---
+
+## 🔗 Related Sections
+
+- **[Technical Competencies](../technical-competencies.md)**: View my detailed technical skills and tools
+- **[Security Assessments](../security-assessments/)**: Explore my security analysis projects
+
