@@ -11,7 +11,7 @@
 
 ---
 
-## Executive Summary
+## Project Summary
 
 This assessment successfully demonstrated a complete attack chain from external reconnaissance to full administrative compromise across a segmented network infrastructure. Critical vulnerabilities in access controls, authentication mechanisms, and system configurations enabled unauthorized access and privilege escalation across all target systems.
 
