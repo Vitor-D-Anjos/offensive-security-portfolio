@@ -53,7 +53,7 @@ The Penetration Testing Execution Standard (PTES) provides a comprehensive metho
 
 ---
 
-### Phase 2: Intelligence Gathering (8 hours)
+### Phase 2: Intelligence Gathering (3 hours)
 
 **Reconnaissance Approach:**
 - Black-box testing (no prior knowledge)
@@ -133,7 +133,7 @@ nikto -h [target]
 
 ---
 
-### Phase 5: Exploitation (12 hours)
+### Phase 5: Exploitation (24 hours)
 
 **Exploitation Methodology:**
 
@@ -173,7 +173,7 @@ nikto -h [target]
 
 ---
 
-### Phase 6: Post-Exploitation (15 hours)
+### Phase 6: Post-Exploitation (12 hours)
 
 **Post-Exploitation Objectives:**
 1. Establish persistence mechanisms
