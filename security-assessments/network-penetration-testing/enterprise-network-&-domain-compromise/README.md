@@ -4,7 +4,7 @@
 
 **Engagement Type**: Internal Network Penetration Test  
 **Testing Focus**: Lateral Movement & Privilege Escalation  
-**Duration**: 2-Day Assessment  
+**Duration**: 6-Day Assessment  
 **Methodology**: OSSTMM-Compliant Testing  
 
 ### 📊 Quick Facts
