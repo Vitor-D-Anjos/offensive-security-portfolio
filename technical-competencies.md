@@ -105,4 +105,4 @@ Enterprise Attack Surface Coverage
 ## 🔗 Explore My Work
 
 - **[Security Assessments](./security-assessments/)**
-- **[Portfolio Home](https://github.com/Vitor-D-Anjos/offensive-security-portfolio_0/tree/main)**
+- **[Portfolio Home](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main)**
