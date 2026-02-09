@@ -210,4 +210,12 @@ text
 📞 **Verification Testing**  
 Recommend retesting after 90 days to verify remediation effectiveness and identify any residual risks.
 
+---
 
+## 🔍 Quick Navigation
+
+- [Back to Project Hub](https://github.com/Vitor-D-Anjos/offensive-security-portfolio_0/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
+- [Executive Summary](executive-summary.md)
+- [Technical Report](technical-report.md)
+- [Evidence & Documentation](evidence/README.md)
+- [Methodology](methodology/README.md)
