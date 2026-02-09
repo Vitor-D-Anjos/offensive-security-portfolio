@@ -5,7 +5,7 @@
 | | |
 |------|------|
 | **Test Type** | Internal Network Penetration Test |
-| **Dates Conducted** | August 15-16, 2025 |
+| **Dates Conducted** | August 15-20, 2025 |
 | **Target Scope** | Internal network segment 192.168.78.0/24 |
 | **Objective** | Assess lateral movement risks and privilege escalation paths |
 | **Overall Risk Rating** | **CRITICAL** |
