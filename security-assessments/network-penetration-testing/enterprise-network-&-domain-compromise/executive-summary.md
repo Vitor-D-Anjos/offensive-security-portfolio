@@ -84,5 +84,12 @@ This engagement demonstrated critical weaknesses in the organization's internal 
 
 <p align="center"><em>Confidential - For Internal Use Only</em></p>
 
+---
 
+## 🔍 Quick Navigation
 
+- [Back to Project Hub](../lateral-movement-assessment)
+- [Technical Report](technical-report.md)
+- [Findings & Remediation](findings-remediation.md)
+- [Evidence & Documentation](evidence/README.md)
+- [Methodology](methodology/README.md)
