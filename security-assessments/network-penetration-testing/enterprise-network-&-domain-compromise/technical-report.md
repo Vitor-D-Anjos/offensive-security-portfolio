@@ -201,7 +201,7 @@ Complete Attack Chain Summary
 ```
 ## 🔍 Quick Navigation
 
-- [Back to Project Hub](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
+- [Back to Project Hub](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/enterprise-network-%26-domain-compromise)
 - [Executive Summary](executive-summary.md)
 - [Findings & Remediation](findings-remediation.md)
 - [Evidence & Documentation](evidence/README.md)
