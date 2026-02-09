@@ -235,12 +235,14 @@ Documentation Phase (9 hours)
 
 This assessment is documented across multiple files:
 
-1. **[README.md](./README.md)** - This overview document
-2. **[executive-summary.md](./executive-summary.md)** - High-level business summary
-3. **[technical-report.md](./technical-report.md)** - Detailed technical walkthrough
-4. **[findings-remediation.md](./findings-remediation.md)** - Vulnerability details and fixes
-5. **[methodology/mitre-attack-mapping.md](./methodology/mitre-attack-mapping.md)** - ATT&CK framework mapping
-
+1. **[README](./README.md)** - This overview document
+2. **[executive-summary](./executive-summary.md)** - High-level business summary
+3. **[technical-report](./technical-report.md)** - Detailed technical walkthrough
+4. **[findings-remediation](./findings-remediation.md)** - Vulnerability details and fixes
+5. **[network-diagrams](./network-diagrams.md)** - Network Topology & Attack Flow Diagrams
+6. **[methodology](./methodology/README.md)** - Testing methodology & procedures
+7. **[mitre-attack-mapping](./methodology/mitre-attack-mapping.md)** - ATT&CK framework mapping
+8. **[evidence](./evidence/README.md)** - Evidence Documentation
 ---
 
 ## Key Takeaways
