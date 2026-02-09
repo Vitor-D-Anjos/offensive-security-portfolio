@@ -385,7 +385,10 @@ During technical interviews, I can demonstrate:
 
 ---
 
-**Back to**  
-[Enterprise Network & Domain Compromise Project](../)  
-[Technical Report](../technical-report.md)  
-[Findings & Remediation](../findings-remediation.md)  
+## 🔍 Quick Navigation
+
+- [Back to Project Hub](../../enterprise-network-%26-domain-compromise)
+- [Executive Summary](../executive-summary.md)
+- [Technical Report](../technical-report.md)
+- [Findings & Remediation](../findings-remediation.md)
+- [Methodology](../methodology/README.md)
