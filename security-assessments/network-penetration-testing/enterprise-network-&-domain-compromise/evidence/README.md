@@ -1,27 +1,5 @@
 # 🖼️ Evidence & Documentation
 
-## 🔗 Navigation
-
-**Back to:**
-[Enterprise Network & Domain Compromise Project](../)
-[Technical Report](../technical-report.md)
-[Findings & Remediation](../findings-remediation.md)
-
-**Jump to:**
-[Phase 1: Reconnaissance Evidence](#🔍-phase-1-reconnaissance-evidence)
-[Phase 2: Initial Access Evidence](#💥-phase-2-initial-access-evidence)
-[Phase 3: Credential Access Evidence](#🔑-phase-3-credential-access-evidence)
-[Phase 4: Lateral Movement Evidence](#🔀-phase-4-lateral-movement-evidence)
-[Phase 5: Privilege Escalation Evidence](#⬆️-phase-5-privilege-escalation-evidence)
-[Phase 6: Domain Compromise Evidence](#🎯-phase-6-domain-compromise-evidence)
-[Attack Timeline Summary](#📊-attack-timeline-summary)
-
-
-**Back to**  
-[Enterprise Network & Domain Compromise Project](../)  
-[Technical Report](../technical-report.md)  
-[Findings & Remediation](../findings-remediation.md)  
-
 **Note:** Detailed screenshots and command outputs were generated during the lab assessment but are not included in this public portfolio version to protect lab environment details. In a professional engagement, evidence would include:
 
 - Nmap scan results (XML output)
@@ -404,3 +382,8 @@ During technical interviews, I can demonstrate:
 - **Tool Proficiency:** Hands-on experience with industry-standard testing tools
 - **Attack Chain Documentation:** Mapping technical findings to business impact
 - **Professional Reporting:** Translating technical evidence into executive-level insights
+
+**Back to**  
+[Enterprise Network & Domain Compromise Project](../)  
+[Technical Report](../technical-report.md)  
+[Findings & Remediation](../findings-remediation.md)  
