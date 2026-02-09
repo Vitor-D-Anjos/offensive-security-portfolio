@@ -383,6 +383,8 @@ During technical interviews, I can demonstrate:
 - **Attack Chain Documentation:** Mapping technical findings to business impact
 - **Professional Reporting:** Translating technical evidence into executive-level insights
 
+---
+
 **Back to**  
 [Enterprise Network & Domain Compromise Project](../)  
 [Technical Report](../technical-report.md)  
