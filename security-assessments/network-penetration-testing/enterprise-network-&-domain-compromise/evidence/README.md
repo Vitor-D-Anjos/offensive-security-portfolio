@@ -1,5 +1,22 @@
 # 🖼️ Evidence & Documentation
 
+## 🔗 Navigation
+
+**Back to:**
+[Enterprise Network & Domain Compromise Project](../)
+[Technical Report](../technical-report.md)
+[Findings & Remediation](../findings-remediation.md)
+
+**Jump to:**
+[Phase 1: Reconnaissance Evidence](#🔍-phase-1-reconnaissance-evidence)
+[Phase 2: Initial Access Evidence](#💥-phase-2-initial-access-evidence)
+[Phase 3: Credential Access Evidence](#🔑-phase-3-credential-access-evidence)
+[Phase 4: Lateral Movement Evidence](#🔀-phase-4-lateral-movement-evidence)
+[Phase 5: Privilege Escalation Evidence](#⬆️-phase-5-privilege-escalation-evidence)
+[Phase 6: Domain Compromise Evidence](#🎯-phase-6-domain-compromise-evidence)
+[Attack Timeline Summary](#📊-attack-timeline-summary)
+
+
 **Back to**  
 [Enterprise Network & Domain Compromise Project](../)  
 [Technical Report](../technical-report.md)  
