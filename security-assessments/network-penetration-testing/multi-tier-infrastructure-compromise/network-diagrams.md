@@ -87,7 +87,7 @@ T+00:00  [RECONNAISSANCE]
          └─► Nmap Port Scan (webapps.corp.local)
              └─► Discovered: HTTP (80), MySQL (3306)
 
-T+00:15  [INITIAL ACCESS]
+T+03:00  [INITIAL ACCESS]
          │
          ├─► SMB Anonymous Access (gateway.corp.local)
          │   └─► Retrieved: credentials.txt, endpoint.txt
@@ -96,7 +96,7 @@ T+00:15  [INITIAL ACCESS]
          └─► Git Repository Exposure (webapps.corp.local)
              └─► Extracted: Source code, database config
 
-T+00:30  [EXPLOITATION]
+T+06:00  [EXPLOITATION]
          │
          ├─► Web Admin Authentication
          │   └─► Login: robert_admin:SecureP@ss2024 ✅
@@ -107,7 +107,7 @@ T+00:30  [EXPLOITATION]
          └─► Reverse Shell
              └─► Obtained: www-data shell ✅
 
-T+01:00  [POST-EXPLOITATION]
+T+10:00  [POST-EXPLOITATION]
          │
          ├─► System Enumeration
          │   └─► Discovered: Dual-homed host (eth0 + eth1)
@@ -119,7 +119,7 @@ T+01:00  [POST-EXPLOITATION]
          └─► Meterpreter Upgrade
              └─► Established: Meterpreter session ✅
 
-T+01:30  [CREDENTIAL HARVESTING]
+T+20:00  [CREDENTIAL HARVESTING]
          │
          ├─► MySQL User Table Dump
          │   └─► Retrieved: admin_db, svc_backup hashes
@@ -127,7 +127,7 @@ T+01:30  [CREDENTIAL HARVESTING]
          └─► Password Cracking (Hashcat)
              └─► Cracked: svc_backup:SecureP@ss2024 ✅
 
-T+02:00  [LATERAL MOVEMENT]
+T+28:00  [LATERAL MOVEMENT]
          │
          ├─► Network Pivoting
          │   └─► Autoroute: 172.16.50.0/24 ✅
@@ -138,13 +138,13 @@ T+02:00  [LATERAL MOVEMENT]
          └─► Port Forwarding Setup
              └─► Forward: SSH port 22 → localhost:2222 ✅
 
-T+02:45  [TARGET COMPROMISE]
+T+34:00  [TARGET COMPROMISE]
          │
          └─► SSH Brute Force (vault.corp.internal)
              └─► Cracked: admin_vault:Welcome2024! ✅
                  └─► Obtained: User-level SSH access ✅
 
-T+03:15  [PRIVILEGE ESCALATION]
+T+42:00  [PRIVILEGE ESCALATION]
          │
          ├─► Vulnerability Identification
          │   └─► Found: CVE-2025-32463 (sudo 1.9.16p2)
@@ -157,7 +157,8 @@ T+03:15  [PRIVILEGE ESCALATION]
                  └─► 🔴 ROOT ACCESS ACHIEVED ✅
 
 ═══════════════════════════════════════════════════════════════════════════
-TOTAL TIME: 3 hours 15 minutes (active exploitation)
+TOTAL TIME: 49 hours 15 minutes (active exploitation)
+FULL ENGAGEMENT DURATION: ~58 hours (including reporting)
 SYSTEMS COMPROMISED: 3/3 (100%)
 PRIVILEGE LEVEL: root/administrator on all systems
 ═══════════════════════════════════════════════════════════════════════════
