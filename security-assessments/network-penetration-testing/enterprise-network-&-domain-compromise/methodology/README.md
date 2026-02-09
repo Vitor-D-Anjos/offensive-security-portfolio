@@ -155,7 +155,7 @@ text
 
 🔍 Quick Navigation
 
-- [Back to Project Hub](../enterprise-network-%26-domain-compromise)
+- [Back to Project Hub](../../enterprise-network-%26-domain-compromise)
 - [MITRE ATT&CK Mapping](mitre-attack-mapping.md)
 - [Executive Summary](../executive-summary.md)
 - [Technical Report](../technical-report.md)
