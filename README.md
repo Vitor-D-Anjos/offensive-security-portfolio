@@ -18,7 +18,7 @@
 
 ## 🔥 Featured Engagement
 
-### [Enterprise Active Directory Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/active-directory-assessments/enterprise-ad-compromise)
+### [Enterprise Active Directory Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/%20%20%20%20active-directory-assessments%20%20/enterprise-ad-compromise)
 **Complete domain takeover | 48-hour assessment | $3.5M-$10M business impact**
 
 - **Time to Domain Admin:** 16 hours
@@ -27,7 +27,7 @@
 - **Methodology:** PTES, MITRE ATT&CK, NIST SP 800-115
 - **Business Impact**: 15,000+ customer records, financial data, complete AD infrastructure compromise
   
-### [Enterprise Network & Domain Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/lateral-movement-assessment)
+### [Enterprise Network & Domain Compromise](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/enterprise-network-%26-domain-compromise)
 **Complete infrastructure takeover | 40-90 hour assessment | Critical data breach scenario**
 
 - **Exploitation Timeline**: ≈50 hours from initial access to domain admin
