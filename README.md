@@ -77,4 +77,4 @@ Professional credentials and continuous development
 ---
 
 ## 📫 Connect
-- **GitHub:** [Vitor-D-Anjos](https://github.com/Vitor-D-Anjos)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Vitor-D-Anjos)
