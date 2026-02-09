@@ -785,7 +785,7 @@ This technical assessment successfully demonstrated a complete attack chain from
 - Missing security patches (CVE-2025-32463)
 - Architecture weaknesses (inadequate network segmentation)
 
-Each individual vulnerability was exploitable, but their combination created a critical security risk that enabled complete infrastructure compromise within approximately 5 hours of active exploitation time.
+Each individual vulnerability was exploitable, but their combination created a critical security risk that enabled complete infrastructure compromise within approximately 50 hours of active exploitation time.
 
 The technical findings demonstrate the need for defense-in-depth security controls, as no single security measure would have prevented this attack chain. Comprehensive remediation across all identified vulnerability areas is essential to establish adequate security posture.
 
