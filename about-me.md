@@ -148,4 +148,8 @@ I'm always interested in connecting with fellow security professionals, discussi
 - ✅ Responsible disclosure
 - ✅ Continuous learning and compliance
 
+## 🔗 Quick Links
+
+- **Security Assessments**: [View detailed security analyses](security-assessments/)
+
 > *"Security is not a product, but a process." — Bruce Schneier*
