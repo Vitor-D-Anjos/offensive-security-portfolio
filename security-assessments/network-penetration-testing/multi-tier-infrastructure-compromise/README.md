@@ -57,7 +57,7 @@ This assessment successfully demonstrated a complete attack chain from external 
 ## Assessment Breakdown
 
 ### Phase 1: Reconnaissance & Discovery
-**Duration:** 8 hours  
+**Duration:** 3 hours  
 **Activities:**
 - Network mapping and service enumeration
 - SMB share discovery and analysis
@@ -70,7 +70,7 @@ This assessment successfully demonstrated a complete attack chain from external 
 - Weak authentication mechanisms
 
 ### Phase 2: Initial Access & Exploitation
-**Duration:** 12 hours  
+**Duration:** 7 hours  
 **Activities:**
 - Credential harvesting from SMB shares
 - Web application authentication bypass
@@ -80,7 +80,7 @@ This assessment successfully demonstrated a complete attack chain from external 
 **Key Achievement:** Obtained foothold on webapps.corp.local as www-data user
 
 ### Phase 3: Post-Exploitation & Lateral Movement
-**Duration:** 15 hours  
+**Duration:** 24 hours  
 **Activities:**
 - Database credential extraction (MySQL root)
 - Password hash cracking
@@ -91,7 +91,7 @@ This assessment successfully demonstrated a complete attack chain from external 
 **Key Achievement:** Discovered and accessed internal 172.16.50.0/24 network
 
 ### Phase 4: Privilege Escalation
-**Duration:** 6 hours  
+**Duration:** 15 hours  
 **Activities:**
 - SSH brute force attack on internal host
 - Vulnerability research and identification
