@@ -698,15 +698,15 @@ root@vault:/# cat /root/.ssh/id_rsa
 | Time | Activity | Result |
 |------|----------|--------|
 | T+00:00 | Initial reconnaissance & SMB enumeration | Target identification & credential discovery (robert_admin:SecureP@ss2024) |
-| T+08:00 | Web authentication & Git repository analysis | Admin panel access & source code review |
-| T+18:00 | Web shell deployment | www-data shell established on webapps.corp.local |
-| T+20:00 | Meterpreter session upgrade | Enhanced post-exploitation capabilities |
-| T+22:00 | Database configuration discovery | Passwordless MySQL root identified in config.php |
-| T+24:00 | Database access & hash extraction | MySQL user hashes extracted for cracking |
-| T+30:00 | Hash cracking & credential verification | Additional credential obtained (svc_backup:SecureP@ss2024) |
-| T+35:00 | Internal network discovery & pivot setup | Internal network segment (172.16.50.0/24) accessed |
-| T+40:00 | Internal host scanning & SSH brute force | User-level access achieved on vault.corp.internal (admin_vault:Welcome2024!) |
-| T+46:00 | Vulnerability research | Privilege escalation vector identified (CVE-2025-32463) |
+| T+03:00 | Web authentication & Git repository analysis | Admin panel access & source code review |
+| T+06:00 | Web shell deployment | www-data shell established on webapps.corp.local |
+| T+10:00 | Meterpreter session upgrade | Enhanced post-exploitation capabilities |
+| T+14:00 | Database configuration discovery | Passwordless MySQL root identified in config.php |
+| T+16:00 | Database access & hash extraction | MySQL user hashes extracted for cracking |
+| T+20:00 | Hash cracking & credential verification | Additional credential obtained (svc_backup:SecureP@ss2024) |
+| T+28:00 | Internal network discovery & pivot setup | Internal network segment (172.16.50.0/24) accessed |
+| T+34:00 | Internal host scanning & SSH brute force | User-level access achieved on vault.corp.internal (admin_vault:Welcome2024!) |
+| T+42:00 | Vulnerability research | Privilege escalation vector identified (CVE-2025-32463) |
 | T+48:00 | Exploit development & compilation | Custom exploit compiled for target environment |
 | T+49:00 | Privilege escalation execution | Root access achieved on vault.corp.internal |
 
