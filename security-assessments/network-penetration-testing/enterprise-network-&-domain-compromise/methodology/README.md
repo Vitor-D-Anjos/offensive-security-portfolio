@@ -151,3 +151,13 @@ text
 - Consistency in reporting  
 - Client feedback incorporation  
 
+---
+
+🔍 Quick Navigation
+
+- [Back to Project Hub](../enterprise-network-%26-domain-compromise)
+- [MITRE ATT&CK Mapping](mitre-attack-mapping.md)
+- [Executive Summary](../executive-summary.md)
+- [Technical Report](../technical-report.md)
+- [Findings & Remediation](../findings-remediation.md)
+- [Evidence & Documentation](../evidence/README.md)
