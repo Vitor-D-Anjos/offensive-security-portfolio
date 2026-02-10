@@ -199,7 +199,6 @@ Evidence Collected: Gained domain administrator privileges and accessed sensitiv
 Complete Attack Chain Summary
 
 ```
-## 🔍 Quick Navigation
 
 - [Back to Project Hub](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/enterprise-network-%26-domain-compromise)
 - [Executive Summary](executive-summary.md)
