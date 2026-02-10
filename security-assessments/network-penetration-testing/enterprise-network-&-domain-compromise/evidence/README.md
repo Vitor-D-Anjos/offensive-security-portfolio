@@ -385,8 +385,6 @@ During technical interviews, I can demonstrate:
 
 ---
 
-## 🔍 Quick Navigation
-
 - [Back to Project Hub](../../enterprise-network-%26-domain-compromise)
 - [Executive Summary](../executive-summary.md)
 - [Technical Report](../technical-report.md)
