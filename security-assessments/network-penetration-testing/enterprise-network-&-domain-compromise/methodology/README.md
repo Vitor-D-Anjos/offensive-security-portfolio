@@ -153,7 +153,7 @@ text
 
 ---
 
-🔍 Quick Navigation
+## 🔍 Quick Navigation
 
 - [Back to Project Hub](../../enterprise-network-%26-domain-compromise)
 - [MITRE ATT&CK Mapping](mitre-attack-mapping.md)
