@@ -212,8 +212,6 @@ Recommend retesting after 90 days to verify remediation effectiveness and identi
 
 ---
 
-## 🔍 Quick Navigation
-
 - [Back to Project Hub](../enterprise-network-%26-domain-compromise)
 - [Executive Summary](executive-summary.md)
 - [Technical Report](technical-report.md)
