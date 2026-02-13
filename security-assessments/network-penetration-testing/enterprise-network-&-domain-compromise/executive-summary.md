@@ -83,11 +83,3 @@ This engagement demonstrated critical weaknesses in the organization's internal 
 **Next Steps:** Review detailed technical findings and coordinate remediation efforts with the IT security team.  
 
 <p align="center"><em>Confidential - For Internal Use Only</em></p>
-
----
-
-- [Back to Project Hub](../enterprise-network-%26-domain-compromise)
-- [Technical Report](technical-report.md)
-- [Findings & Remediation](findings-remediation.md)
-- [Evidence & Documentation](evidence/README.md)
-- [Methodology](methodology/README.md)
