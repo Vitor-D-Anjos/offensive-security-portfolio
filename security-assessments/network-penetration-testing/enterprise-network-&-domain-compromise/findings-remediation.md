@@ -209,11 +209,3 @@ text
 
 📞 **Verification Testing**  
 Recommend retesting after 90 days to verify remediation effectiveness and identify any residual risks.
-
----
-
-- [Back to Project Hub](../enterprise-network-%26-domain-compromise)
-- [Executive Summary](executive-summary.md)
-- [Technical Report](technical-report.md)
-- [Evidence & Documentation](evidence/README.md)
-- [Methodology](methodology/README.md)
