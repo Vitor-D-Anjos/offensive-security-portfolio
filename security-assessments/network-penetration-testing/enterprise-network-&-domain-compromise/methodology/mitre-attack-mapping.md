@@ -193,10 +193,3 @@ Each technique maps to specific MITRE D3FEND countermeasures:
 | Initial Access Vectors | 2         |
 | Privilege Escalation Methods | 2    |
 | Lateral Movement Techniques | 3     |
-
----
-
-## 🔍 Quick Navigation
-
-- [Back to Project Hub](../../enterprise-network-%26-domain-compromise)
-- [Back to Methodology](README.md)
