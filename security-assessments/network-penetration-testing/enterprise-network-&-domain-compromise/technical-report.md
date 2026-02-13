@@ -197,11 +197,3 @@ tree C:\ /F | findstr "password\|secret\|confidential"
 Evidence Collected: Gained domain administrator privileges and accessed sensitive financial and HR data repositories.
 
 Complete Attack Chain Summary
-
-```
-
-- [Back to Project Hub](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/network-penetration-testing/enterprise-network-%26-domain-compromise)
-- [Executive Summary](executive-summary.md)
-- [Findings & Remediation](findings-remediation.md)
-- [Evidence & Documentation](evidence/README.md)
-- [Methodology](methodology/README.md)
