@@ -26,6 +26,12 @@
 ## Web Application Security
 
 - Web Application Penetration Testing - Repeated successful engagements demonstrating OWASP Top 10 exploitation including SQLi, XXE, IDOR, and RCE vectors
+- API Security Assessment - GraphQL introspection exploitation, REST API mass assignment attacks, and broken object property level authorization testing
+- Modern Authentication Testing - OAuth 2.0 redirect validation bypass, JWT algorithm confusion attacks (RS256→HS256), and token forgery exploitation
+- Server-Side Request Forgery - Blind SSRF exploitation via document generation engines leading to cloud metadata service compromise
+- Enterprise Attack Chain Development - Full-stack application compromise from unauthenticated reconnaissance to internal vault access across chained vulnerabilities
+- MITRE ATT&CK Mapping - Application-layer TTP documentation for detection engineering and blue team collaboration
+- Compliance-Focused Assessment - Security findings mapped to PCI-DSS v4.0, SOC 2 Trust Services Criteria, ISO 27001:2022, HIPAA, and GDPR requirements
 - Client-Side Attack Vectors - Experience with browser-based attacks, XSS exploitation chains, and social engineering payload delivery
 
 ## Advanced Adversary Tradecraft
