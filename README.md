@@ -45,7 +45,7 @@
 - **Methodology**: PTES, MITRE ATT&CK, NIST SP 800-115
 - **Business Impact**: Complete infrastructure control, data breach scenarios, regulatory exposure
 
-### [Enterprise API Attack Chain Assessment](https://github.com/Vitor-D-Anjos/offensive-security-portfolio_0/tree/main/security-assessments/web-application-assessments/enterprise-api-attack-chain)
+### [Enterprise API Attack Chain Assessment](https://github.com/Vitor-D-Anjos/offensive-security-portfolio/tree/main/security-assessments/web-application-assessments/enterprise-api-attack-chain)
 **Full-stack application compromise | 10-hour assessment | Complete secrets vault breach**
 
 - **Exploitation Timeline:** 10 hours from unauthenticated to full vault access
