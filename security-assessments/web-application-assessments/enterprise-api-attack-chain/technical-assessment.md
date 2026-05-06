@@ -707,5 +707,4 @@ Access-Control-Allow-Origin: *
 
 **Recommendation:** Restrict CORS to explicitly trusted origins rather than using wildcards.
 
-This technical assessment was produced as part of an authorized security engagement. All findings have been verified and reproduction steps confirmed.
-```
+*This technical assessment was produced as part of an authorized security engagement. All findings have been verified and reproduction steps confirmed.*
