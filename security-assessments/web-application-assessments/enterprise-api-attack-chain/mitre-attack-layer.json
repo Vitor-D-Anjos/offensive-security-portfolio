@@ -1,0 +1,85 @@
+{
+  "name": "Enterprise API Attack Chain Assessment",
+  "description": "MITRE ATT&CK Navigator layer for the enterprise cloud application penetration test. Covers a five-stage attack chain from unauthenticated reconnaissance to internal vault compromise.",
+  "domain": "enterprise-attack",
+  "versions": {
+    "attack": "15",
+    "navigator": "4.9.0",
+    "layer": "4.5"
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1595",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 1: Active scanning for service discovery and port enumeration"
+    },
+    {
+      "techniqueID": "T1190",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 1: Exploit GraphQL introspection to enumerate API schema"
+    },
+    {
+      "techniqueID": "T1552",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 1: Unsecured debug tokens exposed in API responses"
+    },
+    {
+      "techniqueID": "T1078",
+      "score": 80,
+      "color": "#ef6c00",
+      "comment": "Stage 2: Valid OAuth session obtained via redirect_uri bypass"
+    },
+    {
+      "techniqueID": "T1548",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 3: Mass assignment vulnerability enables privilege escalation to super-admin"
+    },
+    {
+      "techniqueID": "T1098",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 3: Account manipulation via role field injection"
+    },
+    {
+      "techniqueID": "T1526",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 4: Cloud metadata service discovered and accessed via SSRF"
+    },
+    {
+      "techniqueID": "T1552.005",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 4: Cloud IAM credentials extracted from metadata endpoint"
+    },
+    {
+      "techniqueID": "T1528",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 5: JWT token forged via algorithm confusion (RS256 to HS256)"
+    },
+    {
+      "techniqueID": "T1553",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 5: Cryptographic trust subverted using RSA public key as HMAC secret"
+    },
+    {
+      "techniqueID": "T1213",
+      "score": 100,
+      "color": "#c62828",
+      "comment": "Stage 5: Internal vault secrets extracted including database and cloud credentials"
+    }
+  ]
+}
