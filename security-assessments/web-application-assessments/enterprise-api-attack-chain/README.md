@@ -45,6 +45,7 @@ text
 
 The assessment demonstrated a realistic enterprise breach scenario where chained vulnerabilities enabled full system compromise:
 
+```text
 Unauthenticated External Attacker
 ↓
 [1] GraphQL Introspection Abuse → Internal Schema & Token Exposure
@@ -58,8 +59,7 @@ Unauthenticated External Attacker
 [5] Cryptographic Algorithm Confusion → Secrets Vault Compromise
 ↓
 Complete System Compromise with Full Data Exfiltration
-text
-
+```
 
 ## Key Vulnerabilities Identified
 
