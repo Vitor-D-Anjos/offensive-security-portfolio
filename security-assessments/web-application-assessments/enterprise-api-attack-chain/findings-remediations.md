@@ -17,7 +17,7 @@
 
 ## V-01: GraphQL Introspection Enabled in Production
 
-### Severity: High
+#### Severity: High
 
 ### Description
 
@@ -56,50 +56,52 @@ const server = new ApolloServer({
 });
 ```
 
-Additional Hardening:
+**Additional Hardening:**
 
-    Implement authentication on ALL queries, including meta-queries
+- Implement authentication on ALL queries, including meta-queries
 
-    Add query complexity analysis to detect schema enumeration attempts
+- Add query complexity analysis to detect schema enumeration attempts
 
-    Configure query depth limiting to prevent recursive introspection
+- Configure query depth limiting to prevent recursive introspection
 
-Verification
+### Verification
 
 After remediation, confirm that introspection queries return an error:
-bash
 
+```bash
 $ curl -s http://target-app.local/api/graphql \
   -H "Content-Type: application/json" \
   -d '{"query":"{__schema{types{name}}}"}'
-# Expected: {"errors":[{"message":"GraphQL introspection is not allowed"}]}
+```
 
-V-02: OAuth redirect_uri Validation via startsWith()
-Severity: Medium
-Description
+**Expected**: {"errors":[{"message":"GraphQL introspection is not allowed"}]}
+
+## V-02: OAuth redirect_uri Validation via startsWith()
+
+#### Severity: Medium
+
+### Description
 
 The OAuth authorization endpoint validates the redirect_uri parameter using startsWith() string comparison rather than exact matching, allowing attackers to register callbacks at attacker-controlled domains.
-Affected Component
 
-    Path: /oauth/authorize
+### Affected Component
 
-    Parameter: redirect_uri
+- **Path:** /oauth/authorize
+- **Parameter:** redirect_uri
 
-Findings Detail
+### Findings Detail
 
-    Issue: Server-side validation uses redirectUri.startsWith(validPrefix) instead of redirectUri === validUri.
+1. **Issue:** Server-side validation uses redirectUri.startsWith(validPrefix) instead of redirectUri === validUri.
+2. **Impact:** URIs such as https://valid-prefix.attacker.com pass validation.
+3. **Prerequisite:** The valid redirect prefix is discoverable through application source analysis.
 
-    Impact: URIs such as https://valid-prefix.attacker.com pass validation.
+### Recommended Remediation
 
-    Prerequisite: The valid redirect prefix is discoverable through application source analysis.
-
-Recommended Remediation
-
-Immediate Action (Priority: Medium):
+**Immediate Action (Priority: Medium):**
 
 Replace startsWith() with exact string matching:
-javascript
 
+```javascript
 // Before (vulnerable)
 const VALID_REDIRECT = "https://app.target-app.local/callback";
 function validateRedirect(uri) {
@@ -114,51 +116,55 @@ const REGISTERED_REDIRECTS = [
 function validateRedirect(uri) {
     return REGISTERED_REDIRECTS.includes(uri);  // ← Exact match
 }
+```
 
-Additional Hardening:
+**Additional Hardening:**
 
-    Implement PKCE (Proof Key for Code Exchange) for all OAuth flows
+- Implement PKCE (Proof Key for Code Exchange) for all OAuth flows
 
-    Add state parameter validation to prevent CSRF attacks
+- Add state parameter validation to prevent CSRF attacks
 
-    Consider using PAR (Pushed Authorization Requests) for additional security
+- Consider using PAR (Pushed Authorization Requests) for additional security
 
-Verification
-bash
+### Verification
 
+```bash
 # Verify that bypass URIs are rejected
 $ curl "http://target-app.local/oauth/authorize?\
 client_id=app-client-production&\
 redirect_uri=https://valid-prefix.attacker.com&\
 response_type=code"
-# Expected: {"error":"invalid_request","error_description":"Invalid redirect_uri"}
+```
 
-V-03: Mass Assignment in User Profile API
-Severity: Critical
-Description
+**Expected:** {"error":"invalid_request","error_description":"Invalid redirect_uri"}
+
+## V-03: Mass Assignment in User Profile API
+
+#### Severity: Critical
+
+### Description
 
 The PUT /api/v2/users/me endpoint accepts arbitrary JSON fields and writes them to the database without filtering, allowing users to modify sensitive attributes including role and permissions.
-Affected Component
 
-    Path: /api/v2/users/me (PUT method)
+### Affected Component
 
-    Technology: Express.js Router
+- **Path:** /api/v2/users/me (PUT method)
 
-Findings Detail
+- **Technology:** Express.js Router
 
-    Issue: The endpoint performs direct object assignment from request body to database.
+### Findings Detail
 
-    No Field Filtering: All JSON properties in the request body are accepted and persisted.
+1. **Issue:** The endpoint performs direct object assignment from request body to database.
+2. **No Field Filtering:** All JSON properties in the request body are accepted and persisted.
+3. **Privilege Escalation:** Any authenticated user can set their own role to admin or super-admin.
 
-    Privilege Escalation: Any authenticated user can set their own role to admin or super-admin.
+### Recommended Remediation
 
-Recommended Remediation
-
-Immediate Action (Priority: Critical):
+**Immediate Action (Priority: Critical):**
 
 Implement strict field allowlisting:
-javascript
 
+```javascript
 // Before (vulnerable)
 app.put('/api/v2/users/me', authenticate, async (req, res) => {
     const updated = await User.update(req.user.id, req.body);  // ← All fields accepted
@@ -180,52 +186,55 @@ app.put('/api/v2/users/me', authenticate, async (req, res) => {
     const updated = await User.update(req.user.id, safeUpdates);
     res.json({ success: true, user: updated });
 });
+```
 
-Additional Hardening:
+### Additional Hardening:
 
-    Use TypeScript or schema validation (Zod, Joi) to enforce strict input types
+- Use TypeScript or schema validation (Zod, Joi) to enforce strict input types
 
-    Separate sensitive field updates to dedicated admin-only endpoints
+- Separate sensitive field updates to dedicated admin-only endpoints
 
-    Implement audit logging for any role or permission changes
+- Implement audit logging for any role or permission changes
 
-Verification
-bash
+### Verification
 
+```bash
 # Verify that role injection is blocked
 $ curl -s -X PUT http://target-app.local/api/v2/users/me \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${TOKEN}" \
   -d '{"role":"admin"}'
-# Expected: The "role" field should be silently dropped or explicitly rejected
+```
 
-V-04: Blind SSRF via Document Generation
-Severity: Critical
-Description
+**Expected:** The "role" field should be silently dropped or explicitly rejected
+
+## V-04: Blind SSRF via Document Generation
+
+#### Severity: Critical
+
+### Description
 
 The administrative document generation feature executes JavaScript in HTML templates server-side, enabling interaction with internal network services including the cloud metadata endpoint.
-Affected Component
 
-    Path: /api/v2/reports/generate (POST method)
+### Affected Component
 
-    Technology: Puppeteer (Headless Chromium)
+- **Path:** /api/v2/reports/generate (POST method)
 
-Findings Detail
+- **Technology:** Puppeteer (Headless Chromium)
 
-    Issue: HTML templates are rendered with full JavaScript execution in the server context.
+### Findings Detail
 
-    SSRF Vector: fetch() calls in template scripts can target internal services.
+1. **Issue:** HTML templates are rendered with full JavaScript execution in the server context.
+2. **SSRF Vector:** fetch() calls in template scripts can target internal services.
+3. **Metadata Access:** The cloud metadata service at 169.254.169.254 is reachable from the server.
 
-    Metadata Access: The cloud metadata service at 169.254.169.254 is reachable from the server.
+### Recommended Remediation
 
-Recommended Remediation
+**Immediate Action (Priority: Critical - within 1 week):**
 
-Immediate Action (Priority: Critical - within 1 week):
+Implement URL validation with a strict allowlist:
 
-    Implement URL validation with a strict allowlist:
-
-javascript
-
+```javascript
 const ALLOWED_URLS = [
     'https://cdn.target-app.local/assets/',
     'https://api.target-app.local/public/'
@@ -234,11 +243,11 @@ const ALLOWED_URLS = [
 function validateUrl(url) {
     return ALLOWED_URLS.some(allowed => url.startsWith(allowed));
 }
+```
 
-    Block private IP ranges in outgoing requests:
+Block private IP ranges in outgoing requests:
 
-javascript
-
+```javascript
 const net = require('net');
 
 function isPrivateIp(hostname) {
@@ -252,51 +261,55 @@ function isPrivateIp(hostname) {
     ];
     return privateRanges.some(range => range.test(hostname));
 }
+```
 
-Additional Hardening:
+### Additional Hardening:
 
-    Disable JavaScript execution in the Puppeteer context unless specifically required
+- Disable JavaScript execution in the Puppeteer context unless specifically required
 
-    Run document generation in an isolated container with no network access
+- Run document generation in an isolated container with no network access
 
-    Implement network-level egress filtering on the application server
+- Implement network-level egress filtering on the application server
 
-Verification
-bash
+### Verification
 
+```bash
 # Verify metadata endpoint is blocked
 $ curl -s -X POST http://target-app.local/api/v2/reports/generate \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${TOKEN}" \
   -d '{"template":"<script>fetch(\"http://169.254.169.254/\")</script>"}'
-# Expected: rendering_log should show "blocked" or request should fail
+```
 
-V-05: JWT Algorithm Confusion Attack
-Severity: Critical
-Description
+**Expected:** rendering_log should show "blocked" or request should fail
+
+## V-05: JWT Algorithm Confusion Attack
+
+#### Severity: Critical
+
+### Description
 
 The JWT verification logic trusts the alg header from incoming tokens and uses the RSA public key as an HMAC secret when HS256 is specified, enabling token forgery with arbitrary claims.
-Affected Component
 
-    Authorization middleware
+### Affected Component
 
-    JWKS endpoint: /.well-known/jwks.json
+- **Authorization middleware**
 
-Findings Detail
+- **JWKS endpoint:** /.well-known/jwks.json
 
-    Issue: The token verification function accepts the algorithm from the JWT header without validation.
+### Findings Detail
 
-    Key Confusion: The RSA public key (available via JWKS) is used as an HMAC shared secret.
+1. **Issue:** The token verification function accepts the algorithm from the JWT header without validation.
+2. **Key Confusion:** The RSA public key (available via JWKS) is used as an HMAC shared secret.
+3. **Token Forgery:** An attacker with the public key can create valid HS256 tokens with any claims.
 
-    Token Forgery: An attacker with the public key can create valid HS256 tokens with any claims.
+### Recommended Remediation
 
-Recommended Remediation
-
-Immediate Action (Priority: Critical):
+**Immediate Action (Priority: Critical):**
 
 Explicitly restrict accepted JWT algorithms:
-javascript
 
+```javascript
 // Before (vulnerable)
 function verifyToken(token) {
     const decoded = jwt.decode(token, { complete: true });
@@ -317,39 +330,43 @@ function verifyToken(token) {
         audience: 'app-production'
     });
 }
+```
 
-Additional Hardening:
+### Additional Hardening:
 
-    Use separate keys for signing and verification, stored in separate locations
+- Use separate keys for signing and verification, stored in separate locations
 
-    Implement JWT claim validation (iss, aud, exp, nbf)
+- Implement JWT claim validation (iss, aud, exp, nbf)
 
-    Consider using opaque tokens with server-side validation instead of JWTs
+- Consider using opaque tokens with server-side validation instead of JWTs
 
-    Rotate signing keys on a regular schedule
+- Rotate signing keys on a regular schedule
 
-Verification
-bash
+### Verification
 
+```bash
 # Verify HS256 tokens are rejected
 $ TOKEN="<hs256-forged-token>"
 $ curl -s http://target-app.local/api/vault/critical-secrets \
   -H "Authorization: Bearer ${TOKEN}"
-# Expected: 401 Unauthorized with "invalid algorithm" message
+```
 
-Remediation Priority Timeline
-Day	Action	Responsible Team
-Day 1	Deploy fix for V-03 (Mass Assignment)	Backend Engineering
-Day 1	Deploy fix for V-05 (JWT Algorithm Confusion)	Auth/Platform Engineering
-Day 2	Deploy fix for V-01 (GraphQL Introspection)	Backend Engineering
-Day 3	Implement network egress filtering (V-04)	Infrastructure/Security
-Day 5	Deploy URL validation in report generator (V-04)	Backend Engineering
-Day 7	Deploy fix for V-02 (OAuth redirect_uri)	Auth Engineering
-Day 10	Address informational findings (I-01, I-02)	DevOps
-Day 14	Verification retest	Security Team
+**Expected:** 401 Unauthorized with "invalid algorithm" message
+
+## Remediation Priority Timeline
+
+| Day | Action | Responsible Team |
+|-----|--------|------------------|
+| Day 1 | Deploy fix for V-03 (Mass Assignment) | Backend Engineering |
+| Day 1 | Deploy fix for V-05 (JWT Algorithm Confusion) | Auth/Platform Engineering |
+| Day 2 | Deploy fix for V-01 (GraphQL Introspection) | Backend Engineering |
+| Day 3 | Implement network egress filtering (V-04) | Infrastructure/Security |
+| Day 5 | Deploy URL validation in report generator (V-04) | Backend Engineering |
+| Day 7 | Deploy fix for V-02 (OAuth redirect_uri) | Auth Engineering |
+| Day 10 | Address informational findings (I-01, I-02) | DevOps |
+| Day 14 | Verification retest | Security Team |
 
 Remediation recommendations are provided based on industry best practices. Implementation should be validated by the responsible engineering teams.
-
 
 ---
 
@@ -399,7 +416,7 @@ curl -s http://target-app.local:8090/api/v2/users/me \
 # Expected: User role should remain "employee", not "admin"
 ```
 
-V-04: SSRF Prevention in Document Generator
+### V-04: SSRF Prevention in Document Generator
 
 ```bash
 # Attempt to access metadata service
