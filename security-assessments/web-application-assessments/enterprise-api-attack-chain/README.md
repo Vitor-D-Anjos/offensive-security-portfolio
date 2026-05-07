@@ -11,12 +11,12 @@ This report contains the complete security assessment documentation for a compre
 
 **Report Documents**
 
-- [01-executive-summary.md](01-executive-summary.md) *(High-level findings for leadership)*
-- [02-technical-assessment.md](02-technical-assessment.md) *(Detailed technical findings and evidence)*
-- [03-findings-remediations.md](03-findings-remediations.md) *(Individual findings with remediation)*
-- [04-attack-chain-analysis.md](04-attack-chain-analysis.md) *(Kill chain visualization and TTP mapping)*
-- [05-compliance-mapping.md](05-compliance-mapping.md) *(Regulatory framework cross-reference)*
-- [06-appendices.md](06-appendices.md) *(Methodology, tools, and references)*
+- [01-executive-summary.md](executive-summary.md) *(High-level findings for leadership)*
+- [02-technical-assessment.md](technical-assessment.md) *(Detailed technical findings and evidence)*
+- [03-findings-remediations.md](findings-remediations.md) *(Individual findings with remediation)*
+- [04-attack-chain-analysis.md](attack-chain-analysis.md) *(Kill chain visualization and TTP mapping)*
+- [05-compliance-mapping.md](compliance-mapping.md) *(Regulatory framework cross-reference)*
+- [06-appendices.md](appendices.md) *(Methodology, tools, and references)*
 
 **Supporting Evidence**
 
