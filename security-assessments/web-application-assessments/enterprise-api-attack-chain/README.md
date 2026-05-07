@@ -3,9 +3,9 @@
 
 ## Project Overview
 
-This repository contains the complete security assessment documentation for a comprehensive penetration test conducted against an enterprise cloud application. The engagement demonstrated a critical five-stage attack chain progressing from unauthenticated external reconnaissance to complete compromise of internal systems.
+This report contains the complete security assessment documentation for a comprehensive penetration test conducted against an enterprise cloud application. The engagement demonstrated a critical five-stage attack chain progressing from unauthenticated external reconnaissance to complete compromise of internal systems.
 
-## Repository Structure
+## Project Structure
 
 - [README.md](README.md) *(Project overview and navigation)*
 
