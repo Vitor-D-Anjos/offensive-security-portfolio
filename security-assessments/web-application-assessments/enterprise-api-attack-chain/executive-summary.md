@@ -124,20 +124,6 @@ These controls represent meaningful security investment and should be maintained
 
 ---
 
-## Positive Observations
-
-While this assessment identified critical vulnerabilities requiring immediate attention, several security controls were observed to be correctly implemented:
-
-- **Content Security Policy (CSP):** The application enforces a restrictive `default-src 'none'` policy, significantly reducing the risk of cross-site scripting (XSS) and client-side injection attacks.
-
-- **OAuth 2.0 Authorization Code Grant:** The authentication flow correctly implements the authorization code grant type with PKCE-capable infrastructure, avoiding the deprecated implicit grant flow that would expose tokens directly in browser redirects.
-
-- **Vault Authentication Requirements:** Despite the JWT forgery vulnerability, the internal vault service requires authentication for all secret access—no anonymous or default-credential access was possible. The vault was not trivially accessible even after network access was achieved.
-
-These controls represent meaningful security investment and should be maintained as the identified vulnerabilities are remediated.
-
----
-
 ## Conclusion
 
 This assessment revealed a critical series of security vulnerabilities that, when chained, create a complete and realistic attack path from external reconnaissance to internal system compromise. The vulnerabilities identified are not theoretical edge cases—they represent well-documented attack patterns observed in real-world enterprise breaches.
